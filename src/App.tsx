@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { AmbientCanvas } from './components/AmbientCanvas';
@@ -15,10 +15,32 @@ import { ContactPage } from './pages/ContactPage';
 import { AdminPage } from './pages/AdminPage';
 import { PortfolioProvider } from './context/PortfolioContext';
 
+// Dynamic Browser Tab Title Manager
+const PageTitleWatcher: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const titles: Record<string, string> = {
+      '/': 'ZY DİJİTAL — Zeynep Yıldırım | Dijital Ürün Tasarımı & Web Geliştirme',
+      '/hakkimda': 'Hakkımda | ZY DİJİTAL — Zeynep Yıldırım',
+      '/projeler': 'Seçkin Projeler | ZY DİJİTAL — Zeynep Yıldırım',
+      '/hizmetler': 'Hizmetler & Süreç | ZY DİJİTAL — Zeynep Yıldırım',
+      '/iletisim': 'İletişim & Randevu | ZY DİJİTAL — Zeynep Yıldırım',
+      '/admin': 'Yönetim Paneli | ZY DİJİTAL',
+    };
+    document.title = titles[location.pathname] || 'ZY DİJİTAL — Zeynep Yıldırım | Dijital Ürün Tasarımı & Web Geliştirme';
+  }, [location.pathname]);
+
+  return null;
+};
+
 export const App: React.FC = () => {
   return (
     <PortfolioProvider>
       <BrowserRouter>
+        {/* Dynamic Browser Tab Title */}
+        <PageTitleWatcher />
+
         {/* Scroll Position Reset on Page Navigation */}
         <ScrollToTop />
 
