@@ -1,0 +1,34 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Çerçeve Lüks Degrade -->
+    <linearGradient id="zy-frame-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#C084FC" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#7E22CE" stop-opacity="0.7" />
+    </linearGradient>
+    <!-- Arka Plan Derinlik Radyal Degrade -->
+    <radialGradient id="zy-bg-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1E1035" />
+      <stop offset="100%" stop-color="#070709" />
+    </radialGradient>
+  </defs>
+
+  <!-- Koyu Zemin Konteyner (Google beyaz arama sonuçlarında net görünmesi için) -->
+  <rect x="3" y="3" width="94" height="94" rx="24" fill="url(#zy-bg-glow)" />
+  
+  <!-- Dış Kavisli Neo-Squircle Çerçeve -->
+  <rect x="8" y="8" width="84" height="84" rx="22" fill="none" stroke="url(#zy-frame-grad)" stroke-width="3" />
+  
+  <!-- İç İnce Çerçeve Vurgusu -->
+  <rect x="14" y="14" width="72" height="72" rx="16" fill="none" stroke="#C084FC" stroke-opacity="0.3" stroke-width="1.2" />
+
+  <!-- 1. Z Harfi (Beyaz Gövde) -->
+  <path d="M22 28 H66 L24 68 H68" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- 2. Y Harfi (Mor Gövde - Z'nin Köşegeninin Üstünden Geçer) -->
+  <path d="M36 22 L58 48 L78 22" stroke="#A855F7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M58 48 V80" stroke="#A855F7" stroke-width="7" stroke-linecap="round" />
+
+  <!-- 3. Z Harfi Alt Çizgi (Y'nin Dikey Çizgisinin Üstüne Geçerek İç İçe Kilitlenir) -->
+  <path d="M24 68 H68" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" />
+</svg>
