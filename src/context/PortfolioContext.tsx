@@ -64,7 +64,17 @@ const getInitialData = (): PortfolioData => {
         },
         stats: parsed.stats?.length ? parsed.stats : defaultStats,
         projects: parsed.projects?.length ? parsed.projects : defaultProjects,
-        services: parsed.services?.length ? parsed.services : defaultServices,
+        services: (() => {
+          const savedServices = parsed.services || [];
+          if (!savedServices.length) return defaultServices;
+          const result = [...savedServices];
+          defaultServices.forEach((defSrv) => {
+            if (!result.some((s: Service) => s.id === defSrv.id)) {
+              result.push(defSrv);
+            }
+          });
+          return result;
+        })(),
         messages: (parsed.messages || []).filter((m: ContactMessage) => m.id !== 'msg-sample-1'),
       };
     }

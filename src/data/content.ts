@@ -49,6 +49,20 @@ export const services: Service[] = [
     badge: 'En Çok Tercih Edilen',
   },
   {
+    id: 'google-meta-ads',
+    title: 'Google & Meta Reklam Yönetimi',
+    tagline: 'Doğru hedef kitle, bütçe optimizasyonu ve ölçülebilir müşteri trafiği.',
+    description: 'Rastgele harcanan reklam bütçeleri yerine; doğrudan potansiyel müşterilerinizi yakalayan, Google Arama ve Meta (Instagram / Facebook) algoritmalarını doğru kullanan, ölçülebilir ve yüksek dönüşümlü reklam kampanyaları kurguluyorum.',
+    deliverables: [
+      'Google Arama (Search) & Harita Reklamları',
+      'Instagram & Facebook Hedef Kitle Kurgusu',
+      'Meta Pixel & Google Analytics Dönüşüm Takibi',
+      'Reklam Metni, Görsel Stratejisi & Bütçe Yönetimi',
+    ],
+    timeline: 'Aylık Yönetim / Esnek Kampanya',
+    badge: 'Yüksek Dönüşüm',
+  },
+  {
     id: 'web-consulting',
     title: 'Web & Tasarım Danışmanlığı',
     tagline: 'Projeniz veya markanız için doğru dijital yol haritası.',

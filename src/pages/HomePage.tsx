@@ -1,13 +1,14 @@
 import React from 'react';
 import { Hero } from '../sections/Hero';
 import { usePortfolio } from '../context/PortfolioContext';
-import { ArrowRight, Sparkles, Layers, Compass, Share2, GraduationCap } from 'lucide-react';
+import { ArrowRight, Sparkles, Layers, Compass, Share2, GraduationCap, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const getServiceIcon = (id: string) => {
   if (id === 'web-consulting') return <Compass className="w-5 h-5" />;
   if (id === 'social-media') return <Share2 className="w-5 h-5" />;
   if (id === 'mentorship-education') return <GraduationCap className="w-5 h-5" />;
+  if (id === 'google-meta-ads') return <Target className="w-5 h-5" />;
   return <Layers className="w-5 h-5" />;
 };
 
@@ -39,7 +40,7 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((srv) => (
               <div
                 key={srv.id}

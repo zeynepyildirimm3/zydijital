@@ -49,6 +49,10 @@ export const ServicesPage: React.FC = () => {
       a: 'Hedeflerinize göre şekillenen 4 temel başlıkta bire bir ilerliyoruz: 1) Yazılıma Nereden Başlamalıyım? yol haritası, 2) Modern Yapay Zeka (AI) araçlarını üretkenlik ve kodlamada etkin kullanma, 3) Temel Python ile kodlama mantığı ve ilk projeler, 4) Genç girişimcilik ve fikirleri dijital ürüne dönüştürme.',
     },
     {
+      q: 'Google ve Meta reklam yönetimi nasıl ilerliyor?',
+      a: 'Sektörünüzü ve rakiplerinizi analiz ederek başlıyoruz. Web sitenize Meta Pixel ve Google dönüşüm kodlarını kuruyor, bütçenizi boşa harcamadan doğrudan satın alma veya randevu alma potansiyeli yüksek kitlelere reklamlarınızı gösteriyoruz. Süreç boyunca harcamaları ve gelen dönüşümleri şeffaf şekilde raporluyorum.',
+    },
+    {
       q: 'Ödeme ve seans takvimi nasıl belirleniyor?',
       a: 'Web projelerinde süreç başlangıç (%50) ve teslim (%50) olarak ilerler. Danışmanlık ve mentorluk görüşmelerinde ise seans başı ya da esnek haftalık paketlerle çalışıyoruz.',
     },
