@@ -52,16 +52,13 @@ export const HomePage: React.FC = () => {
                   <h3 className="text-xl font-editorial font-bold text-white mb-2">
                     {srv.title}
                   </h3>
-                  <p className="text-xs font-mono text-violet-400/90 mb-3">
+                  <p className="text-xs font-mono text-violet-400/90 mb-6">
                     {srv.tagline}
-                  </p>
-                  <p className="text-xs text-slate-400 font-light leading-relaxed mb-6">
-                    {srv.description}
                   </p>
                 </div>
 
                 <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono text-slate-400">
-                  <span>Süre / Program: {srv.timeline}</span>
+                  <span>Süre: {srv.timeline}</span>
                   <Link
                     to="/hizmetler"
                     className="text-violet-400 hover:text-violet-200 font-medium inline-flex items-center gap-1"
