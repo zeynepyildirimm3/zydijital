@@ -6,6 +6,7 @@ interface LogoProps {
   withText?: boolean;
   className?: string;
   variant?: EmblemVariant;
+  customSize?: number;
 }
 
 export const Logo: React.FC<LogoProps> = ({
@@ -13,6 +14,7 @@ export const Logo: React.FC<LogoProps> = ({
   withText = true,
   className = '',
   variant: propVariant,
+  customSize,
 }) => {
   const [syncedVariant] = useEmblemVariant();
   const currentVariant = propVariant || syncedVariant;
@@ -25,7 +27,8 @@ export const Logo: React.FC<LogoProps> = ({
     '2xl': { icon: 140, text: 'text-4xl sm:text-5xl', sub: 'text-base sm:text-lg' },
   };
 
-  const { icon: px, text: titleSize, sub: subSize } = sizeMap[size];
+  const { icon: defaultPx, text: titleSize, sub: subSize } = sizeMap[size];
+  const px = customSize || defaultPx;
 
   // Keskin, net ve şeffaf zemin renkleri
   const Z_STROKE = 'var(--zy-z-stroke, #FFFFFF)';

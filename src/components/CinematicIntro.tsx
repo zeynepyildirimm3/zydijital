@@ -234,7 +234,7 @@ export const CinematicIntro: React.FC = () => {
 
       {/* Orta Görsel & Tipografi Bölümü (Sinematik 3D Parallax & Kamera Yakınlaşması) */}
       <div
-        className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto transition-transform duration-200 ease-out"
+        className="relative z-10 flex flex-col items-center justify-center text-center px-4 w-full max-w-5xl mx-auto transition-transform duration-200 ease-out"
         style={{
           transform: `perspective(1000px) rotateX(${-mousePos.y * 7}deg) rotateY(${mousePos.x * 7}deg)`,
         }}
@@ -249,11 +249,11 @@ export const CinematicIntro: React.FC = () => {
         >
           <div className="relative flex items-center justify-center">
             {/* Genişleyen Dairesel Şok Dalgaları */}
-            <div className="absolute w-28 h-28 rounded-full border border-violet-400/50 animate-ping pointer-events-none duration-1000" />
-            <div className="absolute w-44 h-44 rounded-full border border-violet-500/25 animate-pulse pointer-events-none" />
+            <div className="absolute w-36 h-36 rounded-full border border-violet-400/50 animate-ping pointer-events-none duration-1000" />
+            <div className="absolute w-52 h-52 rounded-full border border-violet-500/25 animate-pulse pointer-events-none" />
             
             {/* Yumuşak Parıltı Haresi */}
-            <div className="absolute w-32 h-32 rounded-full bg-gradient-to-tr from-violet-600/40 via-fuchsia-500/25 to-purple-600/35 blur-3xl animate-pulse" />
+            <div className="absolute w-40 h-40 rounded-full bg-gradient-to-tr from-violet-600/40 via-fuchsia-500/25 to-purple-600/35 blur-3xl animate-pulse" />
             
             {/* Z Harfinin Karanlıkta %100 Parlak Beyaz Olmasını Sağlayan CSS Değişkenleri */}
             <div
@@ -268,20 +268,20 @@ export const CinematicIntro: React.FC = () => {
                 } as React.CSSProperties
               }
             >
-              <Logo size="xl" withText={false} />
+              <Logo size="xl" customSize={115} withText={false} />
             </div>
           </div>
         </div>
 
-        {/* 2. Faz: "ZEYNEP YILDIRIM" BAŞLIĞI (İhtişamlı, Yan Yana ve Tam Kıvamında) */}
+        {/* 2. Faz: "ZEYNEP YILDIRIM" BAŞLIĞI (Mobilde ve Masaüstünde Tam Ortalanmış) */}
         <div
-          className={`transition-all duration-1000 delay-150 ease-out transform ${
+          className={`w-full flex items-center justify-center transition-all duration-1000 delay-150 ease-out transform ${
             stage === 'reveal'
               ? 'opacity-100 scale-100 translate-y-0'
               : 'opacity-0 scale-95 translate-y-6'
           }`}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-editorial font-extrabold tracking-[0.06em] sm:tracking-[0.1em] uppercase leading-none select-none relative group whitespace-nowrap">
+          <h1 className="text-[7.2vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-editorial font-extrabold tracking-[0.05em] sm:tracking-[0.1em] uppercase leading-none select-none relative group whitespace-nowrap text-center">
             {/* Arka Işık Parlaması */}
             <span className="absolute -inset-1 blur-2xl bg-gradient-to-r from-violet-600/25 via-purple-400/25 to-fuchsia-600/25 opacity-80 pointer-events-none" />
 
@@ -292,19 +292,19 @@ export const CinematicIntro: React.FC = () => {
           </h1>
         </div>
 
-        {/* 3. Faz: "Dijital Tasarım & Web Stüdyosu" */}
+        {/* 3. Faz: "Dijital Tasarım & Web Stüdyosu" (Mobilde Taşmayan, Kusursuz Ortalanmış) */}
         <div
-          className={`transition-all duration-1000 delay-300 ease-out transform mt-5 sm:mt-6 flex items-center justify-center gap-4 ${
+          className={`w-full transition-all duration-1000 delay-300 ease-out transform mt-4 sm:mt-6 flex items-center justify-center gap-2 sm:gap-4 ${
             stage === 'reveal'
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
           }`}
         >
-          <span className="h-[1px] w-10 sm:w-20 md:w-28 bg-gradient-to-r from-transparent to-violet-400/70" />
-          <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-serif tracking-[0.2em] sm:tracking-[0.28em] text-violet-200/95 font-medium uppercase drop-shadow-sm whitespace-nowrap">
+          <span className="h-[1px] w-6 sm:w-16 md:w-24 bg-gradient-to-r from-transparent to-violet-400/70 shrink-0" />
+          <h2 className="text-[10px] min-[380px]:text-xs sm:text-base md:text-lg lg:text-xl font-serif tracking-[0.15em] sm:tracking-[0.25em] text-violet-200/95 font-medium uppercase drop-shadow-sm whitespace-nowrap text-center">
             Dijital Tasarım & Web Stüdyosu
           </h2>
-          <span className="h-[1px] w-10 sm:w-20 md:w-28 bg-gradient-to-l from-transparent to-violet-400/70" />
+          <span className="h-[1px] w-6 sm:w-16 md:w-24 bg-gradient-to-l from-transparent to-violet-400/70 shrink-0" />
         </div>
       </div>
     </aside>
