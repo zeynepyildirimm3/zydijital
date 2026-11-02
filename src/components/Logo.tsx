@@ -231,7 +231,7 @@ export const Logo: React.FC<LogoProps> = ({
         </svg>
       </div>
 
-      {/* Tipografi Wordmark (Üstte ZEYNEP YILDIRIM, Altta Dijital Tasarım & Web Stüdyosu) */}
+      {/* Tipografi Wordmark (Üstte ZEYNEP YILDIRIM, Altta Web Geliştirme & Reklamcılık) */}
       {withText && (
         <div className="flex flex-col justify-center leading-none">
           <div className="flex items-center gap-1.5">
@@ -241,7 +241,7 @@ export const Logo: React.FC<LogoProps> = ({
             <span className="w-1.5 h-1.5 rounded-full bg-violet-500 dark:bg-violet-400 inline-block shadow-[0_0_6px_rgba(168,85,247,0.5)]" />
           </div>
           <span className={`font-serif tracking-[0.14em] text-violet-700 dark:text-violet-300 font-medium mt-1 ${subSize}`}>
-            Dijital Tasarım & Web Stüdyosu
+            Web Geliştirme & Reklamcılık
           </span>
         </div>
       )}
