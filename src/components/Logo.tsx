@@ -228,17 +228,17 @@ export const Logo: React.FC<LogoProps> = ({
         </svg>
       </div>
 
-      {/* Tipografi Wordmark (Üstte ZY DİJİTAL, Altta Zeynep Yıldırım) */}
+      {/* Tipografi Wordmark (Üstte ZEYNEP YILDIRIM, Altta Dijital Tasarım & Web Stüdyosu) */}
       {withText && (
         <div className="flex flex-col justify-center leading-none">
           <div className="flex items-center gap-1.5">
-            <span className={`font-editorial font-bold tracking-[0.08em] text-slate-900 dark:text-white uppercase ${titleSize}`}>
-              ZY DİJİTAL
+            <span className={`font-editorial font-bold tracking-[0.06em] text-slate-900 dark:text-white uppercase ${titleSize}`}>
+              ZEYNEP YILDIRIM
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-violet-500 dark:bg-violet-400 inline-block shadow-[0_0_6px_rgba(168,85,247,0.5)]" />
           </div>
           <span className={`font-serif tracking-[0.14em] text-violet-700 dark:text-violet-300 font-medium mt-1 ${subSize}`}>
-            Zeynep Yıldırım
+            Dijital Tasarım & Web Stüdyosu
           </span>
         </div>
       )}

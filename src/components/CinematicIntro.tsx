@@ -209,12 +209,12 @@ export const CinematicIntro: React.FC = () => {
       {/* 60 FPS Canlı Sinematik Video/Warp Canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none cinematic-intro-canvas" />
 
-      {/* Üst Bar: Sadece ZY DİJİTAL göstergesi ve Hızlı Geç Butonu (Ses butonu kaldırıldı) */}
+      {/* Üst Bar: Sadece ZEYNEP YILDIRIM göstergesi ve Hızlı Geç Butonu (Ses butonu kaldırıldı) */}
       <div className="absolute top-6 left-6 right-6 flex items-center justify-between z-20">
         <div className="flex items-center gap-2.5">
           <span className="w-2 h-2 rounded-full bg-violet-400 animate-ping" />
           <span className="text-[11px] font-mono tracking-widest text-slate-400 uppercase">
-            ZY DİJİTAL
+            ZEYNEP YILDIRIM
           </span>
         </div>
 
@@ -287,12 +287,12 @@ export const CinematicIntro: React.FC = () => {
 
             {/* Metalik Işık Geçişli Başlık */}
             <span className="relative bg-gradient-to-b from-white via-slate-100 to-violet-300 bg-clip-text text-transparent drop-shadow-[0_12px_40px_rgba(168,85,247,0.5)]">
-              ZY DİJİTAL
+              ZEYNEP YILDIRIM
             </span>
           </h1>
         </div>
 
-        {/* 3. Faz: Yalnızca "ZEYNEP YILDIRIM" */}
+        {/* 3. Faz: "Dijital Tasarım & Web Stüdyosu" */}
         <div
           className={`transition-all duration-1000 delay-300 ease-out transform mt-5 sm:mt-7 flex items-center justify-center gap-3.5 ${
             stage === 'reveal'
@@ -302,7 +302,7 @@ export const CinematicIntro: React.FC = () => {
         >
           <span className="h-[1px] w-10 sm:w-20 bg-gradient-to-r from-transparent to-violet-400/70" />
           <h2 className="text-base sm:text-xl md:text-2xl font-serif tracking-[0.25em] sm:tracking-[0.35em] text-violet-200 font-medium uppercase drop-shadow-sm">
-            Zeynep Yıldırım
+            Dijital Tasarım & Web Stüdyosu
           </h2>
           <span className="h-[1px] w-10 sm:w-20 bg-gradient-to-l from-transparent to-violet-400/70" />
         </div>

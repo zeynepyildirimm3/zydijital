@@ -21,14 +21,14 @@ const PageTitleWatcher: React.FC = () => {
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      '/': 'ZY DİJİTAL — Zeynep Yıldırım | Dijital Ürün Tasarımı & Web Geliştirme',
-      '/hakkimda': 'Hakkımda | ZY DİJİTAL — Zeynep Yıldırım',
-      '/projeler': 'Seçkin Projeler | ZY DİJİTAL — Zeynep Yıldırım',
-      '/hizmetler': 'Hizmetler & Süreç | ZY DİJİTAL — Zeynep Yıldırım',
-      '/iletisim': 'İletişim & Randevu | ZY DİJİTAL — Zeynep Yıldırım',
-      '/admin': 'Yönetim Paneli | ZY DİJİTAL',
+      '/': 'Zeynep Yıldırım | Dijital Ürün Tasarımı & Web Stüdyosu',
+      '/hakkimda': 'Hakkımda | Zeynep Yıldırım',
+      '/projeler': 'Seçkin Projeler | Zeynep Yıldırım',
+      '/hizmetler': 'Hizmetler & Süreç | Zeynep Yıldırım',
+      '/iletisim': 'İletişim & Randevu | Zeynep Yıldırım',
+      '/admin': 'Yönetim Paneli | Zeynep Yıldırım',
     };
-    document.title = titles[location.pathname] || 'ZY DİJİTAL — Zeynep Yıldırım | Dijital Ürün Tasarımı & Web Geliştirme';
+    document.title = titles[location.pathname] || 'Zeynep Yıldırım | Dijital Ürün Tasarımı & Web Stüdyosu';
   }, [location.pathname]);
 
   return null;
