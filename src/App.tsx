@@ -21,14 +21,14 @@ const PageTitleWatcher: React.FC = () => {
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      '/': 'Zeynep Yıldırım | Web Geliştirme, Tasarım & Dijital Reklamcılık',
+      '/': 'Zeynep Yıldırım | Dijital Tasarım, Web Geliştirme & Reklamcılık',
       '/hakkimda': 'Hakkımda | Zeynep Yıldırım',
       '/projeler': 'Seçkin Projeler | Zeynep Yıldırım',
       '/hizmetler': 'Hizmetler & Süreç | Zeynep Yıldırım',
       '/iletisim': 'İletişim & Randevu | Zeynep Yıldırım',
       '/admin': 'Yönetim Paneli | Zeynep Yıldırım',
     };
-    document.title = titles[location.pathname] || 'Zeynep Yıldırım | Web Geliştirme, Tasarım & Dijital Reklamcılık';
+    document.title = titles[location.pathname] || 'Zeynep Yıldırım | Dijital Tasarım, Web Geliştirme & Reklamcılık';
   }, [location.pathname]);
 
   return null;

@@ -292,7 +292,7 @@ export const CinematicIntro: React.FC = () => {
           </h1>
         </div>
 
-        {/* 3. Faz: "Web Geliştirme, Tasarım & Reklamcılık" (Mobilde Taşmayan, Kusursuz Ortalanmış) */}
+        {/* 3. Faz: "Dijital Tasarım · Web Geliştirme · Reklamcılık" (Mobilde Taşmayan, Kusursuz Ortalanmış) */}
         <div
           className={`w-full transition-all duration-1000 delay-300 ease-out transform mt-4 sm:mt-6 flex items-center justify-center gap-2 sm:gap-4 ${
             stage === 'reveal'
@@ -300,11 +300,11 @@ export const CinematicIntro: React.FC = () => {
               : 'opacity-0 translate-y-4'
           }`}
         >
-          <span className="h-[1px] w-6 sm:w-16 md:w-24 bg-gradient-to-r from-transparent to-violet-400/70 shrink-0" />
-          <h2 className="text-[10px] min-[380px]:text-xs sm:text-base md:text-lg lg:text-xl font-serif tracking-[0.14em] sm:tracking-[0.22em] text-violet-200/95 font-medium uppercase drop-shadow-sm whitespace-nowrap text-center">
-            Web Geliştirme, Tasarım & Reklamcılık
+          <span className="h-[1px] w-4 sm:w-12 md:w-20 bg-gradient-to-r from-transparent to-violet-400/70 shrink-0" />
+          <h2 className="text-[9.5px] min-[380px]:text-xs sm:text-base md:text-lg lg:text-xl font-serif tracking-[0.12em] sm:tracking-[0.22em] text-violet-200/95 font-medium uppercase drop-shadow-sm whitespace-nowrap text-center">
+            Dijital Tasarım · Web Geliştirme · Reklamcılık
           </h2>
-          <span className="h-[1px] w-6 sm:w-16 md:w-24 bg-gradient-to-l from-transparent to-violet-400/70 shrink-0" />
+          <span className="h-[1px] w-4 sm:w-12 md:w-20 bg-gradient-to-l from-transparent to-violet-400/70 shrink-0" />
         </div>
       </div>
     </aside>

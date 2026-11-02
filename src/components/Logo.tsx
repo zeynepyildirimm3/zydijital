@@ -27,7 +27,7 @@ export const Logo: React.FC<LogoProps> = ({
     '2xl': { icon: 140, text: 'text-4xl sm:text-5xl', sub: 'text-base sm:text-lg' },
   };
 
-  const { icon: defaultPx, text: titleSize, sub: subSize } = sizeMap[size];
+  const { icon: defaultPx, text: titleSize } = sizeMap[size];
   const px = customSize || defaultPx;
 
   // Keskin, net ve şeffaf zemin renkleri
@@ -231,7 +231,7 @@ export const Logo: React.FC<LogoProps> = ({
         </svg>
       </div>
 
-      {/* Tipografi Wordmark (Üstte ZEYNEP YILDIRIM, Altta Web Geliştirme & Reklamcılık) */}
+      {/* Tipografi Wordmark (Üstte ZEYNEP YILDIRIM, Altta Dijital Tasarım · Web Geliştirme · Reklamcılık) */}
       {withText && (
         <div className="flex flex-col justify-center leading-none">
           <div className="flex items-center gap-1.5">
@@ -240,8 +240,8 @@ export const Logo: React.FC<LogoProps> = ({
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-violet-500 dark:bg-violet-400 inline-block shadow-[0_0_6px_rgba(168,85,247,0.5)]" />
           </div>
-          <span className={`font-serif tracking-[0.14em] text-violet-700 dark:text-violet-300 font-medium mt-1 ${subSize}`}>
-            Web Geliştirme & Reklamcılık
+          <span className={`font-serif tracking-[0.05em] text-violet-700 dark:text-violet-300 font-medium mt-1 text-[9.5px] min-[390px]:text-[10.5px] sm:text-xs whitespace-nowrap`}>
+            Dijital Tasarım · Web Geliştirme · Reklamcılık
           </span>
         </div>
       )}
