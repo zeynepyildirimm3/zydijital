@@ -273,7 +273,7 @@ export const CinematicIntro: React.FC = () => {
           </div>
         </div>
 
-        {/* 2. Faz: "ZEYNEP YILDIRIM" BAŞLIĞI (Zarif, Yan Yana ve Dengeli Boyut) */}
+        {/* 2. Faz: "ZEYNEP YILDIRIM" BAŞLIĞI (İhtişamlı, Yan Yana ve Tam Kıvamında) */}
         <div
           className={`transition-all duration-1000 delay-150 ease-out transform ${
             stage === 'reveal'
@@ -281,12 +281,12 @@ export const CinematicIntro: React.FC = () => {
               : 'opacity-0 scale-95 translate-y-6'
           }`}
         >
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-editorial font-bold tracking-[0.08em] sm:tracking-[0.12em] uppercase leading-none select-none relative group whitespace-nowrap">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-editorial font-extrabold tracking-[0.06em] sm:tracking-[0.1em] uppercase leading-none select-none relative group whitespace-nowrap">
             {/* Arka Işık Parlaması */}
-            <span className="absolute -inset-1 blur-2xl bg-gradient-to-r from-violet-600/20 via-purple-400/20 to-fuchsia-600/20 opacity-75 pointer-events-none" />
+            <span className="absolute -inset-1 blur-2xl bg-gradient-to-r from-violet-600/25 via-purple-400/25 to-fuchsia-600/25 opacity-80 pointer-events-none" />
 
             {/* Metalik Işık Geçişli Başlık */}
-            <span className="relative bg-gradient-to-b from-white via-slate-100 to-violet-300 bg-clip-text text-transparent drop-shadow-[0_8px_30px_rgba(168,85,247,0.4)]">
+            <span className="relative bg-gradient-to-b from-white via-slate-100 to-violet-300 bg-clip-text text-transparent drop-shadow-[0_12px_40px_rgba(168,85,247,0.5)]">
               ZEYNEP YILDIRIM
             </span>
           </h1>
@@ -294,17 +294,17 @@ export const CinematicIntro: React.FC = () => {
 
         {/* 3. Faz: "Dijital Tasarım & Web Stüdyosu" */}
         <div
-          className={`transition-all duration-1000 delay-300 ease-out transform mt-4 sm:mt-5 flex items-center justify-center gap-3.5 ${
+          className={`transition-all duration-1000 delay-300 ease-out transform mt-5 sm:mt-6 flex items-center justify-center gap-4 ${
             stage === 'reveal'
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
           }`}
         >
-          <span className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-violet-400/70" />
-          <h2 className="text-xs sm:text-sm md:text-base font-serif tracking-[0.2em] sm:tracking-[0.25em] text-violet-200/90 font-medium uppercase drop-shadow-sm whitespace-nowrap">
+          <span className="h-[1px] w-10 sm:w-20 md:w-28 bg-gradient-to-r from-transparent to-violet-400/70" />
+          <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-serif tracking-[0.2em] sm:tracking-[0.28em] text-violet-200/95 font-medium uppercase drop-shadow-sm whitespace-nowrap">
             Dijital Tasarım & Web Stüdyosu
           </h2>
-          <span className="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-violet-400/70" />
+          <span className="h-[1px] w-10 sm:w-20 md:w-28 bg-gradient-to-l from-transparent to-violet-400/70" />
         </div>
       </div>
     </aside>
