@@ -382,3 +382,12 @@ html.light [class*="bg-violet-950"] svg,
 html:not(.dark) [class*="bg-violet-950"] svg {
   color: #7E22CE !important;
 }
+
+/* Horizontal Scrollbar Hider for Smooth Carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

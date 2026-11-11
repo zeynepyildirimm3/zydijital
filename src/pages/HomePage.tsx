@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { Hero } from '../sections/Hero';
 import { usePortfolio } from '../context/PortfolioContext';
-import { ArrowRight, Sparkles, Layers, Compass, Share2, GraduationCap, Target } from 'lucide-react';
+import { ArrowRight, Sparkles, Layers, Compass, Share2, GraduationCap, Target, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const getServiceIcon = (id: string) => {
@@ -14,15 +14,103 @@ const getServiceIcon = (id: string) => {
 
 export const HomePage: React.FC = () => {
   const { services } = usePortfolio();
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const dragRef = useRef({ isDown: false, startX: 0, scrollLeft: 0, moved: false });
+
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const updateScrollState = useCallback(() => {
+    const el = sliderRef.current;
+    if (!el) return;
+
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    setCanScrollLeft(el.scrollLeft > 4);
+    setCanScrollRight(maxScroll > 4 && el.scrollLeft < maxScroll - 4);
+    setScrollProgress(maxScroll > 0 ? Math.min(100, Math.max(0, (el.scrollLeft / maxScroll) * 100)) : 100);
+  }, []);
+
+  useEffect(() => {
+    updateScrollState();
+    window.addEventListener('resize', updateScrollState);
+    return () => window.removeEventListener('resize', updateScrollState);
+  }, [updateScrollState, services.length]);
+
+  const scrollByStep = (direction: 'left' | 'right') => {
+    const el = sliderRef.current;
+    if (!el) return;
+
+    const firstCard = el.firstElementChild as HTMLElement | null;
+    const step = firstCard ? firstCard.offsetWidth + 20 : 360;
+    el.scrollBy({
+      left: direction === 'left' ? -step : step,
+      behavior: 'smooth',
+    });
+  };
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = sliderRef.current;
+    if (!el) return;
+    dragRef.current = {
+      isDown: true,
+      startX: e.pageX,
+      scrollLeft: el.scrollLeft,
+      moved: false,
+    };
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = sliderRef.current;
+    if (!el || !dragRef.current.isDown) return;
+
+    const walk = e.pageX - dragRef.current.startX;
+    if (Math.abs(walk) > 6) {
+      if (!dragRef.current.moved) {
+        dragRef.current.moved = true;
+        setIsDragging(true);
+      }
+      e.preventDefault();
+      el.scrollLeft = dragRef.current.scrollLeft - walk;
+    }
+  };
+
+  const stopDragging = () => {
+    dragRef.current.isDown = false;
+    if (isDragging) {
+      setIsDragging(false);
+    }
+    setTimeout(() => {
+      dragRef.current.moved = false;
+    }, 0);
+  };
+
+  const handleMouseLeave = () => {
+    dragRef.current.isDown = false;
+    dragRef.current.moved = false;
+    if (isDragging) {
+      setIsDragging(false);
+    }
+  };
+
+  const handleClickCapture = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (dragRef.current.moved) {
+      e.preventDefault();
+      e.stopPropagation();
+      dragRef.current.moved = false;
+    }
+  };
+
   return (
     <div className="space-y-16 sm:space-y-24">
       {/* 1. Cinematic Hero with 360° Emblem */}
       <Hero />
 
-      {/* 2. Core Capabilities Overview (Hizmetler Özeti) */}
+      {/* 2. Core Capabilities Overview (Hizmetler Özeti - Yatay Kaydırmalı Vitrin) */}
       <section className="py-12 relative bg-dark-900/30 border-y border-white/[0.04]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-6">
             <div>
               <span className="text-xs font-mono uppercase tracking-[0.2em] text-violet-400 font-semibold">
                 Neler Yapıyorum?
@@ -32,28 +120,74 @@ export const HomePage: React.FC = () => {
               </h2>
             </div>
 
-            <Link
-              to="/hizmetler"
-              className="inline-flex items-center gap-2 text-xs font-semibold px-5 py-2.5 rounded-full bg-dark-850 hover:bg-dark-800 border border-white/[0.08] hover:border-violet-400/40 text-slate-200 hover:text-white transition-all group"
-            >
-              <span>Tüm Detaylar & Süreç →</span>
-            </Link>
+            <div className="flex items-center justify-between sm:justify-end gap-3">
+              {/* Sağa / Sola Kaydırma Ok Butonları */}
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => scrollByStep('left')}
+                  disabled={!canScrollLeft}
+                  aria-label="Önceki hizmetler"
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${
+                    canScrollLeft
+                      ? 'bg-dark-850 hover:bg-dark-800 border-white/[0.12] hover:border-violet-400/50 text-slate-700 dark:text-white shadow-sm cursor-pointer active:scale-95'
+                      : 'bg-dark-900/40 border-white/[0.05] text-slate-400 dark:text-slate-600 opacity-45 cursor-not-allowed'
+                  }`}
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollByStep('right')}
+                  disabled={!canScrollRight}
+                  aria-label="Sonraki hizmetler"
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${
+                    canScrollRight
+                      ? 'bg-dark-850 hover:bg-dark-800 border-violet-500/35 hover:border-violet-400 text-violet-700 dark:text-violet-200 hover:text-violet-900 dark:hover:text-white shadow-sm shadow-violet-500/10 cursor-pointer active:scale-95'
+                      : 'bg-dark-900/40 border-white/[0.05] text-slate-400 dark:text-slate-600 opacity-45 cursor-not-allowed'
+                  }`}
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+
+              <Link
+                to="/hizmetler"
+                className="inline-flex items-center gap-2 text-xs font-semibold px-5 py-2.5 rounded-full bg-dark-850 hover:bg-dark-800 border border-white/[0.08] hover:border-violet-400/40 text-slate-200 hover:text-white transition-all group"
+              >
+                <span>Tüm Detaylar & Süreç →</span>
+              </Link>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Yatay Kaydırmalı Hizmet Kartları */}
+          <div
+            ref={sliderRef}
+            onScroll={updateScrollState}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={stopDragging}
+            onMouseLeave={handleMouseLeave}
+            onClickCapture={handleClickCapture}
+            className={`relative flex items-stretch gap-5 overflow-x-auto no-scrollbar py-2 -my-2 ${
+              isDragging
+                ? 'cursor-grabbing select-none snap-none scroll-auto'
+                : 'cursor-grab snap-x snap-mandatory scroll-smooth'
+            }`}
+          >
             {services.map((srv) => (
               <div
                 key={srv.id}
-                className="p-6 sm:p-7 rounded-3xl bg-dark-850/60 border border-white/[0.06] hover:border-violet-500/30 transition-all flex flex-col justify-between"
+                className="w-[84%] sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-13.333px)] shrink-0 snap-start p-6 sm:p-7 rounded-3xl bg-dark-850/60 border border-white/[0.06] hover:border-violet-500/30 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-2xl bg-violet-600/20 border border-violet-500/30 flex items-center justify-center text-violet-300 mb-5">
+                  <div className="w-10 h-10 rounded-2xl bg-violet-600/20 border border-violet-500/30 flex items-center justify-center text-violet-600 dark:text-violet-300 mb-5">
                     {getServiceIcon(srv.id)}
                   </div>
                   <h3 className="text-xl font-editorial font-bold text-white mb-2">
                     {srv.title}
                   </h3>
-                  <p className="text-xs font-mono text-violet-400/90 mb-6">
+                  <p className="text-xs font-mono text-violet-600 dark:text-violet-400/90 mb-6">
                     {srv.tagline}
                   </p>
                 </div>
@@ -62,13 +196,27 @@ export const HomePage: React.FC = () => {
                   <span>Süre: {srv.timeline}</span>
                   <Link
                     to="/hizmetler"
-                    className="text-violet-400 hover:text-violet-200 font-medium inline-flex items-center gap-1"
+                    draggable={false}
+                    className="text-violet-600 dark:text-violet-400 hover:text-violet-800 dark:hover:text-violet-200 font-medium inline-flex items-center gap-1"
                   >
                     İncele <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Alt Kaydırma İlerleme Göstergesi */}
+          <div className="mt-6 flex items-center justify-between gap-4">
+            <div className="h-1 flex-1 max-w-xs rounded-full bg-slate-200 dark:bg-white/[0.06] overflow-hidden">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-violet-500 to-purple-400 transition-all duration-200"
+                style={{ width: `${Math.max(25, scrollProgress)}%` }}
+              />
+            </div>
+            <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
+              {services.length} Hizmet · Kaydırarak inceleyin
+            </span>
           </div>
         </div>
       </section>
