@@ -67,13 +67,19 @@ const getInitialData = (): PortfolioData => {
         services: (() => {
           const savedServices = parsed.services || [];
           if (!savedServices.length) return defaultServices;
-          const result = [...savedServices];
+          const result: Service[] = [...savedServices];
           defaultServices.forEach((defSrv) => {
             if (!result.some((s: Service) => s.id === defSrv.id)) {
               result.push(defSrv);
             }
           });
-          return result;
+          // Varsayılan hizmet sırasını content.ts ile senkronize tut
+          const defaultOrder = new Map(defaultServices.map((s, idx) => [s.id, idx]));
+          return result.sort((a, b) => {
+            const idxA = defaultOrder.has(a.id) ? defaultOrder.get(a.id)! : Number.MAX_SAFE_INTEGER;
+            const idxB = defaultOrder.has(b.id) ? defaultOrder.get(b.id)! : Number.MAX_SAFE_INTEGER;
+            return idxA - idxB;
+          });
         })(),
         messages: (parsed.messages || []).filter((m: ContactMessage) => m.id !== 'msg-sample-1'),
       };

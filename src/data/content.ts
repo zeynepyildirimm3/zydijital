@@ -49,6 +49,14 @@ export const services: Service[] = [
     badge: 'En Çok Tercih Edilen',
   },
   {
+    id: 'web-consulting',
+    title: 'Web & Tasarım Danışmanlığı',
+    tagline: 'Projeniz veya markanız için doğru dijital yol haritası.',
+    description: 'Mevcut web sitenizin eksiklerini analiz ediyor, yeni bir fikir için en doğru teknoloji ve tasarım stratejisini belirliyor, bütçenizi ve zamanınızı koruyacak net bir yol haritası sunuyorum.',
+    deliverables: ['Mevcut Site / Arayüz İncelemesi', 'Kullanılabilirlik & Tasarım Geri Bildirimi', 'Teknoloji & Altyapı Rehberliği', 'Bire Bir Danışmanlık Oturumu'],
+    timeline: '1 - 3 Gün',
+  },
+  {
     id: 'google-meta-ads',
     title: 'Google & Meta Reklam Yönetimi',
     tagline: 'Doğru hedef kitle, bütçe optimizasyonu ve ölçülebilir müşteri trafiği.',
@@ -61,14 +69,6 @@ export const services: Service[] = [
     ],
     timeline: 'Aylık Yönetim / Esnek Kampanya',
     badge: 'Yüksek Dönüşüm',
-  },
-  {
-    id: 'web-consulting',
-    title: 'Web & Tasarım Danışmanlığı',
-    tagline: 'Projeniz veya markanız için doğru dijital yol haritası.',
-    description: 'Mevcut web sitenizin eksiklerini analiz ediyor, yeni bir fikir için en doğru teknoloji ve tasarım stratejisini belirliyor, bütçenizi ve zamanınızı koruyacak net bir yol haritası sunuyorum.',
-    deliverables: ['Mevcut Site / Arayüz İncelemesi', 'Kullanılabilirlik & Tasarım Geri Bildirimi', 'Teknoloji & Altyapı Rehberliği', 'Bire Bir Danışmanlık Oturumu'],
-    timeline: '1 - 3 Gün',
   },
   {
     id: 'social-media',
