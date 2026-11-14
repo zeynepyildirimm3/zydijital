@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { usePortfolio } from '../context/PortfolioContext';
 import { Project } from '../types';
@@ -157,25 +158,25 @@ export const Projects: React.FC = () => {
       </div>
 
       {/* 1. INTERACTIVE LIVE PROJECT VIEWER (Aynı Sekmede Canlı Gezinme) */}
-      {livePreviewProject && (
+      {livePreviewProject && createPortal(
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex flex-col bg-dark-950/95 backdrop-blur-xl animate-in fade-in duration-200"
+          className="fixed inset-0 z-[99999] flex flex-col bg-dark-950 text-slate-100 animate-in fade-in duration-200"
         >
           {/* Top Control Bar (Mobilde ve Masaüstünde Daima Sabit) */}
-          <header className="h-14 sm:h-16 px-3 sm:px-6 border-b border-white/[0.08] bg-dark-900/95 backdrop-blur-md flex items-center justify-between gap-2 sm:gap-4 flex-shrink-0 z-20">
+          <header className="h-16 px-3 sm:px-6 border-b border-white/[0.1] bg-dark-900/98 backdrop-blur-md flex items-center justify-between gap-2 sm:gap-4 flex-shrink-0 z-30">
             {/* Sol: Geri / Projelere Dön Butonu & Proje Başlığı */}
             <div className="flex items-center gap-2 sm:gap-3 min-w-0">
               <button
                 type="button"
                 onClick={handleCloseLive}
                 aria-label="Projelere Dön"
-                className="px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-300 hover:text-white border border-white/[0.08] text-xs font-medium inline-flex items-center gap-1 transition-all flex-shrink-0 cursor-pointer"
+                className="px-3 py-2 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-200 hover:text-white border border-white/[0.1] text-xs font-semibold inline-flex items-center gap-1 transition-all flex-shrink-0 cursor-pointer shadow-sm active:scale-95"
                 title="Projelere Dön"
               >
                 <span>←</span>
-                <span className="hidden xs:inline sm:inline">Projeler</span>
+                <span>Projeler</span>
               </button>
 
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
@@ -238,18 +239,18 @@ export const Projects: React.FC = () => {
                 type="button"
                 onClick={() => setIframeKey((prev) => prev + 1)}
                 aria-label="Yeniden Yükle"
-                className="p-1.5 sm:p-2 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-400 hover:text-white border border-white/[0.08] transition-all cursor-pointer"
+                className="p-2 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-400 hover:text-white border border-white/[0.08] transition-all cursor-pointer"
                 title="Demoyu Yeniden Yükle"
               >
-                <RotateCcw className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <RotateCcw className="w-4 h-4" />
               </button>
               <button
                 type="button"
                 onClick={handleCloseLive}
                 aria-label="Kapat ve Projelere Dön"
-                className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 hover:brightness-110 text-white border border-violet-400/30 text-xs font-bold inline-flex items-center gap-1.5 shadow-md shadow-violet-500/25 transition-all active:scale-95 cursor-pointer"
+                className="px-4 py-2 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 hover:brightness-110 text-white border border-violet-400/40 text-xs font-bold inline-flex items-center gap-1.5 shadow-lg shadow-violet-500/30 ring-2 ring-violet-400/40 transition-all active:scale-95 cursor-pointer"
               >
-                <X className="w-4 h-4" />
+                <X className="w-4 h-4 stroke-[2.5]" />
                 <span>Kapat</span>
               </button>
             </div>
@@ -262,9 +263,9 @@ export const Projects: React.FC = () => {
               type="button"
               onClick={handleCloseLive}
               aria-label="Önizlemeyi Kapat"
-              className="sm:hidden fixed bottom-5 right-4 z-50 px-4 py-2.5 rounded-full bg-violet-600/95 hover:bg-violet-500 text-white border border-white/20 shadow-2xl shadow-black font-bold text-xs inline-flex items-center gap-1.5 active:scale-95 cursor-pointer backdrop-blur-md"
+              className="sm:hidden fixed bottom-6 right-4 z-50 px-4 py-2.5 rounded-full bg-violet-600/95 hover:bg-violet-500 text-white border border-white/20 shadow-2xl shadow-black font-bold text-xs inline-flex items-center gap-1.5 active:scale-95 cursor-pointer backdrop-blur-md ring-2 ring-violet-400/40"
             >
-              <X className="w-4 h-4" />
+              <X className="w-4 h-4 stroke-[2.5]" />
               <span>Kapat</span>
             </button>
 
@@ -294,15 +295,16 @@ export const Projects: React.FC = () => {
               />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* 2. PROJECT DETAIL MODAL (Metin & Vaka Analizi Görünümü) */}
-      {selectedProject && (
+      {selectedProject && createPortal(
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-950/85 backdrop-blur-md overflow-y-auto"
+          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-dark-950/85 backdrop-blur-md overflow-y-auto"
         >
           <div className="relative w-full max-w-2xl bg-dark-900 border border-white/[0.1] rounded-3xl p-6 sm:p-10 shadow-2xl my-8 max-h-[90vh] overflow-y-auto">
             <button
@@ -380,7 +382,8 @@ export const Projects: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
