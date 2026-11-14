@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZY Restoran - Online QR Menü. Demo ve ön izleme sitesi.">
+  <meta name="color-scheme" content="dark">
+  <title>ZY Restoran | Online Menü</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="stylesheet" href="style.css?v=33">
+  
+  <!-- FOUC Prevention Script: Varsayılan Her Zaman Koyu Tema -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('sumak_theme');
+        if (savedTheme === 'light') {
+          document.querySelector('meta[name="color-scheme"]').content = 'light';
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.querySelector('meta[name="color-scheme"]').content = 'dark';
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Erişilebilirlik Atla Linki -->
+  <a href="#menu-content" class="skip-link" data-i18n="skipLink">İçeriğe Atla</a>
+
+  <!-- Ekran Okuyucu Dinamik Bildirici -->
+  <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Üst Bilgi & Başlık (Header) -->
+  <header class="site-header" role="banner">
+    <div class="header-top-bar">
+      <div class="restaurant-badges">
+        <span class="badge badge-hours" title="Çalışma Saatleri">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <span id="header-hours">Her gün 11:00 - 23:00</span>
+        </span>
+        <span class="badge badge-address" title="Adres">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <span id="header-address">Demo Mah. Örnek Sok. No:1</span>
+        </span>
+      </div>
+
+      <div class="header-controls">
+        <!-- Dil Değiştirme -->
+        <div class="lang-switch-group" role="group" aria-label="Dil Seçimi">
+          <button type="button" class="lang-btn active" data-lang="tr" id="lang-tr" aria-pressed="true">TR</button>
+          <span class="lang-separator" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" id="lang-en" aria-pressed="false">EN</button>
+        </div>
+
+        <!-- Karanlık Mod Değiştirme -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Temayı değiştir" title="Temayı değiştir">
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Metin Tabanlı Wordmark & Restoran Kimliği -->
+    <div class="brand-container">
+      <div class="brand-ornament" aria-hidden="true">
+        <svg class="brand-emblem-svg" viewBox="0 0 56 56" width="52" height="52" fill="none">
+          <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2" opacity="0.6"/>
+          <circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="28" cy="5" r="1.5" fill="currentColor"/>
+          <circle cx="28" cy="51" r="1.5" fill="currentColor"/>
+          <circle cx="5" cy="28" r="1.5" fill="currentColor"/>
+          <circle cx="51" cy="28" r="1.5" fill="currentColor"/>
+          <text x="28" y="35" text-anchor="middle" font-family="'Georgia', serif" font-weight="700" font-size="20" fill="currentColor" letter-spacing="1.5">ZY</text>
+        </svg>
+      </div>
+      <h1 class="brand-wordmark">ZY RESTORAN</h1>
+      <p class="brand-tagline" id="brand-tagline">Menü</p>
+    </div>
+  </header>
+
+  <!-- Hamburger'de Gizlenmeyen Yapışkan (Sticky) Yatay Kategori Şeridi (Yalnızca kategori/arama görünümünde aktif) -->
+  <nav class="sticky-nav" id="sticky-nav" aria-label="Menü Kategorileri" hidden>
+    <div class="category-scroll-container" id="category-bar" role="tablist">
+      <!-- Dinamik kategori sekmeleri buraya gelir -->
+    </div>
+  </nav>
+
+  <!-- Ana İçerik Bölgesi -->
+  <main id="menu-content" class="main-content" tabindex="-1">
+    
+    <!-- Filtreleme ve Kontrol Paneli -->
+    <section class="filter-panel" aria-labelledby="filter-heading">
+      <!-- Kompakt Mobil Üst Satır: Arama + Filtrele Çekmecesi Butonu -->
+      <div class="filter-toolbar">
+        <div class="search-box">
+          <label for="search-input" class="sr-only" data-i18n="searchPlaceholder">Menüde ara...</label>
+          <div class="input-with-icon">
+            <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/></svg>
+            <input type="search" id="search-input" class="search-input" placeholder="Menüde ara..." data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+            <button type="button" class="search-clear-btn" id="clear-search-btn" aria-label="Aramayı temizle" hidden>✕</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-filter-toggle" id="toggle-filters-btn" aria-expanded="false" aria-controls="filter-drawer">
+          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <span data-i18n="filtersBtn">Filtrele</span>
+          <span class="filter-count-badge" id="active-filter-badge" hidden>0</span>
+        </button>
+      </div>
+
+      <!-- Açılır/Kapanır Detaylı Filtre Çekmecesi -->
+      <div class="filter-drawer" id="filter-drawer" hidden>
+        <div class="filter-header">
+          <h2 id="filter-heading" class="filter-title">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span data-i18n="filterTitle">Menüyü Filtrele</span>
+          </h2>
+          <button type="button" class="btn-text-reset" id="drawer-reset-btn" data-i18n="resetFilters">Temizle</button>
+        </div>
+
+        <!-- Diyet Seçenekleri Filtresi -->
+        <fieldset class="filter-group">
+          <legend class="filter-legend" data-i18n="dietLegend">Tercihler</legend>
+          <div class="filter-chips" id="diet-chips">
+            <button type="button" class="chip" data-diet="vegetarian" aria-pressed="false" data-i18n="dietVegetarian">Vejetaryen</button>
+            <button type="button" class="chip" data-diet="vegan" aria-pressed="false" data-i18n="dietVegan">Vegan</button>
+            <button type="button" class="chip" data-diet="gluten-free" aria-pressed="false" data-i18n="dietGlutenFree">Glutensiz</button>
+            <button type="button" class="chip" data-diet="mild" aria-pressed="false" data-i18n="dietMild">Acısız</button>
+          </div>
+        </fieldset>
+
+        <!-- Alerjen Gizleme Filtresi (Seçilen alerjenler GİZLENİR) -->
+        <fieldset class="filter-group">
+          <legend class="filter-legend" data-i18n="allergenLegend">Alerjen Gizle (İçerenleri Kaldır)</legend>
+          <div class="filter-chips allergen-chips" id="allergen-chips">
+            <button type="button" class="chip chip-allergen" data-allergen="dairy" aria-pressed="false">
+              <span class="chip-cross" aria-hidden="true">✕</span> <span data-i18n="allergenDairy">Süt</span>
+            </button>
+            <button type="button" class="chip chip-allergen" data-allergen="nuts" aria-pressed="false">
+              <span class="chip-cross" aria-hidden="true">✕</span> <span data-i18n="allergenNuts">Fındık / Ceviz</span>
+            </button>
+            <button type="button" class="chip chip-allergen" data-allergen="peanuts" aria-pressed="false">
+              <span class="chip-cross" aria-hidden="true">✕</span> <span data-i18n="allergenPeanuts">Fıstık</span>
+            </button>
+            <button type="button" class="chip chip-allergen" data-allergen="gluten" aria-pressed="false">
+              <span class="chip-cross" aria-hidden="true">✕</span> <span data-i18n="allergenGluten">Gluten</span>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- Bütçe Aralığı Slider'ı -->
+        <div class="filter-group price-filter-group">
+          <div class="price-header">
+            <label for="price-range" class="filter-legend" data-i18n="budgetLabel">Maksimum Fiyat:</label>
+            <span class="price-value-badge" id="price-value-display">520 TL</span>
+          </div>
+          <input type="range" id="price-range" min="30" max="520" step="10" value="520" class="price-slider">
+        </div>
+
+        <button type="button" class="btn-apply-filters" id="close-filters-btn" data-i18n="applyFiltersBtn">Sonuçları Gör</button>
+      </div>
+
+      <!-- Aktif Sonuç ve Hızlı Temizleme Çubuğu -->
+      <div class="filter-status-bar">
+        <span id="filtered-count-text">8 kategori • 25 lezzet</span>
+        <button type="button" class="btn-text-reset btn-inline-reset" id="reset-filters-btn" data-i18n="resetFilters" hidden>Temizle</button>
+      </div>
+    </section>
+
+    <!-- Menü Kartları Listeleme Alanı -->
+    <div id="menu-container" class="menu-container">
+      <!-- JavaScript tarafından dinamik oluşturulur -->
+    </div>
+
+  </main>
+
+  <!-- Sayfa Altı (Footer) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <p class="footer-title">ZY RESTORAN</p>
+      </div>
+
+      <div class="footer-details">
+        <p><strong>Çalışma Saatleri:</strong> Her gün 11:00 - 23:00</p>
+        <p><strong>Adres:</strong> Demo Mah. Örnek Sok. No:1 (Kurgusal)</p>
+        <p><strong>İletişim:</strong> +90 500 000 00 00</p>
+      </div>
+
+      <!-- Kurgusal İşletme & Demo Bildirimi (Kriter 7) -->
+      <div class="demo-disclaimer-box">
+        <p class="demo-disclaimer-text" data-i18n="demoNotice">
+          ℹ️ Bu web sitesi bir demo ve ön izleme çalışmasıdır. ZY Restoran kurgusal bir işletmedir; fiyatlar ve bilgiler simülasyon amaçlıdır.
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="#menu-content" class="back-to-top-link" data-i18n="backToTop">↑ Menü Başına Dön</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Telefonda Tek Elle Kolay Yukarı Çıkma Butonu -->
+  <button type="button" id="scroll-top-btn" class="scroll-top-btn" aria-label="Menü Başına Dön" title="Menü Başına Dön" hidden>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><polyline points="18 15 12 9 6 15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- Ürün Detay Modalı (Native HTML Dialog) -->
+  <dialog id="item-detail-modal" class="item-detail-modal" aria-labelledby="modal-item-title">
+    <div class="modal-dialog-inner">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h2 id="modal-item-title" class="modal-item-title"></h2>
+          <span id="modal-item-price" class="modal-item-price"></span>
+        </div>
+        <button type="button" class="modal-close-icon-btn" id="modal-close-icon-btn" aria-label="Kapat">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div id="modal-sold-out-alert" class="modal-alert-sold-out" hidden></div>
+
+        <div class="modal-section">
+          <p id="modal-item-story" class="modal-item-story"></p>
+        </div>
+
+        <div class="modal-meta-grid" id="modal-meta-grid"></div>
+
+        <div class="modal-section modal-warnings-section">
+          <h3 class="modal-section-title" id="modal-allergen-heading">Alerjen ve Diyet Uyarıları</h3>
+          <div class="modal-badges-list" id="modal-badges-list"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-modal-close" id="modal-close-btn">Kapat</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js?v=33"></script>
+</body>
+</html>

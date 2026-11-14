@@ -1,0 +1,2988 @@
+{
+  "restaurant": {
+    "name": "ZY Restoran",
+    "cuisine": {
+      "tr": "Menü",
+      "en": "Menu"
+    },
+    "hours": {
+      "tr": "Her gün 11:00 - 23:00",
+      "en": "Every day 11:00 - 23:00"
+    },
+    "address": {
+      "tr": "Demo Mah. Örnek Sok. No:1 (Kurgusal)",
+      "en": "1 Sample St., Demo District (Fictional)"
+    },
+    "whatsappNumber": "+905000000000"
+  },
+  "categories": [
+    {
+      "id": "corbalar",
+      "title": {
+        "tr": "Çorbalar",
+        "en": "Soups"
+      },
+      "subtitle": {
+        "tr": "Sıcak başlangıçlar",
+        "en": "Hot traditional soups"
+      },
+      "icon": "corba",
+      "image": "images/corbalar.webp"
+    },
+    {
+      "id": "ana-yemekler",
+      "title": {
+        "tr": "Ana Yemekler",
+        "en": "Main Courses"
+      },
+      "subtitle": {
+        "tr": "Et, tavuk, taş fırın & fast food",
+        "en": "Meat, chicken, stone oven & fast food"
+      },
+      "icon": "kebap",
+      "image": "images/kebaplar.webp",
+      "subcategories": [
+        {
+          "id": "et",
+          "title": {
+            "tr": "Et",
+            "en": "Meat Dishes"
+          },
+          "subtitle": {
+            "tr": "Kebaplar, ızgaralar, döner & tantuni",
+            "en": "Kebabs, grills, doner & tantuni"
+          },
+          "image": "images/kebaplar.webp"
+        },
+        {
+          "id": "tavuk",
+          "title": {
+            "tr": "Tavuk",
+            "en": "Chicken Dishes"
+          },
+          "subtitle": {
+            "tr": "Döner, şiş, kanat & tantuni",
+            "en": "Doner, shish, wings & tantuni"
+          },
+          "image": "images/tavuk.webp"
+        },
+        {
+          "id": "tas-firin",
+          "title": {
+            "tr": "Taş Fırın",
+            "en": "Stone Oven"
+          },
+          "subtitle": {
+            "tr": "Lahmacun & pide çeşitleri",
+            "en": "Lahmacun & wood-fired pides"
+          },
+          "image": "images/tas-firin.webp"
+        },
+        {
+          "id": "fast-food",
+          "title": {
+            "tr": "Fast Food",
+            "en": "Fast Food"
+          },
+          "subtitle": {
+            "tr": "Burger, pizza, kumpir & çıtırlar",
+            "en": "Burgers, pizza, kumpir & snacks"
+          },
+          "image": "images/fast-food.webp"
+        }
+      ]
+    },
+    {
+      "id": "tatlilar",
+      "title": {
+        "tr": "Tatlılar",
+        "en": "Desserts"
+      },
+      "subtitle": {
+        "tr": "Sütlü & şerbetli tatlılar",
+        "en": "Milk-based & syrup-soaked desserts"
+      },
+      "icon": "tatli",
+      "image": "images/tatlilar.webp",
+      "subcategories": [
+        {
+          "id": "sutlu",
+          "title": {
+            "tr": "Sütlü Tatlılar",
+            "en": "Milk-Based Desserts"
+          },
+          "subtitle": {
+            "tr": "Sütlaç, magnolya, San Sebastian & sufle",
+            "en": "Rice pudding, San Sebastian, tiramisu & more"
+          },
+          "image": "images/sutlu-tatlilar.webp"
+        },
+        {
+          "id": "serbetli",
+          "title": {
+            "tr": "Şerbetli Tatlılar",
+            "en": "Syrup-Soaked Desserts"
+          },
+          "subtitle": {
+            "tr": "Baklava, künefe, katmer & kadayıf",
+            "en": "Baklava, künefe, katmer & kadayif"
+          },
+          "image": "images/tatlilar.webp"
+        }
+      ]
+    },
+    {
+      "id": "sicak-icecekler",
+      "title": {
+        "tr": "Sıcak İçecekler",
+        "en": "Hot Drinks"
+      },
+      "subtitle": {
+        "tr": "Türk kahvesi, çay & 3. dalga kahveler",
+        "en": "Turkish coffee, tea & specialty brews"
+      },
+      "icon": "sicak",
+      "image": "images/sicak-icecekler.webp"
+    },
+    {
+      "id": "soguk-icecekler",
+      "title": {
+        "tr": "Soğuk İçecekler",
+        "en": "Cold Drinks"
+      },
+      "subtitle": {
+        "tr": "Iced latte, cooler, ayran & limonata",
+        "en": "Iced coffee, coolers, ayran & lemonade"
+      },
+      "icon": "soguk",
+      "image": "images/soguk-icecekler.webp"
+    }
+  ],
+  "items": [
+    {
+      "id": "mercimek-corbasi",
+      "categoryId": "corbalar",
+      "price": 110,
+      "name": {
+        "tr": "Süzme Mercimek Çorbası",
+        "en": "Traditional Red Lentil Soup"
+      },
+      "story": {
+        "tr": "Kırmızı mercimek, havuç ve patatesin kemiksiz sebze suyunda ağır ateşte kaynatılıp süzülmüş ipeksi klasik lezzeti.",
+        "en": "Silky slow-simmered red lentils blended with carrot and potato in aromatic vegetable broth, served with lemon."
+      },
+      "prepTime": {
+        "tr": "5 dk",
+        "en": "5 mins"
+      },
+      "portion": {
+        "tr": "280 ml kase (limon ile)",
+        "en": "280 ml bowl (with lemon)"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "beyran-corbasi",
+      "categoryId": "corbalar",
+      "price": 220,
+      "name": {
+        "tr": "Antep Beyran Çorbası",
+        "en": "Gaziantep Beyran Soup"
+      },
+      "story": {
+        "tr": "12 saat kısık ateşte pişen tel tel kuzu gerdan eti, pirinç, sarımsak ve kırmızı pul biberin bakır sahanda buluşması.",
+        "en": "Rich Gaziantep specialty with 12-hour slow-braised lamb neck, rice, garlic, and red pepper flakes."
+      },
+      "prepTime": {
+        "tr": "8-10 dk",
+        "en": "8-10 mins"
+      },
+      "portion": {
+        "tr": "320 ml bakır sahan",
+        "en": "320 ml copper bowl"
+      },
+      "tags": [
+        "gluten-free",
+        "spicy"
+      ],
+      "allergens": [],
+      "spicy": "spicy",
+      "available": true
+    },
+    {
+      "id": "ezogelin-corbasi",
+      "categoryId": "corbalar",
+      "price": 115,
+      "name": {
+        "tr": "Ezogelin Çorbası",
+        "en": "Ezogelin Soup"
+      },
+      "story": {
+        "tr": "Kırmızı mercimek, ince bulgur, pirinç ve domates salçasının kuru nane ile kavrulup ağır ateşte demlenmiş Anadolu klasiği.",
+        "en": "Classic Anatolian soup made with red lentils, fine bulgur, rice, tomato paste, and fragrant dried mint."
+      },
+      "prepTime": {
+        "tr": "5 dk",
+        "en": "5 mins"
+      },
+      "portion": {
+        "tr": "280 ml kase (limon ile)",
+        "en": "280 ml bowl (with lemon)"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true
+    },
+    {
+      "id": "yayla-corbasi",
+      "categoryId": "corbalar",
+      "price": 120,
+      "name": {
+        "tr": "Yayla Çorbası",
+        "en": "Turkish Yogurt Soup (Yayla)"
+      },
+      "story": {
+        "tr": "Süzme yoğurt ve yumuşak pirinç taneleri üzerine tereyağında yakılmış taze kuru nane gezdirilerek sunulan hafif lezzet.",
+        "en": "Velvety warm yogurt and tender rice soup finished with melted butter and toasted dried mint."
+      },
+      "prepTime": {
+        "tr": "5 dk",
+        "en": "5 mins"
+      },
+      "portion": {
+        "tr": "280 ml kase",
+        "en": "280 ml bowl"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "tavuk-suyu-corbasi",
+      "categoryId": "corbalar",
+      "price": 135,
+      "name": {
+        "tr": "Şehriyeli Tavuk Suyu Çorbası",
+        "en": "Chicken Broth Soup with Orzo"
+      },
+      "story": {
+        "tr": "Kemikli tavuk suyunda didilmiş tavuk göğsü, tel şehriye, maydanoz ve taze limon sıkımıyla şifa kaynağı klasik çorba.",
+        "en": "Nourishing homemade bone-in chicken broth with shredded chicken, delicate orzo, parsley, and lemon."
+      },
+      "prepTime": {
+        "tr": "5-7 dk",
+        "en": "5-7 mins"
+      },
+      "portion": {
+        "tr": "300 ml kase (limon ile)",
+        "en": "300 ml bowl (with lemon)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "kelle-paca-corbasi",
+      "categoryId": "corbalar",
+      "price": 240,
+      "name": {
+        "tr": "Kelle Paça Çorbası",
+        "en": "Traditional Kelle Paça Soup"
+      },
+      "story": {
+        "tr": "Uzun saatler kaynatılmış kolajen zengini kuzu eti suyu; yanında özel sarımsaklı sirke sosu ve tereyağlı biber ile servis edilir.",
+        "en": "Slow-simmered traditional lamb head and trotter soup served with garlic-vinegar dressing and spiced butter."
+      },
+      "prepTime": {
+        "tr": "8-10 dk",
+        "en": "8-10 mins"
+      },
+      "portion": {
+        "tr": "320 ml kase (sarımsaklı sos ile)",
+        "en": "320 ml bowl (with garlic sauce)"
+      },
+      "tags": [
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "mild",
+      "available": true
+    },
+    {
+      "id": "adana-kebap",
+      "categoryId": "ana-yemekler",
+      "price": 360,
+      "name": {
+        "tr": "Adana Kebap",
+        "en": "Adana Kebab"
+      },
+      "story": {
+        "tr": "Zırhla çekilmiş kuzu kıyması, kök biber ve kuyruk yağıyla yoğrulup meşe kömürü ateşinde közlenir.",
+        "en": "Hand-minced lamb meat with sweet kapya pepper and tail fat, grilled over hot oak charcoal embers."
+      },
+      "prepTime": {
+        "tr": "15-20 dk",
+        "en": "15-20 mins"
+      },
+      "portion": {
+        "tr": "180 g et, lavaş ve köz garnitür",
+        "en": "180 g meat, flatbread & roasted garnish"
+      },
+      "tags": [
+        "spicy"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "spicy",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "urfa-kebap",
+      "categoryId": "ana-yemekler",
+      "price": 360,
+      "name": {
+        "tr": "Urfa Kebap",
+        "en": "Urfa Kebab"
+      },
+      "story": {
+        "tr": "Acısız tercih edenler için zırh kıyması, hafif kaya tuzu ve baharat dengesiyle közlenmiş yumuşacık lezzet.",
+        "en": "Mild, unspiced hand-minced lamb with sea salt and subtle spices, gently grilled to tender perfection."
+      },
+      "prepTime": {
+        "tr": "15-20 dk",
+        "en": "15-20 mins"
+      },
+      "portion": {
+        "tr": "180 g et, tırnak pide ve garnitür",
+        "en": "180 g meat, pita & roasted garnish"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "ali-nazik",
+      "categoryId": "ana-yemekler",
+      "price": 390,
+      "name": {
+        "tr": "Ali Nazik",
+        "en": "Ali Nazik Kebab"
+      },
+      "story": {
+        "tr": "Köz patlıcanlı ılık süzme yoğurt yatağında tereyağında sotelenmiş yumuşak kuzu lokum dilimleri.",
+        "en": "Smoky charbroiled eggplant folded into velvety garlic yogurt, crowned with tender sautéed lamb morsels."
+      },
+      "prepTime": {
+        "tr": "15-20 dk",
+        "en": "15-20 mins"
+      },
+      "portion": {
+        "tr": "320 g porsiyon",
+        "en": "320 g portion"
+      },
+      "tags": [],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "kuzu-tandir",
+      "categoryId": "ana-yemekler",
+      "price": 520,
+      "name": {
+        "tr": "Kuzu Tandır",
+        "en": "Slow-Roasted Lamb Tandir"
+      },
+      "story": {
+        "tr": "Kemikli kuzu incik, taş fırında kendi buharında 6 saat ağır ateşte lokum kıvamına gelene dek pişirilir.",
+        "en": "Tender bone-in lamb shank braised in stone oven steam for 6 hours until meltingly tender."
+      },
+      "prepTime": {
+        "tr": "20-25 dk",
+        "en": "20-25 mins"
+      },
+      "portion": {
+        "tr": "350 g (Kemikli et & fırın patates)",
+        "en": "350 g (Bone-in meat & roasted potatoes)"
+      },
+      "tags": [
+        "gluten-free"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": false,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "beyti-sarma",
+      "categoryId": "ana-yemekler",
+      "price": 410,
+      "name": {
+        "tr": "Beyti Sarma Kebap",
+        "en": "Beyti Sarma Kebab"
+      },
+      "story": {
+        "tr": "Közlenmiş zırh kebabı ince lavaşa sarılır; tereyağlı domates sosu, süzme yoğurt ve közlenmiş sebzelerle servis edilir.",
+        "en": "Chargrilled kebab wrapped in warm lavash flatbread, topped with spiced tomato butter sauce and strained yogurt."
+      },
+      "prepTime": {
+        "tr": "18-22 dk",
+        "en": "18-22 mins"
+      },
+      "portion": {
+        "tr": "340 g (yoğurt & sos ile)",
+        "en": "340 g (with yogurt & sauce)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "patlicanli-kebap",
+      "categoryId": "ana-yemekler",
+      "price": 420,
+      "name": {
+        "tr": "Patlıcanlı Kebap",
+        "en": "Eggplant Kebab"
+      },
+      "story": {
+        "tr": "Birecik kemer patlıcanı dilimleri arasına dizilen kuzu zırh kıymasının meşe ateşinde ağır ağır közlenmesiyle hazırlanır.",
+        "en": "Juicy hand-minced lamb skewered alternately with tender Birecik eggplant slices and roasted over oak embers."
+      },
+      "prepTime": {
+        "tr": "20-25 dk",
+        "en": "20-25 mins"
+      },
+      "portion": {
+        "tr": "360 g (tırnak pide & köz biber ile)",
+        "en": "360 g (with pita & roasted peppers)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "domatesli-kebap",
+      "categoryId": "ana-yemekler",
+      "price": 390,
+      "name": {
+        "tr": "Domatesli Kebap",
+        "en": "Tomato Kebab"
+      },
+      "story": {
+        "tr": "Sulu tarla domatesleri ve kuzu zırh kebabının aynı şişte közlenerek suyunu birbirine bıraktığı klasik Gaziantep lezzeti.",
+        "en": "Ripe tomatoes and spiced minced lamb grilled together on wide skewers so the smoky juices blend naturally."
+      },
+      "prepTime": {
+        "tr": "18-20 dk",
+        "en": "18-20 mins"
+      },
+      "portion": {
+        "tr": "330 g (lavaş & sumaklı soğan ile)",
+        "en": "330 g (with flatbread & sumac onion)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "fistikli-kebap",
+      "categoryId": "ana-yemekler",
+      "price": 440,
+      "name": {
+        "tr": "Fıstıklı Kebap",
+        "en": "Pistachio Kebab"
+      },
+      "story": {
+        "tr": "Zırhlanmış kuzu kıyması ile iri çekilmiş kavrulmuş Antep fıstığının meşe kömüründe buluştuğu özel kebap.",
+        "en": "Signature hand-minced lamb kebab enriched with coarsely crushed roasted Antep pistachios over charcoal."
+      },
+      "prepTime": {
+        "tr": "18-20 dk",
+        "en": "18-20 mins"
+      },
+      "portion": {
+        "tr": "200 g et, lavaş ve köz garnitür",
+        "en": "200 g meat, lavash & roasted garnish"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "peanuts",
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "kuzu-sis",
+      "categoryId": "ana-yemekler",
+      "price": 420,
+      "name": {
+        "tr": "Kuzu Şiş",
+        "en": "Lamb Shish Kebab"
+      },
+      "story": {
+        "tr": "Zeytinyağı, taze kekik ve soğan suyunda dinlendirilmiş süt kuzu küşleme küplerinin yüksek közde mühürlenmiş hâli.",
+        "en": "Marinated tender lamb loin cubes seared quickly over hot charcoal embers with oregano and olive oil."
+      },
+      "prepTime": {
+        "tr": "15-18 dk",
+        "en": "15-18 mins"
+      },
+      "portion": {
+        "tr": "200 g et, tırnak pide & garnitür",
+        "en": "200 g meat, pita & garnish"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "iskender-kebap",
+      "categoryId": "ana-yemekler",
+      "price": 420,
+      "name": {
+        "tr": "İskender Kebap",
+        "en": "Iskender Kebab"
+      },
+      "story": {
+        "tr": "Tırnak pide yatağında ince yaprak et döner, domates sosu, köy yoğurdu ve üzerine cızırdayan kızgın tereyağı ile.",
+        "en": "Thinly sliced leaf doner over diced pita bread with rich tomato sauce, yogurt, and sizzling browned butter."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "340 g (yoğurt & tereyağı ile)",
+        "en": "340 g (with yogurt & butter)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "hunkar-begendi",
+      "categoryId": "ana-yemekler",
+      "price": 440,
+      "name": {
+        "tr": "Hünkar Beğendi",
+        "en": "Sultan's Delight (Hünkar Beğendi)"
+      },
+      "story": {
+        "tr": "Köz patlıcanlı kaşarlı ipeksi beğendi yatağında, domates sosuyla ağır ateşte lokum gibi pişmiş dana tas kebabı.",
+        "en": "Slow-braised tender beef stew served atop smoky roasted eggplant and kashar cheese béchamel puree."
+      },
+      "prepTime": {
+        "tr": "15-20 dk",
+        "en": "15-20 mins"
+      },
+      "portion": {
+        "tr": "350 g porsiyon",
+        "en": "350 g portion"
+      },
+      "tags": [
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "et-doner",
+      "categoryId": "ana-yemekler",
+      "price": 380,
+      "name": {
+        "tr": "Yaprak Et Döner",
+        "en": "Sliced Beef & Lamb Doner"
+      },
+      "story": {
+        "tr": "Özel terbiyeli dana ve kuzu yaprak etin odun ateşinde ağır ağır dönerek kızarmış, pilav ve lavaşla servis edilen klasiği.",
+        "en": "Marinated stacked beef and lamb roasted slowly over wood fire, sliced thin and served with rice and flatbread."
+      },
+      "prepTime": {
+        "tr": "10-12 dk",
+        "en": "10-12 mins"
+      },
+      "portion": {
+        "tr": "180 g et, pilav & lavaş",
+        "en": "180 g meat, rice & flatbread"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "tavuk-doner",
+      "categoryId": "ana-yemekler",
+      "price": 260,
+      "name": {
+        "tr": "Tavuk Döner",
+        "en": "Chicken Doner"
+      },
+      "story": {
+        "tr": "Yoğurt ve baharatlarla dinlendirilmiş taze tavuk but ve göğüs yapraklarının nar gibi kızartılmış, patates ve pilavlı sunumu.",
+        "en": "Herb-marinated chicken thigh and breast roasted on the vertical spit, served with fries, rice, and lavash."
+      },
+      "prepTime": {
+        "tr": "10-12 dk",
+        "en": "10-12 mins"
+      },
+      "portion": {
+        "tr": "180 g tavuk, pilav & patates",
+        "en": "180 g chicken, rice & fries"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "tavuk"
+    },
+    {
+      "id": "izgara-kofte",
+      "categoryId": "ana-yemekler",
+      "price": 340,
+      "name": {
+        "tr": "Izgara Köfte",
+        "en": "Grilled Turkish Meatballs"
+      },
+      "story": {
+        "tr": "Klasik dana-kuzu döş harcı, kimyon ve taze soğanla yoğrulup kömür ateşinde sulu sulu mühürlenmiş el yapımı köfteler.",
+        "en": "Juicy handmade beef and lamb patties seasoned with cumin and onion, chargrilled over hot embers."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "200 g (6 adet köfte, piyaz & biber)",
+        "en": "200 g (6 meatballs, bean salad & pepper)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "tavuk-sis",
+      "categoryId": "ana-yemekler",
+      "price": 290,
+      "name": {
+        "tr": "Tavuk Şiş",
+        "en": "Chicken Shish Kebab"
+      },
+      "story": {
+        "tr": "Süt, salça ve kekik terbiyesinde dinlendirilmiş taze tavuk kalça etlerinin meşe közünde nar gibi kızarmış şiş sunumu.",
+        "en": "Tender chicken thigh cubes marinated in yogurt, tomato paste, and oregano, chargrilled on skewers."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "200 g et, pilav, lavaş & garnitür",
+        "en": "200 g meat, rice, lavash & garnish"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "tavuk"
+    },
+    {
+      "id": "tavuk-kanat",
+      "categoryId": "ana-yemekler",
+      "price": 300,
+      "name": {
+        "tr": "Tavuk Kanat Izgara",
+        "en": "Chargrilled Chicken Wings"
+      },
+      "story": {
+        "tr": "Özel baharat ve sarımsak sosuyla marine edilmiş dışı çıtır, içi sulu közde tavuk kanatları.",
+        "en": "Crispy-skinned, juicy chicken wings marinated in house garlic-herb blend and grilled over charcoal."
+      },
+      "prepTime": {
+        "tr": "15-18 dk",
+        "en": "15-18 mins"
+      },
+      "portion": {
+        "tr": "8 adet kanat, patates & köz biber",
+        "en": "8 wings, fries & roasted peppers"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "tavuk"
+    },
+    {
+      "id": "kuzu-pirzola",
+      "categoryId": "ana-yemekler",
+      "price": 480,
+      "name": {
+        "tr": "Kuzu Pirzola",
+        "en": "Grilled Lamb Chops"
+      },
+      "story": {
+        "tr": "Zeytinyağı, taze biberiye ve tane karabiber ile dinlendirilmiş süt kuzu kalem pirzolanın kömür ızgaradaki en saf hâli.",
+        "en": "Prime baby lamb chops marinated with olive oil, rosemary, and cracked black pepper, seared over charcoal."
+      },
+      "prepTime": {
+        "tr": "15-20 dk",
+        "en": "15-20 mins"
+      },
+      "portion": {
+        "tr": "4 kalem pirzola, köz domates & soğan",
+        "en": "4 chops, roasted tomato & onion"
+      },
+      "tags": [
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "dana-antrikot",
+      "categoryId": "ana-yemekler",
+      "price": 490,
+      "name": {
+        "tr": "Dana Antrikot Izgara",
+        "en": "Chargrilled Beef Ribeye"
+      },
+      "story": {
+        "tr": "Dinlendirilmiş mermer dokulu dana antrikot diliminin döküm ve kömür ızgarada mühürlenerek deniz tuzuyla sunumu.",
+        "en": "Well-marbled dry-aged beef ribeye seared over charcoal and finished with flaky sea salt and rosemary."
+      },
+      "prepTime": {
+        "tr": "15-18 dk",
+        "en": "15-18 mins"
+      },
+      "portion": {
+        "tr": "240 g et, fırın patates & köz sebze",
+        "en": "240 g steak, roasted potato & veggies"
+      },
+      "tags": [
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "karisik-izgara",
+      "categoryId": "ana-yemekler",
+      "price": 520,
+      "name": {
+        "tr": "Karışık Izgara Tabağı",
+        "en": "Mixed Grill Platter"
+      },
+      "story": {
+        "tr": "Adana kebap, kuzu şiş, ızgara köfte ve tavuk kanat çeşitlerinin közlenmiş domates, biber ve lavaş eşliğinde zengin seçkisi.",
+        "en": "Generous platter of Adana kebab, lamb shish, grilled meatballs, and chicken wings with roasted veggies and lavash."
+      },
+      "prepTime": {
+        "tr": "20-25 dk",
+        "en": "20-25 mins"
+      },
+      "portion": {
+        "tr": "420 g (4 çeşit ızgara & garnitür)",
+        "en": "420 g (4-item grill assortment & sides)"
+      },
+      "tags": [],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "lahmacun",
+      "categoryId": "ana-yemekler",
+      "price": 150,
+      "name": {
+        "tr": "Taş Fırın Lahmacun",
+        "en": "Crispy Stone-Oven Lahmacun"
+      },
+      "story": {
+        "tr": "Çıtır ince hamur üzerine zırhlanmış dana-kuzu kıyması, maydanoz, domates ve isot harcıyla odun fırınında pişirilir.",
+        "en": "Wafer-thin dough topped with spiced minced lamb-beef, fresh herbs, and sun-dried peppers baked over wood fire."
+      },
+      "prepTime": {
+        "tr": "8-12 dk",
+        "en": "8-12 mins"
+      },
+      "portion": {
+        "tr": "1 adet (Geniş boy, yeşillik ve limon ile)",
+        "en": "1 piece (Large, served with fresh herbs & lemon)"
+      },
+      "tags": [
+        "spicy"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "spicy",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "peynirli-pide",
+      "categoryId": "ana-yemekler",
+      "price": 240,
+      "name": {
+        "tr": "Peynirli Pide",
+        "en": "Anatolian Cheese Pide"
+      },
+      "story": {
+        "tr": "Yöresel beyaz peynir ve taze maydanoz harcının taş fırında kabaran çıtır kenarlı mayalı hamurla buluşması.",
+        "en": "Artisanal regional white cheese and fresh parsley baked atop golden, wood-fired boat-shaped crust."
+      },
+      "prepTime": {
+        "tr": "10-15 dk",
+        "en": "10-15 mins"
+      },
+      "portion": {
+        "tr": "1 boy pide (dilimlenmiş, tereyağlı kenar)",
+        "en": "1 whole pide (sliced, brushed with butter)"
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "kasarli-pide",
+      "categoryId": "ana-yemekler",
+      "price": 260,
+      "name": {
+        "tr": "Kaşarlı Pide",
+        "en": "Melted Kashar Cheese Pide"
+      },
+      "story": {
+        "tr": "İnce açılmış mayalı hamur üzerinde bolca eritilmiş Kars kaşarı, odun ateşinde çıtır kenarlarıyla ve tereyağlı.",
+        "en": "Generously topped with melted aged Anatolian kashar cheese on thin, wood-fired crusty dough brushed with butter."
+      },
+      "prepTime": {
+        "tr": "10-14 dk",
+        "en": "10-14 mins"
+      },
+      "portion": {
+        "tr": "1 boy pide (dilimlenmiş, tereyağlı)",
+        "en": "1 whole pide (sliced, buttered)"
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "kiymali-pide",
+      "categoryId": "ana-yemekler",
+      "price": 290,
+      "name": {
+        "tr": "Kıymalı Pide",
+        "en": "Minced Beef Pide"
+      },
+      "story": {
+        "tr": "Zırh kıyması, ince doğranmış domates, yeşil biber ve baharatlarla harmanlanıp taş fırında nar gibi kızartılır.",
+        "en": "Hand-minced beef blended with diced tomatoes, green peppers, and warm spices, baked crispy in our stone oven."
+      },
+      "prepTime": {
+        "tr": "12-16 dk",
+        "en": "12-16 mins"
+      },
+      "portion": {
+        "tr": "1 boy pide (dilimlenmiş, limon ile)",
+        "en": "1 whole pide (sliced, served with lemon)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "kusbasili-pide",
+      "categoryId": "ana-yemekler",
+      "price": 340,
+      "name": {
+        "tr": "Kuşbaşılı Pide",
+        "en": "Diced Beef Steak Pide"
+      },
+      "story": {
+        "tr": "Bıçak arası doğranmış dinlendirilmiş dana bonfile parçaları, kapya biber ve domatesle odun ateşinde pişirilir.",
+        "en": "Tender hand-diced aged beef cubes baked over wood fire with sweet red peppers and ripe tomatoes."
+      },
+      "prepTime": {
+        "tr": "14-18 dk",
+        "en": "14-18 mins"
+      },
+      "portion": {
+        "tr": "1 boy pide (dilimlenmiş, tereyağlı)",
+        "en": "1 whole pide (sliced, brushed with butter)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "kusbasili-kasarli-pide",
+      "categoryId": "ana-yemekler",
+      "price": 370,
+      "name": {
+        "tr": "Kuşbaşılı Kaşarlı Pide",
+        "en": "Diced Beef & Kashar Cheese Pide"
+      },
+      "story": {
+        "tr": "Lokum gibi dana kuşbaşı, taze biber ve domates harcının üzeri uzayan eritilmiş kaşar peyniriyle taçlandırılır.",
+        "en": "Wood-fired diced beef, peppers, and tomato finished under a bubbling layer of melted Anatolian kashar cheese."
+      },
+      "prepTime": {
+        "tr": "14-18 dk",
+        "en": "14-18 mins"
+      },
+      "portion": {
+        "tr": "1 boy pide (dilimlenmiş, tereyağlı)",
+        "en": "1 whole pide (sliced, brushed with butter)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "sucuklu-kasarli-pide",
+      "categoryId": "ana-yemekler",
+      "price": 310,
+      "name": {
+        "tr": "Sucuklu Kaşarlı Pide",
+        "en": "Turkish Sucuk & Kashar Pide"
+      },
+      "story": {
+        "tr": "Afyon usulü fermente dana sucuk dilimleri ve bol kaşar peynirinin taş fırında çıtır hamurla buluşması.",
+        "en": "Spiced Turkish fermented beef sausage slices and rich melted kashar cheese baked crisp in the stone oven."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "1 boy pide (dilimlenmiş, tereyağlı)",
+        "en": "1 whole pide (sliced, buttered)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "karisik-pide",
+      "categoryId": "ana-yemekler",
+      "price": 360,
+      "name": {
+        "tr": "Karışık Pide",
+        "en": "Chef's Mixed Pide"
+      },
+      "story": {
+        "tr": "Kıyma, dana kuşbaşı, fermente sucuk ve kaşar peynirini tek pidede buluşturan doyurucu taş fırın klasiği.",
+        "en": "Our signature mixed stone-oven pide combining minced beef, diced steak, Turkish sucuk, and melted kashar cheese."
+      },
+      "prepTime": {
+        "tr": "14-18 dk",
+        "en": "14-18 mins"
+      },
+      "portion": {
+        "tr": "1 boy pide (dilimlenmiş, tereyağlı)",
+        "en": "1 whole pide (sliced, brushed with butter)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "tas-firin"
+    },
+    {
+      "id": "tavuk-tantuni-durum",
+      "categoryId": "ana-yemekler",
+      "price": 210,
+      "name": {
+        "tr": "Mersin Tavuk Tantuni Dürüm",
+        "en": "Mersin Chicken Tantuni Wrap"
+      },
+      "story": {
+        "tr": "Saç tavada ince doğranmış tavuk göğsü, sumaklı soğan piyazı, domates ve taze maydanozla pamuk lavaşa sarılır.",
+        "en": "Finely diced griddle-seared chicken breast wrapped in soft lavash with sumac onions, tomato, and parsley."
+      },
+      "prepTime": {
+        "tr": "8-10 dk",
+        "en": "8-10 mins"
+      },
+      "portion": {
+        "tr": "240 g dürüm (turşu ile)",
+        "en": "240 g wrap (with pickles)"
+      },
+      "tags": [],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "tavuk"
+    },
+    {
+      "id": "et-tantuni-durum",
+      "categoryId": "ana-yemekler",
+      "price": 270,
+      "name": {
+        "tr": "Mersin Et Tantuni Dürüm",
+        "en": "Mersin Beef Tantuni Wrap"
+      },
+      "story": {
+        "tr": "Özel saç tavada pamuk yağı ve toz biberle kavrulmuş ince kıyım dana biftek, sumaklı soğan ve domatesle servis edilir.",
+        "en": "Finely chopped beef seared with paprika on a traditional griddle, wrapped with sumac onions, tomato, and parsley."
+      },
+      "prepTime": {
+        "tr": "8-10 dk",
+        "en": "8-10 mins"
+      },
+      "portion": {
+        "tr": "240 g dürüm (turşu ve limon ile)",
+        "en": "240 g wrap (with pickles & lemon)"
+      },
+      "tags": [],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "et"
+    },
+    {
+      "id": "zy-izgara-burger",
+      "categoryId": "ana-yemekler",
+      "price": 290,
+      "name": {
+        "tr": "Kasap Köfte Burger",
+        "en": "Butcher Craft Burger"
+      },
+      "story": {
+        "tr": "180 g dana kasap köfte, karamelize soğan, eritilmiş eski kaşar ve brioche ekmekte çıtır patates eşliğinde sunulur.",
+        "en": "180 g craft beef patty with caramelized onions, aged kashar cheese on brioche bun, served with crispy fries."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "Burger + 140 g patates",
+        "en": "Burger + 140 g fries"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "cheeseburger",
+      "categoryId": "ana-yemekler",
+      "price": 310,
+      "name": {
+        "tr": "Klasik Cheeseburger",
+        "en": "Classic Double Cheeseburger"
+      },
+      "story": {
+        "tr": "Izgara dana burger köftesi üzerine çift kat eritilmiş cheddar peyniri, kornişon turşu, marul ve özel burger sosuyla.",
+        "en": "Grilled beef patty layered with double melted cheddar cheese, crunchy pickles, crisp lettuce, and house burger sauce."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "Burger + 140 g patates",
+        "en": "Burger + 140 g fries"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "citir-tavuk-burger",
+      "categoryId": "ana-yemekler",
+      "price": 260,
+      "name": {
+        "tr": "Çıtır Tavuk Burger",
+        "en": "Crispy Chicken Burger"
+      },
+      "story": {
+        "tr": "Özel baharatlı kaplamayla altın sarısı kızartılmış tavuk fileto, taze göbek marul, turşu ve ballı hardal sosuyla.",
+        "en": "Golden spiced crispy fried chicken fillet topped with crisp iceberg lettuce, pickles, and honey mustard mayo."
+      },
+      "prepTime": {
+        "tr": "10-14 dk",
+        "en": "10-14 mins"
+      },
+      "portion": {
+        "tr": "Burger + 140 g patates",
+        "en": "Burger + 140 g fries"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "kumru-sandvic",
+      "categoryId": "ana-yemekler",
+      "price": 240,
+      "name": {
+        "tr": "İzmir Kumru Sandviç",
+        "en": "Izmir Kumru Grilled Sandwich"
+      },
+      "story": {
+        "tr": "Taze susamlı kumru ekmeğinde ızgara dana sucuk, salam, eritilmiş taze kaşar, dilim domates ve çıtır turşu uyumu.",
+        "en": "Toasted sesame kumru roll stuffed with grilled Turkish sucuk, salami, melted kashar cheese, tomato, and pickles."
+      },
+      "prepTime": {
+        "tr": "8-12 dk",
+        "en": "8-12 mins"
+      },
+      "portion": {
+        "tr": "1 adet sıcak sandviç + patates",
+        "en": "1 hot sandwich + fries"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "tavuk-nugget",
+      "categoryId": "ana-yemekler",
+      "price": 180,
+      "name": {
+        "tr": "Çıtır Tavuk Nuggets (8'li)",
+        "en": "Crispy Chicken Nuggets (8 pcs)"
+      },
+      "story": {
+        "tr": "%100 tavuk göğüs etinden hazırlanan çıtır nuggetlar, baharatlı patates kızartması ve ikili dip sos ile.",
+        "en": "Tender chicken breast nuggets in a crispy golden coating, served with spiced fries and dual dipping sauces."
+      },
+      "prepTime": {
+        "tr": "8-10 dk",
+        "en": "8-10 mins"
+      },
+      "portion": {
+        "tr": "8 adet nugget + patates",
+        "en": "8 nuggets + fries"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "sogan-halkasi",
+      "categoryId": "ana-yemekler",
+      "price": 115,
+      "name": {
+        "tr": "Çıtır Soğan Halkası (8'li)",
+        "en": "Crispy Onion Rings (8 pcs)"
+      },
+      "story": {
+        "tr": "İnce çıtır kaplamalı tatlı soğan halkaları, sıcak servis ve sarımsaklı ranch sos eşliğinde.",
+        "en": "Golden battered sweet onion rings served hot and crunchy alongside creamy garlic ranch dip."
+      },
+      "prepTime": {
+        "tr": "6-8 dk",
+        "en": "6-8 mins"
+      },
+      "portion": {
+        "tr": "8 adet sepet",
+        "en": "8 pieces basket"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "citir-patates",
+      "categoryId": "ana-yemekler",
+      "price": 120,
+      "name": {
+        "tr": "Baharatlı Çıtır Patates",
+        "en": "Spiced Crispy Fries"
+      },
+      "story": {
+        "tr": "Çift kızartma altın sarısı patates dilimleri, dağ kekiği ve tatlı toz kırmızı biber serpilerek sıcak servis edilir.",
+        "en": "Double-fried golden potato strips dusted with wild mountain thyme and sweet paprika."
+      },
+      "prepTime": {
+        "tr": "7-10 dk",
+        "en": "7-10 mins"
+      },
+      "portion": {
+        "tr": "220 g sepet",
+        "en": "220 g basket"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "margarita-pizza",
+      "categoryId": "ana-yemekler",
+      "price": 250,
+      "name": {
+        "tr": "Margarita Pizza",
+        "en": "Classic Margherita Pizza"
+      },
+      "story": {
+        "tr": "İtalyan usulü ince çıtır hamur üzerinde özel domates sosu, taze mozzarella peyniri, cherry domates ve fesleğen yaprakları.",
+        "en": "Thin crispy artisan crust topped with house tomato sauce, fresh mozzarella, cherry tomatoes, and sweet basil."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "Orta boy (30 cm, 8 dilim)",
+        "en": "Medium (30 cm, 8 slices)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "sucuklu-pizza",
+      "categoryId": "ana-yemekler",
+      "price": 290,
+      "name": {
+        "tr": "Sucuklu Pizza",
+        "en": "Turkish Sucuk Pizza"
+      },
+      "story": {
+        "tr": "Özel baharatlı domates sosu, bol mozzarella peyniri, ince dilim Afyon dana sucuğu ve kuru dağ kekiği ile fırınlanır.",
+        "en": "Baked with spiced tomato sauce, generous melted mozzarella, fermented Turkish beef sucuk slices, and wild oregano."
+      },
+      "prepTime": {
+        "tr": "12-16 dk",
+        "en": "12-16 mins"
+      },
+      "portion": {
+        "tr": "Orta boy (30 cm, 8 dilim)",
+        "en": "Medium (30 cm, 8 slices)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "karisik-pizza",
+      "categoryId": "ana-yemekler",
+      "price": 320,
+      "name": {
+        "tr": "Karışık Pizza",
+        "en": "Supreme Mixed Pizza"
+      },
+      "story": {
+        "tr": "Mozzarella üzerinde dana sucuk, kokteyl sosis, taze mantar, tatlı mısır, siyah zeytin ve renkli biberlerle dolu klasik lezzet.",
+        "en": "Loaded with mozzarella, beef sucuk, cocktail sausages, fresh mushrooms, sweet corn, black olives, and bell peppers."
+      },
+      "prepTime": {
+        "tr": "14-18 dk",
+        "en": "14-18 mins"
+      },
+      "portion": {
+        "tr": "Orta boy (30 cm, 8 dilim)",
+        "en": "Medium (30 cm, 8 slices)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "mild",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "tavuklu-bbq-pizza",
+      "categoryId": "ana-yemekler",
+      "price": 305,
+      "name": {
+        "tr": "Tavuklu BBQ Pizza",
+        "en": "BBQ Chicken Pizza"
+      },
+      "story": {
+        "tr": "İsli barbekü sosla harmanlanmış ızgara tavuk dilimleri, mozzarella, karamelize kırmızı soğan ve tatlı mısır taneleriyle.",
+        "en": "Smoky BBQ-glazed grilled chicken strips topped with mozzarella, caramelized red onions, and sweet corn."
+      },
+      "prepTime": {
+        "tr": "13-17 dk",
+        "en": "13-17 mins"
+      },
+      "portion": {
+        "tr": "Orta boy (30 cm, 8 dilim)",
+        "en": "Medium (30 cm, 8 slices)"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "klasik-kumpir",
+      "categoryId": "ana-yemekler",
+      "price": 210,
+      "name": {
+        "tr": "Klasik Kaşarlı Kumpir",
+        "en": "Classic Butter & Cheese Kumpir"
+      },
+      "story": {
+        "tr": "Fırında ağır ağır közlenmiş dev patates, saf köy tereyağı ve bol kaşar peyniriyle harmanlanıp mısır ve zeytinle sunulur.",
+        "en": "Large oven-baked jacket potato whipped fluffy with village butter and aged kashar cheese, topped with corn and olives."
+      },
+      "prepTime": {
+        "tr": "10-14 dk",
+        "en": "10-14 mins"
+      },
+      "portion": {
+        "tr": "450 g kumpir (mısır & zeytin)",
+        "en": "450 g baked potato (corn & olives)"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "karisik-kumpir",
+      "categoryId": "ana-yemekler",
+      "price": 270,
+      "name": {
+        "tr": "Full Karışık Kumpir",
+        "en": "Loaded Supreme Kumpir"
+      },
+      "story": {
+        "tr": "Tereyağı ve kaşarla ezilmiş köz patates üzerinde sosis, Rus salatası, mısır, siyah-yeşil zeytin, turşu ve kısır şöleni.",
+        "en": "Fluffy butter-cheese baked potato piled high with sausage, Russian salad, sweet corn, mixed olives, pickles, and bulgur salad."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "600 g dolu kumpir",
+        "en": "600 g loaded baked potato"
+      },
+      "tags": [
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "fast-food"
+    },
+    {
+      "id": "firin-sutlac",
+      "categoryId": "tatlilar",
+      "price": 145,
+      "name": {
+        "tr": "Hamsiköy Fırın Sütlaç",
+        "en": "Caramelized Baked Rice Pudding"
+      },
+      "story": {
+        "tr": "Günlük tam yağlı köy sütü ve kırık pirinçle ağır ateşte pişirilir, taş fırında üzeri nar gibi kızartılıp kavrulmuş fındıkla sunulur.",
+        "en": "Slow-simmered with whole village milk, blistered golden under intense heat, and finished with roasted hazelnuts."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "1 güveç kase (220 g)",
+        "en": "1 clay bowl (220 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "nuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "kazandibi",
+      "categoryId": "tatlilar",
+      "price": 155,
+      "name": {
+        "tr": "Karamelize Kazandibi",
+        "en": "Traditional Caramelized Kazandibi"
+      },
+      "story": {
+        "tr": "Manda ve inek sütü karışımından hazırlanan, altı bakır tepside karamelize edilmiş ipeksi ve hafif yanık aromalı klasik.",
+        "en": "Silky milk pudding gently scorched at the base in a copper pan for its signature caramelized finish."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "1 porsiyon (180 g, tarçın ile)",
+        "en": "1 portion (180 g, with cinnamon)"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "trilece",
+      "categoryId": "tatlilar",
+      "price": 165,
+      "name": {
+        "tr": "Karamelli Trileçe",
+        "en": "Caramel Trilece Milk Cake"
+      },
+      "story": {
+        "tr": "Üç çeşit sütle ıslatılmış pamuk gibi sünger kek üzerine ev yapımı akışkan yanık karamel sosuyla soğuk servis edilir.",
+        "en": "Airy sponge cake soaked in a blend of three milks and topped with house-made glossy burnt caramel glaze."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "1 büyük dilim (190 g)",
+        "en": "1 generous slice (190 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "cilekli-magnolya",
+      "categoryId": "tatlilar",
+      "price": 175,
+      "name": {
+        "tr": "Çilekli Magnolya",
+        "en": "Strawberry Vanilla Magnolia"
+      },
+      "story": {
+        "tr": "Madagaskar vanilyalı taze pastacı kreması katmanları arasında dilimlenmiş taze çilek ve çıtır bisküvi kırıkları.",
+        "en": "Layers of velvety Madagascar vanilla custard, fresh sliced strawberries, and crunchy golden biscuit crumbles."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "1 kupta (230 g)",
+        "en": "1 cup serving (230 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "supangle",
+      "categoryId": "tatlilar",
+      "price": 160,
+      "name": {
+        "tr": "Bitter Çikolatalı Supangle",
+        "en": "Dark Chocolate Supangle Pudding"
+      },
+      "story": {
+        "tr": "Gerçek bitter Belçika çikolatası ile hazırlanan yoğun kıvamlı soğuk puding, altında kakaolu kek ve üzerinde fıstık tozlarıyla.",
+        "en": "Rich dark chocolate chilled pudding layered over moist cocoa sponge, dusted with pistachio crumble."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "1 kase (200 g)",
+        "en": "1 bowl (200 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten",
+        "peanuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "lotus-magnolya",
+      "categoryId": "tatlilar",
+      "price": 185,
+      "name": {
+        "tr": "Lotus Biscoff Magnolya",
+        "en": "Lotus Biscoff Magnolia Cup"
+      },
+      "story": {
+        "tr": "Karamelize Lotus Biscoff bisküvi ezmesi, ipeksi vanilya kreması ve çıtır bisküvi kırıkları katmanlarıyla hazırlanan modern sütlü tatlı.",
+        "en": "Velvety vanilla cream layered with caramelized Lotus Biscoff spread and crunchy spiced biscuit crumbles."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "1 kupta (230 g)",
+        "en": "1 cup serving (230 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "profiterol",
+      "categoryId": "tatlilar",
+      "price": 180,
+      "name": {
+        "tr": "Belçika Çikolatalı Profiterol",
+        "en": "Belgian Chocolate Profiteroles"
+      },
+      "story": {
+        "tr": "Günlük taze pastacı kreması dolgulu yumuşak profiterol topları üzerinde sıcak akışkan Belçika çikolata sosu ve fıstık kırıntısıyla.",
+        "en": "Choux pastry puffs filled with fresh vanilla pastry cream and drenched in warm Belgian dark chocolate sauce."
+      },
+      "prepTime": {
+        "tr": "4-6 dk",
+        "en": "4-6 mins"
+      },
+      "portion": {
+        "tr": "1 kase (220 g)",
+        "en": "1 bowl (220 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten",
+        "peanuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "san-sebastian",
+      "categoryId": "tatlilar",
+      "price": 225,
+      "name": {
+        "tr": "San Sebastian Cheesecake",
+        "en": "San Sebastian Burnt Cheesecake"
+      },
+      "story": {
+        "tr": "Üzeri yüksek ısıda karamelize edilmiş, içi akışkan kremamsı Bask usulü cheesecake; yanında ılık Belçika sütlü çikolata sosuyla.",
+        "en": "Creamy crustless Basque cheesecake blistered golden on top, served alongside a pour of warm Belgian milk chocolate."
+      },
+      "prepTime": {
+        "tr": "4-6 dk",
+        "en": "4-6 mins"
+      },
+      "portion": {
+        "tr": "1 dilim (210 g) + çikolata sos",
+        "en": "1 slice (210 g) + chocolate pour"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "tiramisu",
+      "categoryId": "tatlilar",
+      "price": 200,
+      "name": {
+        "tr": "İtalyan Klasik Tiramisu",
+        "en": "Classic Italian Tiramisu"
+      },
+      "story": {
+        "tr": "Taze çekilmiş espresso kahve ile ıslatılmış savoiardi bisküviler, İtalyan mascarpone kreması ve yoğun kakao kaplamasıyla.",
+        "en": "Espresso-soaked savoiardi ladyfingers layered with silky mascarpone cream and dusted in dark cocoa powder."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "1 porsiyon (190 g)",
+        "en": "1 portion (190 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "cikolatali-sufle",
+      "categoryId": "tatlilar",
+      "price": 195,
+      "name": {
+        "tr": "Akışkan Belçika Çikolatalı Sufle",
+        "en": "Molten Belgian Chocolate Soufflé"
+      },
+      "story": {
+        "tr": "Sipariş anında fırınlanan, kaşık dokunuşuyla ortasından sıcak bitter çikolata akan sufle; bir top vanilyalı dondurma ile.",
+        "en": "Baked fresh to order with a molten dark chocolate heart, served warm alongside a scoop of vanilla bean ice cream."
+      },
+      "prepTime": {
+        "tr": "12-15 dk",
+        "en": "12-15 mins"
+      },
+      "portion": {
+        "tr": "1 sıcak porsiyon + dondurma",
+        "en": "1 warm soufflé + ice cream"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "sicak-brownie",
+      "categoryId": "tatlilar",
+      "price": 210,
+      "name": {
+        "tr": "Dondurmalı Sıcak Brownie",
+        "en": "Warm Walnut Fudge Brownie"
+      },
+      "story": {
+        "tr": "%70 kakao oranlı yoğun nemli cevizli brownie dilimi, üzerinde eriyen vanilyalı dondurma ve fındık pralin sosla.",
+        "en": "Rich 70% dark chocolate walnut fudge brownie warmed through and topped with vanilla ice cream and hazelnut praline."
+      },
+      "prepTime": {
+        "tr": "5-8 dk",
+        "en": "5-8 mins"
+      },
+      "portion": {
+        "tr": "1 kare dilim + 1 top dondurma",
+        "en": "1 warm square + 1 scoop ice cream"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten",
+        "nuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "belcika-waffle",
+      "categoryId": "tatlilar",
+      "price": 215,
+      "name": {
+        "tr": "Çilek & Muzlu Belçika Waffle",
+        "en": "Strawberry & Banana Belgian Waffle"
+      },
+      "story": {
+        "tr": "Dışı çıtır içi yumuşacık taze pişmiş Belçika waffle hamuru üzerinde sütlü-beyaz çikolata sos, çilek, muz ve kavrulmuş fındık.",
+        "en": "Crisp golden Belgian waffle drizzled with dual milk & white chocolate sauces, fresh strawberries, banana, and hazelnuts."
+      },
+      "prepTime": {
+        "tr": "8-12 dk",
+        "en": "8-12 mins"
+      },
+      "portion": {
+        "tr": "1 tam waffle",
+        "en": "1 full waffle"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten",
+        "nuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "dubai-cikolatali-kup",
+      "categoryId": "tatlilar",
+      "price": 240,
+      "name": {
+        "tr": "Dubai Çikolatalı Fıstık Kup",
+        "en": "Dubai Chocolate Pistachio Knafeh Cup"
+      },
+      "story": {
+        "tr": "Tereyağında kavrulmuş çıtır kadayıf ve yoğun Antep fıstığı kreması katmanlarının akışkan Belçika çikolatasıyla modern buluşması.",
+        "en": "Trendsetting dessert cup layering crisp roasted knafeh pastry, rich pistachio cream, and silky Belgian milk chocolate."
+      },
+      "prepTime": {
+        "tr": "4-6 dk",
+        "en": "4-6 mins"
+      },
+      "portion": {
+        "tr": "1 büyük kup (240 g)",
+        "en": "1 large cup (240 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten",
+        "peanuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "sutlu"
+    },
+    {
+      "id": "fistikli-baklava",
+      "categoryId": "tatlilar",
+      "price": 210,
+      "name": {
+        "tr": "Fıstıklı Baklava (3 dilim)",
+        "en": "Pistachio Baklava (3 slices)"
+      },
+      "story": {
+        "tr": "Gaziantep boz fıstığı ve saf sade yağ ile açılmış 40 kat ince yufkanın hafif pancar şekeri şerbetiyle dengesi.",
+        "en": "40 layers of crisp filo pastry filled with emerald Gaziantep pistachios and clarified butter in light syrup."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "3 dilim (130 g)",
+        "en": "3 slices (130 g)"
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "gluten",
+        "peanuts",
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "serbetli"
+    },
+    {
+      "id": "havuc-dilimi-baklava",
+      "categoryId": "tatlilar",
+      "price": 245,
+      "name": {
+        "tr": "Dondurmalı Havuç Dilimi Baklava",
+        "en": "Carrot-Cut Pistachio Baklava w/ Ice Cream"
+      },
+      "story": {
+        "tr": "Odun fırınında nar gibi kızarmış tek parça iri havuç dilimi baklava, ortasında Maraş usulü keçi sütü dondurmasıyla sıcak-soğuk uyumu.",
+        "en": "Crisp oven-baked large wedge pistachio baklava paired hot with creamy traditional Maraş goat-milk ice cream."
+      },
+      "prepTime": {
+        "tr": "5-7 dk",
+        "en": "5-7 mins"
+      },
+      "portion": {
+        "tr": "1 iri dilim + 1 top dondurma",
+        "en": "1 large slice + 1 scoop ice cream"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy",
+        "peanuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "serbetli"
+    },
+    {
+      "id": "kunefe",
+      "categoryId": "tatlilar",
+      "price": 230,
+      "name": {
+        "tr": "Hatay Usulü Künefe",
+        "en": "Hatay Crispy Künefe"
+      },
+      "story": {
+        "tr": "Taze tuzsuz künefe peyniri ve tel kadayıfın bakır tepside tereyağıyla nar gibi kızartılıp sıcak şerbetle sunumu.",
+        "en": "Shredded pastry layered with fresh sweet melting cheese, pan-crisped in clarified butter, finished with crushed pistachio."
+      },
+      "prepTime": {
+        "tr": "10-15 dk",
+        "en": "10-15 mins"
+      },
+      "portion": {
+        "tr": "1 porsiyon (sıcak bakır tabak)",
+        "en": "1 portion (served piping hot)"
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "dairy",
+        "gluten",
+        "peanuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "serbetli"
+    },
+    {
+      "id": "gaziantep-katmeri",
+      "categoryId": "tatlilar",
+      "price": 250,
+      "name": {
+        "tr": "Fıstıklı Gaziantep Katmeri",
+        "en": "Pistachio & Clotted Cream Katmer"
+      },
+      "story": {
+        "tr": "Zar inceliğinde açılmış çıtır hamur içine manda kaymağı, sade yağ ve bol Antep boz fıstığı doldurulup taş fırında pişirilir.",
+        "en": "Paper-thin flaky dough folded with buffalo clotted cream and generous emerald Gaziantep pistachios, baked stone-oven crisp."
+      },
+      "prepTime": {
+        "tr": "10-12 dk",
+        "en": "10-12 mins"
+      },
+      "portion": {
+        "tr": "1 tam porsiyon (dilimlenmiş)",
+        "en": "1 whole pastry (sliced)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy",
+        "peanuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "serbetli"
+    },
+    {
+      "id": "soguk-baklava",
+      "categoryId": "tatlilar",
+      "price": 235,
+      "name": {
+        "tr": "Fıstıklı Soğuk Baklava (3 dilim)",
+        "en": "Chilled Milky Pistachio Baklava (3 pcs)"
+      },
+      "story": {
+        "tr": "Özel sütlü hafif şerbetle dinlendirilmiş Antep fıstıklı baklava yaprakları, üzerinde ince kakao ve sütlü çikolata rendesiyle.",
+        "en": "Pistachio baklava soaked in a light chilled milk syrup and topped with fine cocoa and shaved milk chocolate."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "3 kare dilim (150 g)",
+        "en": "3 square slices (150 g)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy",
+        "peanuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "serbetli"
+    },
+    {
+      "id": "cevizli-kadayif",
+      "categoryId": "tatlilar",
+      "price": 190,
+      "name": {
+        "tr": "Kaymaklı Cevizli Tel Kadayıf",
+        "en": "Walnut Shredded Kadayıf"
+      },
+      "story": {
+        "tr": "Tereyağı ile çıtır kızarmış tel kadayıf arasında iri kırılmış yerli ceviz içi, yanında taze manda kaymağı ile.",
+        "en": "Golden butter-baked shredded pastry stuffed with coarse Anatolian walnuts, served with rich clotted cream."
+      },
+      "prepTime": {
+        "tr": "4-6 dk",
+        "en": "4-6 mins"
+      },
+      "portion": {
+        "tr": "1 porsiyon (kaymak eşliğinde)",
+        "en": "1 portion (with clotted cream)"
+      },
+      "tags": [
+        "vegetarian",
+        "mild"
+      ],
+      "allergens": [
+        "gluten",
+        "dairy",
+        "nuts"
+      ],
+      "spicy": "none",
+      "available": true,
+      "subcategoryId": "serbetli"
+    },
+    {
+      "id": "menengic-kahvesi",
+      "categoryId": "sicak-icecekler",
+      "price": 90,
+      "name": {
+        "tr": "Menengiç Kahvesi",
+        "en": "Wild Pistachio (Menengiç) Coffee"
+      },
+      "story": {
+        "tr": "Güneydoğu dağlarının yabani fıstık meyvesinden (çitlembik) kafeinsiz, zengin aromalı, suyla demlenen vegan kahve.",
+        "en": "Caffeine-free specialty brew crafted from wild pistachio berries (terebinth), rich, nutty, and vegan."
+      },
+      "prepTime": {
+        "tr": "5-7 dk",
+        "en": "5-7 mins"
+      },
+      "portion": {
+        "tr": "Geleneksel fincan (lokum ile)",
+        "en": "Traditional fincan cup (with Turkish delight)"
+      },
+      "tags": [
+        "vegan"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "turk-cayi",
+      "categoryId": "sicak-icecekler",
+      "price": 35,
+      "name": {
+        "tr": "Demleme Rize Çayı",
+        "en": "Brewed Turkish Black Tea"
+      },
+      "story": {
+        "tr": "Yüksek rakımlı Rize yapraklarından porselen demlikte ağır ağır demlenmiş, ince belli bardakta taze sıcak çay.",
+        "en": "Freshly brewed high-altitude Rize black tea served piping hot in a traditional tulip glass."
+      },
+      "prepTime": {
+        "tr": "2 dk",
+        "en": "2 mins"
+      },
+      "portion": {
+        "tr": "İnce belli bardak (120 ml)",
+        "en": "Tulip glass (120 ml)"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "turk-kahvesi",
+      "categoryId": "sicak-icecekler",
+      "price": 75,
+      "name": {
+        "tr": "Közde Türk Kahvesi",
+        "en": "Ember-Brewed Turkish Coffee"
+      },
+      "story": {
+        "tr": "Bakır cezvede köz ateşinde ağır ağır köpürtülen taze çekilmiş orta kavrum kahve, lokum ve soğuk su eşliğinde.",
+        "en": "Freshly ground medium-roast coffee slowly brewed in copper pot over embers, served with Turkish delight."
+      },
+      "prepTime": {
+        "tr": "4-6 dk",
+        "en": "4-6 mins"
+      },
+      "portion": {
+        "tr": "Fincan + lokum & su",
+        "en": "Fincan cup + delight & water"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "dibek-kahvesi",
+      "categoryId": "sicak-icecekler",
+      "price": 85,
+      "name": {
+        "tr": "Osmanlı Dibek Kahvesi",
+        "en": "Ottoman Dibek Stone-Ground Coffee"
+      },
+      "story": {
+        "tr": "Taş havanda dövülmüş yumuşak içimli kahve, kakule, menengiç, sahlep ve hafif krema harmanıyla aromatik fincan keyfi.",
+        "en": "Stone-pounded soft-bodied Turkish coffee blended with cardamom, pistachio resin, orchid root, and subtle cream."
+      },
+      "prepTime": {
+        "tr": "4-6 dk",
+        "en": "4-6 mins"
+      },
+      "portion": {
+        "tr": "Fincan + lokum & su",
+        "en": "Fincan cup + delight & water"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "salep",
+      "categoryId": "sicak-icecekler",
+      "price": 110,
+      "name": {
+        "tr": "Tarçınlı Sıcak Salep",
+        "en": "Warm Orchid-Root Salep w/ Cinnamon"
+      },
+      "story": {
+        "tr": "Hakiki dağ orkidesi kökü salebi ile tam yağlı sütün ağır ateşte kıvam almasıyla hazırlanır, bol tarçınla servis edilir.",
+        "en": "Velvety winter drink simmered slowly from genuine Anatolian orchid root powder and whole milk, dusted with cinnamon."
+      },
+      "prepTime": {
+        "tr": "5-7 dk",
+        "en": "5-7 mins"
+      },
+      "portion": {
+        "tr": "250 ml porselen kupa",
+        "en": "250 ml ceramic mug"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "bitki-cayi",
+      "categoryId": "sicak-icecekler",
+      "price": 70,
+      "name": {
+        "tr": "Kış & Bitki Çayı (Adaçayı / Ihlamur)",
+        "en": "Herbal Infusion (Sage & Linden Tea)"
+      },
+      "story": {
+        "tr": "Doğal kurutulmuş adaçayı yaprakları, ıhlamur çiçeği, taze limon ve zencefil dilimleriyle cam demlikte demlenir.",
+        "en": "Whole dried mountain sage leaves and linden blossoms steeped in glass pot with fresh lemon and ginger slices."
+      },
+      "prepTime": {
+        "tr": "4-5 dk",
+        "en": "4-5 mins"
+      },
+      "portion": {
+        "tr": "300 ml cam kupa / french press",
+        "en": "300 ml glass pot"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "v60-filtre-kahve",
+      "categoryId": "sicak-icecekler",
+      "price": 115,
+      "name": {
+        "tr": "V60 Nitelikli Filtre Kahve",
+        "en": "Single-Origin V60 Pour-Over Coffee"
+      },
+      "story": {
+        "tr": "Sipariş anında taze çekilmiş Etiyopya Yirgacheffe çekirdeklerinin el ile dökme (pour-over) yöntemiyle berrak demlemesi.",
+        "en": "Hand-poured single-origin Ethiopian Yirgacheffe coffee freshly ground to order for clean floral and citrus notes."
+      },
+      "prepTime": {
+        "tr": "4-5 dk",
+        "en": "4-5 mins"
+      },
+      "portion": {
+        "tr": "260 ml kupa",
+        "en": "260 ml cup"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "flat-white",
+      "categoryId": "sicak-icecekler",
+      "price": 120,
+      "name": {
+        "tr": "Flat White",
+        "en": "Artisan Flat White"
+      },
+      "story": {
+        "tr": "Çift shot yoğun espresso üzerine ipeksi mikro süt köpüğü dökülerek hazırlanan dengeli üçüncü dalga kahve klasiği.",
+        "en": "Double shot of rich espresso topped with silky textured microfoam milk for bold third-wave flavor."
+      },
+      "prepTime": {
+        "tr": "3-4 dk",
+        "en": "3-4 mins"
+      },
+      "portion": {
+        "tr": "200 ml fincan",
+        "en": "200 ml ceramic cup"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "caffe-latte",
+      "categoryId": "sicak-icecekler",
+      "price": 115,
+      "name": {
+        "tr": "Caffe Latte",
+        "en": "Creamy Caffe Latte"
+      },
+      "story": {
+        "tr": "Taze kavrulmuş espresso çekirdekleri, bol sıcak krema süt ve üzerinde ince süt köpüğü ile yumuşak kahve keyfi.",
+        "en": "Smooth espresso shot mellowed with generous steamed milk and a light velvety layer of foam."
+      },
+      "prepTime": {
+        "tr": "3-4 dk",
+        "en": "3-4 mins"
+      },
+      "portion": {
+        "tr": "280 ml kupa",
+        "en": "280 ml mug"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "karamel-macchiato",
+      "categoryId": "sicak-icecekler",
+      "price": 130,
+      "name": {
+        "tr": "Karamel Macchiato",
+        "en": "Warm Caramel Macchiato"
+      },
+      "story": {
+        "tr": "Doğal vanilya şuruplu buharlanmış süt, üzerinde taze espresso shot ve akışkan ev yapımı karamel sos gezdirmesi.",
+        "en": "Steamed vanilla milk marked with fresh espresso shots and finished with golden caramel drizzle."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "300 ml büyük fincan",
+        "en": "300 ml large cup"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "white-mocha",
+      "categoryId": "sicak-icecekler",
+      "price": 135,
+      "name": {
+        "tr": "White Chocolate Mocha",
+        "en": "White Chocolate Mocha"
+      },
+      "story": {
+        "tr": "Belçika beyaz çikolatasıyla eritilen sıcak sütün double espresso ile buluştuğu tatlı ve kadifemsi kahve.",
+        "en": "Melted Belgian white chocolate whisked into steamed milk and rich double espresso."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "300 ml kupa",
+        "en": "300 ml mug"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "sicak-matcha-latte",
+      "categoryId": "sicak-icecekler",
+      "price": 140,
+      "name": {
+        "tr": "Sıcak Matcha Latte",
+        "en": "Ceremonial Hot Matcha Latte"
+      },
+      "story": {
+        "tr": "Törensel kalite Japon yeşil matcha çayının bambu çırpıcıyla hazırlanıp sıcak kadifemsi sütle harmanlanmış yeni nesil lezzeti.",
+        "en": "Stone-ground Japanese ceremonial matcha whisked smooth and poured with velvety steamed milk."
+      },
+      "prepTime": {
+        "tr": "4-5 dk",
+        "en": "4-5 mins"
+      },
+      "portion": {
+        "tr": "280 ml kupa",
+        "en": "280 ml mug"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "ayran",
+      "categoryId": "soguk-icecekler",
+      "price": 50,
+      "name": {
+        "tr": "Köy Yayık Ayranı",
+        "en": "Traditional Churned Yayık Ayran"
+      },
+      "story": {
+        "tr": "Doğal koyun ve inek yoğurdundan geleneksel yayıkta çalkalanmış, bol köpüklü ve ferahlatıcı soğuk içecek.",
+        "en": "Frothy, salted yogurt beverage churned traditionally in oak vessels, served ice cold."
+      },
+      "prepTime": {
+        "tr": "2-3 dk",
+        "en": "2-3 mins"
+      },
+      "portion": {
+        "tr": "300 ml bakır maşrapada",
+        "en": "300 ml in copper mug"
+      },
+      "tags": [
+        "vegetarian"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "ev-yapimi-limonata",
+      "categoryId": "soguk-icecekler",
+      "price": 85,
+      "name": {
+        "tr": "Naneli Ev Yapımı Limonata",
+        "en": "Homemade Mint Lemonade"
+      },
+      "story": {
+        "tr": "Taze sıkılmış Mersin limonu, rendelenmiş limon kabuğu aroması ve taze bahçe nanesiyle hazırlanmış buz gibi serinlik.",
+        "en": "Freshly pressed Mersin lemons infused with zest aroma and garden mint leaves over crushed ice."
+      },
+      "prepTime": {
+        "tr": "3-5 dk",
+        "en": "3-5 mins"
+      },
+      "portion": {
+        "tr": "330 ml karaf bardak",
+        "en": "330 ml tall glass"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "salgam-suyu",
+      "categoryId": "soguk-icecekler",
+      "price": 65,
+      "name": {
+        "tr": "Adana Şalgam Suyu",
+        "en": "Traditional Adana Turnip Juice"
+      },
+      "story": {
+        "tr": "Mor havuç ve şalgam turpunun fıçıda doğal fermantasyonuyla elde edilen, kebapların geleneksel eşlikçisi.",
+        "en": "Naturally barrel-fermented purple carrot and turnip beverage, the classic companion to Anatolian kebabs."
+      },
+      "prepTime": {
+        "tr": "2 dk",
+        "en": "2 mins"
+      },
+      "portion": {
+        "tr": "300 ml cam şişe / bardak",
+        "en": "300 ml chilled glass"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "spicy"
+      ],
+      "allergens": [],
+      "spicy": "spicy",
+      "available": true
+    },
+    {
+      "id": "portakal-suyu",
+      "categoryId": "soguk-icecekler",
+      "price": 105,
+      "name": {
+        "tr": "Taze Sıkılmış Portakal Suyu",
+        "en": "Freshly Squeezed Orange Juice"
+      },
+      "story": {
+        "tr": "Finike ve Dörtyol bahçelerinden taze portakalların sipariş anında katkısız ve soğuk preslenerek sıkılmış doğal hali.",
+        "en": "100% pure, unpasteurized Antalya oranges pressed fresh to order with natural citrus sweetness."
+      },
+      "prepTime": {
+        "tr": "3-4 dk",
+        "en": "3-4 mins"
+      },
+      "portion": {
+        "tr": "300 ml cam bardak",
+        "en": "300 ml glass"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "iced-americano",
+      "categoryId": "soguk-icecekler",
+      "price": 110,
+      "name": {
+        "tr": "Iced Americano",
+        "en": "Iced Double Americano"
+      },
+      "story": {
+        "tr": "Bol buz ve soğuk filtre su üzerine taze çekilmiş double espresso shot ilavesiyle net, berrak ve ferah kahve deneyimi.",
+        "en": "Crisp chilled spring water over ice topped with a fresh double espresso pull for clean, bold refreshment."
+      },
+      "prepTime": {
+        "tr": "2-3 dk",
+        "en": "2-3 mins"
+      },
+      "portion": {
+        "tr": "350 ml buzlu bardak",
+        "en": "350 ml iced glass"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "iced-latte",
+      "categoryId": "soguk-icecekler",
+      "price": 130,
+      "name": {
+        "tr": "Iced Caramel Latte",
+        "en": "Iced Caramel Latte"
+      },
+      "story": {
+        "tr": "Buzlu soğuk süt, taze double espresso shot ve ev yapımı karamel şurubunun dengeli buluşması.",
+        "en": "Chilled fresh milk poured over ice with espresso and delicate house caramel syrup."
+      },
+      "prepTime": {
+        "tr": "3-4 dk",
+        "en": "3-4 mins"
+      },
+      "portion": {
+        "tr": "350 ml buzlu bardak",
+        "en": "350 ml tall iced glass"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "spanish-iced-latte",
+      "categoryId": "soguk-icecekler",
+      "price": 135,
+      "name": {
+        "tr": "Spanish Iced Latte",
+        "en": "Spanish Iced Latte"
+      },
+      "story": {
+        "tr": "Tatlı yoğunlaştırılmış süt kreması, soğuk süt ve taze espresso katmanlarının buz üzerinde buluştuğu popüler yeni nesil kahve.",
+        "en": "Trending layered iced espresso crafted with cold milk and velvety sweetened condensed milk cream."
+      },
+      "prepTime": {
+        "tr": "3-4 dk",
+        "en": "3-4 mins"
+      },
+      "portion": {
+        "tr": "350 ml cam bardak",
+        "en": "350 ml iced glass"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "cold-brew",
+      "categoryId": "soguk-icecekler",
+      "price": 130,
+      "name": {
+        "tr": "Cold Brew (18 Saat Demleme)",
+        "en": "18-Hour Slow Cold Brew"
+      },
+      "story": {
+        "tr": "Nitelikli kahve çekirdeklerinin soğuk suda 18 saat damla demlenmesiyle elde edilen düşük asiditeli, kakao notalı pürüzsüz kahve.",
+        "en": "Specialty beans slow-steeped for 18 hours in cold water for naturally sweet, cocoa-toned smoothness."
+      },
+      "prepTime": {
+        "tr": "2 dk",
+        "en": "2 mins"
+      },
+      "portion": {
+        "tr": "330 ml buzlu servis",
+        "en": "330 ml over ice"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "iced-matcha-strawberry",
+      "categoryId": "soguk-icecekler",
+      "price": 155,
+      "name": {
+        "tr": "Iced Strawberry Matcha Latte",
+        "en": "Iced Strawberry Matcha Latte"
+      },
+      "story": {
+        "tr": "Tabanda ev yapımı taze çilek püresi, ortada buzlu süt ve üstte çırpılmış Japon matcha çayının üç katmanlı ferah uyumu.",
+        "en": "Three refreshing layers of fresh strawberry compote, chilled milk, and whisked Japanese ceremonial matcha."
+      },
+      "prepTime": {
+        "tr": "4-5 dk",
+        "en": "4-5 mins"
+      },
+      "portion": {
+        "tr": "350 ml üç katmanlı bardak",
+        "en": "350 ml layered glass"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "berry-hibiscus",
+      "categoryId": "soguk-icecekler",
+      "price": 115,
+      "name": {
+        "tr": "Berry Hibiscus Cooler",
+        "en": "Iced Berry Hibiscus Refresher"
+      },
+      "story": {
+        "tr": "Soğuk demlenmiş yakut renkli hibiskus çayı, böğürtlen ve frambuaz taneleri ile çalkalanmış hafif mayhoş meyveli serinlik.",
+        "en": "Chilled ruby hibiscus infusion shaken with blackberries, raspberries, and crushed ice for crisp fruity refreshment."
+      },
+      "prepTime": {
+        "tr": "3-4 dk",
+        "en": "3-4 mins"
+      },
+      "portion": {
+        "tr": "350 ml buzlu bardak",
+        "en": "350 ml iced glass"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "mango-frozen",
+      "categoryId": "soguk-icecekler",
+      "price": 135,
+      "name": {
+        "tr": "Mango & Çarkıfelek Frozen",
+        "en": "Mango Passionfruit Frozen"
+      },
+      "story": {
+        "tr": "Olgun mango püresi ve egzotik çarkıfelek meyvesi aromasının kırılmış buzla kar kıvamında çekilmiş tropikal içeceği.",
+        "en": "Ripe tropical mango purée and fragrant passionfruit blended slush-smooth with crushed ice."
+      },
+      "prepTime": {
+        "tr": "4-5 dk",
+        "en": "4-5 mins"
+      },
+      "portion": {
+        "tr": "350 ml frozen bardak",
+        "en": "350 ml frozen glass"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "cilekli-milkshake",
+      "categoryId": "soguk-icecekler",
+      "price": 145,
+      "name": {
+        "tr": "Çilekli Milkshake",
+        "en": "Fresh Strawberry Milkshake"
+      },
+      "story": {
+        "tr": "Vanilyalı Maraş dondurması, taze çilek dilimleri ve soğuk sütün krema dokusunda çırpılmış yoğun tatlı serinliği.",
+        "en": "Thick and creamy shake blended from vanilla ice cream, chilled milk, and ripe garden strawberries."
+      },
+      "prepTime": {
+        "tr": "4-5 dk",
+        "en": "4-5 mins"
+      },
+      "portion": {
+        "tr": "350 ml bardak",
+        "en": "350 ml tall glass"
+      },
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [
+        "dairy"
+      ],
+      "spicy": "none",
+      "available": true
+    },
+    {
+      "id": "virgin-mojito",
+      "categoryId": "soguk-icecekler",
+      "price": 120,
+      "name": {
+        "tr": "Nane & Lime Mojito (Alkolsüz)",
+        "en": "Mint & Lime Virgin Mojito"
+      },
+      "story": {
+        "tr": "Hafifçe ezilmiş taze bahçe nanesi, misket limonu suyu, kırık buz ve doğal maden suyu ile gazlı yaz ferahlığı.",
+        "en": "Muddled fresh garden mint leaves, pressed lime juice, sparkling mineral water, and crushed ice (zero-proof)."
+      },
+      "prepTime": {
+        "tr": "3-4 dk",
+        "en": "3-4 mins"
+      },
+      "portion": {
+        "tr": "350 ml kokteyl bardağı",
+        "en": "350 ml tall glass"
+      },
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "mild"
+      ],
+      "allergens": [],
+      "spicy": "none",
+      "available": true
+    }
+  ]
+}

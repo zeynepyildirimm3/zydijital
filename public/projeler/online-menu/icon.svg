@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="112" fill="#09090B"/>
+  <circle cx="256" cy="235" r="180" fill="none" stroke="#D4A373" stroke-width="3" stroke-dasharray="10 6" opacity="0.7"/>
+  <circle cx="256" cy="235" r="160" fill="none" stroke="#D4A373" stroke-width="5"/>
+  <circle cx="256" cy="67" r="6" fill="#D4A373"/>
+  <circle cx="256" cy="403" r="6" fill="#D4A373"/>
+  <circle cx="88" cy="235" r="6" fill="#D4A373"/>
+  <circle cx="424" cy="235" r="6" fill="#D4A373"/>
+  <text x="256" y="295" text-anchor="middle" font-family="'Georgia', serif" font-weight="bold" font-size="165" fill="#FAFAFA" letter-spacing="6">ZY</text>
+  <text x="256" y="465" text-anchor="middle" font-family="'Georgia', serif" font-weight="bold" font-size="34" fill="#D4A373" letter-spacing="12">RESTORAN</text>
+</svg>
