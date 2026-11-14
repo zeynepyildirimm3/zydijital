@@ -63,7 +63,16 @@ const getInitialData = (): PortfolioData => {
           social: mergedSocial
         },
         stats: parsed.stats?.length ? parsed.stats : defaultStats,
-        projects: parsed.projects?.length ? parsed.projects : defaultProjects,
+        projects: (() => {
+          const savedProjects = parsed.projects || [];
+          const result: Project[] = [...savedProjects];
+          defaultProjects.forEach((defProj) => {
+            if (!result.some((p: Project) => p.id === defProj.id)) {
+              result.unshift(defProj);
+            }
+          });
+          return result.length ? result : defaultProjects;
+        })(),
         services: (() => {
           const savedServices = parsed.services || [];
           if (!savedServices.length) return defaultServices;
