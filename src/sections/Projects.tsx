@@ -17,7 +17,27 @@ export const Projects: React.FC = () => {
     setDeviceView(project.id === 'zy-online-menu' ? 'mobile' : 'desktop');
     setLivePreviewProject(project);
     setSelectedProject(null);
+    // Telefonun geri tuşuna basıldığında da kapanması için tarayıcı geçmişine durum ekle
+    window.history.pushState({ zyModal: 'livePreview' }, '');
   };
+
+  const handleCloseLive = () => {
+    setLivePreviewProject(null);
+    if (window.history.state?.zyModal === 'livePreview') {
+      window.history.back();
+    }
+  };
+
+  // Telefonun fiziksel / tarayıcı geri tuşuna basıldığında canlı önizlemeyi kapat
+  React.useEffect(() => {
+    const handlePopState = () => {
+      if (livePreviewProject) {
+        setLivePreviewProject(null);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [livePreviewProject]);
 
   return (
     <section id="projeler" className="py-16 sm:py-24 relative bg-dark-900/30">
@@ -143,27 +163,38 @@ export const Projects: React.FC = () => {
           aria-modal="true"
           className="fixed inset-0 z-50 flex flex-col bg-dark-950/95 backdrop-blur-xl animate-in fade-in duration-200"
         >
-          {/* Top Control Bar */}
-          <header className="h-16 px-4 sm:px-6 border-b border-white/[0.08] bg-dark-900/90 flex items-center justify-between gap-4 flex-shrink-0">
-            {/* Project Title & Badge */}
-            <div className="flex items-center gap-3 min-w-0">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
+          {/* Top Control Bar (Mobilde ve Masaüstünde Daima Sabit) */}
+          <header className="h-14 sm:h-16 px-3 sm:px-6 border-b border-white/[0.08] bg-dark-900/95 backdrop-blur-md flex items-center justify-between gap-2 sm:gap-4 flex-shrink-0 z-20">
+            {/* Sol: Geri / Projelere Dön Butonu & Proje Başlığı */}
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+              <button
+                type="button"
+                onClick={handleCloseLive}
+                aria-label="Projelere Dön"
+                className="px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-300 hover:text-white border border-white/[0.08] text-xs font-medium inline-flex items-center gap-1 transition-all flex-shrink-0 cursor-pointer"
+                title="Projelere Dön"
+              >
+                <span>←</span>
+                <span className="hidden xs:inline sm:inline">Projeler</span>
+              </button>
+
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
               <div className="min-w-0">
-                <h3 className="text-sm font-semibold text-white truncate">
+                <h3 className="text-xs sm:text-sm font-semibold text-white truncate">
                   {livePreviewProject.title}
                 </h3>
-                <span className="text-[11px] font-mono text-violet-400 block truncate">
-                  Canlı Etkileşimli Önizleme · Aynı Sekmede Gezinme
+                <span className="text-[10px] sm:text-[11px] font-mono text-violet-400 block truncate hidden xs:block">
+                  Canlı Önizleme
                 </span>
               </div>
             </div>
 
-            {/* Device Switcher (Telefon / Tablet / Geniş Ekran) */}
+            {/* Orta: Device Switcher (Sadece masaüstünde/geniş ekranda görünür) */}
             <div className="hidden sm:flex items-center gap-1 p-1 rounded-xl bg-dark-850 border border-white/[0.08]">
               <button
                 type="button"
                 onClick={() => setDeviceView('mobile')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono inline-flex items-center gap-1.5 transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono inline-flex items-center gap-1.5 transition-all cursor-pointer ${
                   deviceView === 'mobile'
                     ? 'bg-violet-600 text-white shadow-sm'
                     : 'text-slate-400 hover:text-white'
@@ -176,7 +207,7 @@ export const Projects: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setDeviceView('tablet')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono inline-flex items-center gap-1.5 transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono inline-flex items-center gap-1.5 transition-all cursor-pointer ${
                   deviceView === 'tablet'
                     ? 'bg-violet-600 text-white shadow-sm'
                     : 'text-slate-400 hover:text-white'
@@ -189,7 +220,7 @@ export const Projects: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setDeviceView('desktop')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono inline-flex items-center gap-1.5 transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono inline-flex items-center gap-1.5 transition-all cursor-pointer ${
                   deviceView === 'desktop'
                     ? 'bg-violet-600 text-white shadow-sm'
                     : 'text-slate-400 hover:text-white'
@@ -201,22 +232,22 @@ export const Projects: React.FC = () => {
               </button>
             </div>
 
-            {/* Right Action: Yenile + Kapat Butonu */}
-            <div className="flex items-center gap-2 flex-shrink-0">
+            {/* Sağ: Yenile + Belirgin Parlak Kapat Butonu (Mobilde de kocaman görünür) */}
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
               <button
                 type="button"
                 onClick={() => setIframeKey((prev) => prev + 1)}
                 aria-label="Yeniden Yükle"
-                className="p-2 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-400 hover:text-white border border-white/[0.08] transition-all"
+                className="p-1.5 sm:p-2 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-400 hover:text-white border border-white/[0.08] transition-all cursor-pointer"
                 title="Demoyu Yeniden Yükle"
               >
-                <RotateCcw className="w-4 h-4" />
+                <RotateCcw className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
               <button
                 type="button"
-                onClick={() => setLivePreviewProject(null)}
+                onClick={handleCloseLive}
                 aria-label="Kapat ve Projelere Dön"
-                className="px-4 py-2 rounded-xl bg-dark-850 hover:bg-dark-800 text-slate-200 hover:text-white border border-white/[0.08] text-xs font-semibold inline-flex items-center gap-1.5 transition-all"
+                className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 hover:brightness-110 text-white border border-violet-400/30 text-xs font-bold inline-flex items-center gap-1.5 shadow-md shadow-violet-500/25 transition-all active:scale-95 cursor-pointer"
               >
                 <X className="w-4 h-4" />
                 <span>Kapat</span>
@@ -224,20 +255,31 @@ export const Projects: React.FC = () => {
             </div>
           </header>
 
-          {/* Interactive Live Screen Container */}
-          <div className="flex-1 overflow-auto flex items-center justify-center p-2 sm:p-6 bg-dark-950/60">
+          {/* Interactive Live Screen Container (Mobilde tam ekran, masaüstünde cihaz çerçevesi) */}
+          <div className="flex-1 overflow-hidden flex items-center justify-center p-0 sm:p-6 bg-dark-950/60 relative">
+            {/* Mobilde Ekranın Sağ Altında Yüzen Ekstra Güvence Kapatma Butonu */}
+            <button
+              type="button"
+              onClick={handleCloseLive}
+              aria-label="Önizlemeyi Kapat"
+              className="sm:hidden fixed bottom-5 right-4 z-50 px-4 py-2.5 rounded-full bg-violet-600/95 hover:bg-violet-500 text-white border border-white/20 shadow-2xl shadow-black font-bold text-xs inline-flex items-center gap-1.5 active:scale-95 cursor-pointer backdrop-blur-md"
+            >
+              <X className="w-4 h-4" />
+              <span>Kapat</span>
+            </button>
+
             <div
-              className={`transition-all duration-300 relative bg-dark-900 overflow-hidden shadow-2xl flex flex-col ${
+              className={`transition-all duration-300 relative bg-dark-900 overflow-hidden shadow-2xl flex flex-col w-full h-full max-sm:rounded-none max-sm:border-0 ${
                 deviceView === 'mobile'
-                  ? 'w-[390px] h-[780px] max-h-[85vh] rounded-[44px] border-[10px] border-dark-800 shadow-[0_0_50px_rgba(168,85,247,0.15)] ring-1 ring-white/10'
+                  ? 'sm:w-[390px] sm:h-[780px] sm:max-h-[85vh] sm:rounded-[44px] sm:border-[10px] sm:border-dark-800 sm:shadow-[0_0_50px_rgba(168,85,247,0.15)] sm:ring-1 sm:ring-white/10'
                   : deviceView === 'tablet'
-                  ? 'w-[768px] h-[85vh] rounded-[32px] border-[10px] border-dark-800 shadow-[0_0_50px_rgba(168,85,247,0.15)] ring-1 ring-white/10'
-                  : 'w-full h-full rounded-2xl border border-white/[0.08]'
+                  ? 'sm:w-[768px] sm:h-[85vh] sm:rounded-[32px] sm:border-[10px] sm:border-dark-800 sm:shadow-[0_0_50px_rgba(168,85,247,0.15)] sm:ring-1 sm:ring-white/10'
+                  : 'w-full h-full sm:rounded-2xl sm:border sm:border-white/[0.08]'
               }`}
             >
-              {/* iPhone Mockup Dynamic Island / Speaker notch for mobile view */}
+              {/* iPhone Mockup Dynamic Island (Sadece masaüstünde cihaz çerçevesindeyken görünür) */}
               {deviceView === 'mobile' && (
-                <div className="h-6 bg-dark-800 flex items-center justify-center flex-shrink-0">
+                <div className="hidden sm:flex h-6 bg-dark-800 items-center justify-center flex-shrink-0">
                   <div className="w-24 h-3.5 bg-dark-950 rounded-full" />
                 </div>
               )}
