@@ -68,10 +68,16 @@ const getInitialData = (): PortfolioData => {
           const result: Project[] = [...savedProjects];
           defaultProjects.forEach((defProj) => {
             if (!result.some((p: Project) => p.id === defProj.id)) {
-              result.unshift(defProj);
+              result.push(defProj);
             }
           });
-          return result.length ? result : defaultProjects;
+          // Varsayılan proje sırasını content.ts ile senkronize tut (zeynep-portfolio ilk sırada)
+          const defaultOrder = new Map(defaultProjects.map((p, idx) => [p.id, idx]));
+          return result.sort((a, b) => {
+            const idxA = defaultOrder.has(a.id) ? defaultOrder.get(a.id)! : Number.MAX_SAFE_INTEGER;
+            const idxB = defaultOrder.has(b.id) ? defaultOrder.get(b.id)! : Number.MAX_SAFE_INTEGER;
+            return idxA - idxB;
+          });
         })(),
         services: (() => {
           const savedServices = parsed.services || [];
