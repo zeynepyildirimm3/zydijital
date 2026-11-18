@@ -56,10 +56,16 @@ const getInitialData = (): PortfolioData => {
           : savedSocial.instagram,
       };
 
+      const savedEmail = parsed.personalInfo?.email;
+      const mergedEmail = (!savedEmail || savedEmail.trim().toLowerCase() === 'yildirimzeynepweb@gmail.com')
+        ? defaultPersonalInfo.email
+        : savedEmail;
+
       return {
         personalInfo: { 
           ...defaultPersonalInfo, 
           ...(parsed.personalInfo || {}),
+          email: mergedEmail,
           social: mergedSocial
         },
         stats: parsed.stats?.length ? parsed.stats : defaultStats,

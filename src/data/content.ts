@@ -6,7 +6,7 @@ export const personalInfo = {
   tagline: 'Dijital çağın dinamizmiyle şekillenen, özgün ve modern web deneyimleri.',
   bio: 'Genç bir vizyonun enerjisini, modern tasarım zevki ve titiz bir çalışma disipliniyle birleştiriyorum. Ezbere kalıplara takılmadan; markanızı internette öne çıkaracak, hızlı, etkileyici ve yaşayan web siteleri inşa ediyorum.',
   location: 'İstanbul / Remote',
-  email: 'yildirimzeynepweb@gmail.com',
+  email: 'zeynepyildirimdijital@gmail.com',
   status: 'Yeni web projeleri & yaratıcı fikirler için müsait',
   social: {
     instagram: 'https://www.instagram.com/zydijital_/',
