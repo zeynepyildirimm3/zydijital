@@ -71,7 +71,11 @@ const getInitialData = (): PortfolioData => {
         stats: parsed.stats?.length ? parsed.stats : defaultStats,
         projects: (() => {
           const savedProjects = parsed.projects || [];
-          const result: Project[] = [...savedProjects];
+          // Eski veya mükerrer 'hukuk-burosu' id'sini ve tekrarlayan kayıtları temizle
+          const cleanedSaved = savedProjects.filter(
+            (p: Project) => p.id !== 'hukuk-burosu' && !(p.id !== 'zy-hukuk-burosu' && (p.link?.includes('hukuk-burosu') || p.title?.includes('Hukuk Bürosu')))
+          );
+          const result: Project[] = [...cleanedSaved];
           defaultProjects.forEach((defProj) => {
             if (!result.some((p: Project) => p.id === defProj.id)) {
               result.push(defProj);
