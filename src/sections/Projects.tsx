@@ -53,8 +53,8 @@ export const Projects: React.FC = () => {
           </h2>
         </div>
 
-        {/* Projects 2-Column Side-by-Side Showcase */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        {/* Projects Showcase Grid (Masaüstünde 3'lü Yan Yana, Kompakt Vitrin) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {projects.map((project) => (
             <div
               key={project.id}

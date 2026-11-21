@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avukatlarımız &amp; Hukuk Ekibimiz | HUKUK BÜROSU</title>
+    <meta name="description" content="Hukuk Büromuz deneyimli avukat kadrosu, danışmanları ve hukuk heyeti.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=23.0">
+</head>
+<body class="bg-obsidian text-pearl font-body antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Ambient Luxury Background Lighting -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-top-right"></div>
+    <div class="ambient-glow glow-center"></div>
+
+    <!-- Main Navigation Bar (Sol: Amblem ve İsim, Sağ: Giriş / Anasayfa) -->
+    <header class="navbar-wrapper sticky-nav" id="mainHeader">
+        <div class="container-luxury flex-between py-4">
+            <!-- Sol: Brand Crest & Monogram -->
+            <a href="index.html" class="brand-crest flex-items-center gap-3" title="Anasayfa - Hukuk Bürosu">
+                <div class="crest-emblem">
+                    <svg viewBox="0 0 100 100" class="w-10 h-10 crest-svg">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="2" stroke-dasharray="2 3"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="url(#goldGradient)" stroke-width="1.2"/>
+                        <path d="M50 16 L56 32 L74 34 L60 46 L64 64 L50 54 L36 64 L40 46 L26 34 L44 32 Z" fill="url(#goldGradient)" opacity="0.3"/>
+                        <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                              stroke="url(#goldGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F5E7A9"/>
+                                <stop offset="50%" stop-color="#D4AF37"/>
+                                <stop offset="100%" stop-color="#917224"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="brand-typography">
+                    <span class="brand-title">HUKUK BÜROSU</span>
+                    <span class="brand-subtitle">AVUKATLIK &amp; DANIŞMANLIK</span>
+                </div>
+            </a>
+
+                        <!-- Orta: Masaüstü Prestijli Sekmeler (Nav Links) -->
+            <nav class="nav-links desktop-only" aria-label="Ana Menü">
+                <a href="index.html" class="nav-item"><span class="nav-num">01.</span>Ana Sayfa</a>
+                <a href="hakkimizda.html" class="nav-item"><span class="nav-num">02.</span>Hakkımızda</a>
+                <a href="uzmanliklar.html" class="nav-item"><span class="nav-num">03.</span>Faaliyet Alanlarımız</a>
+                <a href="ortaklar.html" class="nav-item active"><span class="nav-num">04.</span>Avukatlarımız</a>
+                <a href="iletisim.html" class="nav-item"><span class="nav-num">05.</span>İletişim</a>
+            </nav>
+
+            <!-- Sağ: Aksiyonlar (Masaüstü Randevu Butonu + Mobil Hamburger/Arama) -->
+            <div class="nav-right-cluster flex-items-center gap-3">
+                <a href="iletisim.html" class="nav-home-btn desktop-only" title="Hemen Randevu Alın">
+                    <i class="fa-solid fa-calendar-check text-gold"></i>
+                    <span>Randevu Al</span>
+                </a>
+                <a href="tel:+902129900000" class="mobile-call-icon-btn mobile-only" title="Telefonla Arayın" aria-label="Telefonla Arayın">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <button class="mobile-menu-toggle mobile-only" id="mobileMenuBtn" aria-label="Menüyü Aç" title="Menüyü Aç">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBİL YANDAN KAYAN LÜKS MENÜ (DRAWER) -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header flex-between">
+            <div class="brand-typography">
+                <span class="brand-title" style="font-size: 1.05rem;">HUKUK BÜROSU</span>
+                <span class="brand-subtitle">HUKUK &amp; DANIŞMANLIK</span>
+            </div>
+            <button class="close-drawer" id="closeDrawerBtn" aria-label="Kapat">&times;</button>
+        </div>
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-link"><i class="fa-solid fa-house text-gold mr-2"></i> 01. Ana Sayfa</a>
+            <a href="hakkimizda.html" class="mobile-link"><i class="fa-solid fa-landmark text-gold mr-2"></i> 02. Hakkımızda</a>
+            <a href="uzmanliklar.html" class="mobile-link"><i class="fa-solid fa-scale-balanced text-gold mr-2"></i> 03. Faaliyet Alanlarımız</a>
+            <a href="ortaklar.html" class="mobile-link active"><i class="fa-solid fa-user-tie text-gold mr-2"></i> 04. Avukatlarımız</a>
+            <a href="iletisim.html" class="mobile-link"><i class="fa-solid fa-envelope text-gold mr-2"></i> 05. İletişim &amp; Randevu</a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <a href="tel:+902129900000" class="btn-luxury-primary w-full text-center mb-3" style="padding: 0.75rem; display: block;">
+                <i class="fa-solid fa-phone mr-2"></i> 0212 990 00 00
+            </a>
+            <a href="https://wa.me/905000000000" target="_blank" rel="noopener" class="btn-luxury-outline w-full text-center" style="padding: 0.65rem; border-color: #25D366; color: #25D366; display: block;">
+                <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Danışma
+            </a>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- BİRLEŞİK, DERLİ TOPLU VE PRESTİJLİ AVUKAT KADROSU DÜZENİ                     -->
+    <!-- Hakkımızda sayfasının 2px altın çerçeveli ve şeffaf zeminli mimarisine tam uyumlu -->
+    <!-- ========================================================================= -->
+    <main class="about-unified-container">
+        
+        <!-- ÜST KISIM: KISA VE VURUCU EDİTORYAL MANŞET -->
+        <header class="about-hero-compact">
+            <span class="section-eyebrow">SAVUNMA MAKAMI &amp; DAVA KONSEYİ</span>
+            <h1 class="section-title text-4xl mt-3">
+                Avukat Kadromuz &amp; Hukuk Heyetimiz <br>
+                <span class="gold-gradient-text italic-serif">Kıdemli, Bağımsız ve İlkeli Temsil.</span>
+            </h1>
+            <div class="gold-separator mx-auto"></div>
+            <p class="text-secondary text-base mt-4 leading-relaxed">
+                Dava ve uyuşmazlık süreçlerini salt bir dosya takibi olarak değil; müvekkillerimizin hukuki güvenliğini ve hak arama özgürlüğünü en üst düzeyde koruyan stratejik bir emanet olarak yöneten avukat kadromuz.
+            </p>
+        </header>
+
+        <!-- ORTA KISIM: AVUKAT KADROSU KUTULARI (2 SÜTUNLU ŞIK GRID) -->
+        <div class="about-qa-grid">
+            
+            <!-- KART 01: AV. MEHMET ERDEM -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-gavel"></i> 01. KIDEMLİ DAVA VEKİLİ</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Av. Mehmet Erdem</h2>
+                    <p class="text-xs text-gold mb-2 font-serif tracking-wider uppercase">İstanbul Barosu | Kıdemli Dava Avukatı</p>
+                    <p class="qa-answer">
+                        İstanbul Üniversitesi Hukuk Fakültesi mezunu. Ağır ceza yargılamaları, ticari ceza davaları, şirketler arası uyuşmazlıklar ve Yargıtay nezdindeki temyiz süreçlerinde çeyrek asra yaklaşan fiili duruşma tecrübesiyle savunma makamını temsil etmektedir.
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Duruşma ve Kürsü Disiplini:</strong> Ağır Ceza ve Ticaret Mahkemelerinde tavizsiz savunma vekilligi.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Yüksek Yargı İçtihat Taraması:</strong> Emsal Yargıtay Ceza ve Hukuk Genel Kurulu kararlarıyla stratejik savunma kurgusu.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Müvekkil Gizliliği:</strong> Avukatlık Kanunu m. 36 uyarınca mutlak ve süresiz sır saklama ilkesine tam bağlılık.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KART 02: AV. SELİN KARAHAN -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-briefcase"></i> 02. ŞİRKETLER &amp; M&amp;A</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-handshake-simple"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Av. Selin Karahan, LL.M.</h2>
+                    <p class="text-xs text-gold mb-2 font-serif tracking-wider uppercase">İstanbul Barosu | Şirketler &amp; Tahkim Danışmanı</p>
+                    <p class="qa-answer">
+                        Galatasaray Üniversitesi Hukuk Fakültesi lisans ve Özel Hukuk yüksek lisans derecesine sahiptir. Şirket birleşme ve devralmaları (M&amp;A), hissedarlar sözleşmesi tasarımı, ticari tahkim ve kurumsal önleyici hukuk danışmanlığında uzmanlaşmıştır.
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Şirketler &amp; M&amp;A Denetimi:</strong> Kapsamlı hukuki inceleme (Due Diligence) ve hisse devir müzakereleri.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Tahkim &amp; Uyuşmazlık Yönetimi:</strong> ISTAC ve ICC kuralları uyarınca ticari tahkim heyetlerinde temsil.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Sözleşme Mimarisi:</strong> Çok taraflı ticari sözleşmelerin hazırlanması ve kurumsal regülasyon uyumu.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KART 03: AV. BURAK YILMAZ -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-building"></i> 03. GAYRİMENKUL &amp; MÜLKİYET</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Av. Burak Yılmaz</h2>
+                    <p class="text-xs text-gold mb-2 font-serif tracking-wider uppercase">İstanbul Barosu | Mülkiyet &amp; İmar Hukuku</p>
+                    <p class="qa-answer">
+                        Marmara Üniversitesi Hukuk Fakültesi mezunu. Tapu iptal ve tescil davaları, arsa payı karşılığı inşaat sözleşmeleri, kamulaştırmasız el atma ihtilafları ve miras taksim süreçlerinde aktif duruşma ve dava yönetimi yürütmektedir.
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Mülkiyet &amp; Tapu Davaları:</strong> Hukuka aykırı tescillerin iptali, şufa (önalım) ve tasarrufun korunması.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>İnşaat Hukuku &amp; Eser Sözleşmeleri:</strong> Müteahhit temerrüdü, gecikme tazminatı ve eksik iş davaları.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Miras Hukuku İhtilafları:</strong> Muris muvazaası ve miras ortaklığının giderilmesi davalarının takibi.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KART 04: AV. ZEYNEP DEMİR -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-file-contract"></i> 04. İŞ HUKUKU &amp; UYUM</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Av. Zeynep Demir</h2>
+                    <p class="text-xs text-gold mb-2 font-serif tracking-wider uppercase">İstanbul Barosu | İş Hukuku &amp; Arabuluculuk</p>
+                    <p class="qa-answer">
+                        Ankara Üniversitesi Hukuk Fakültesi mezunu. İş ve sosyal güvenlik hukuku davaları, toplu iş sözleşmesi müzakereleri, uzman arabuluculuk süreçleri ve şirket içi regülasyon uyum (compliance) denetimlerinde vekillik yürütmektedir.
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>İş Hukuku Dava Temsili:</strong> İşe iade, kıdem/ihbar tazminatları ve iş kazası aktüerya hesaplamaları.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Arabuluculuk &amp; Müzakere:</strong> Dava şartı ve ihtiyari arabuluculuk müzakerelerinde müvekkil temsili.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Önleyici Danışmanlık:</strong> İşyeri yönetmelikleri, disiplin süreçleri ve personel sözleşmelerinin dizaynı.</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- MINIMAL & PRESTİJLİ FOOTER (SADECE GEREKLİ BİLGİLER) -->
+    <footer class="footer-minimal-wrapper">
+        <div class="container-luxury">
+            <div class="footer-minimal-inner">
+                
+                <!-- Sol: Minimal Logo & Büro Başlığı -->
+                <div class="flex-items-center gap-3">
+                    <svg viewBox="0 0 100 100" class="w-7 h-7">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                        <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                              stroke="url(#goldGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <div>
+                        <span class="brand-title text-sm font-serif text-gold tracking-wider">HUKUK BÜROSU</span>
+                        <span class="text-xs text-muted block" style="font-size: 0.72rem;">Avukatlık &amp; Hukuki Danışmanlık</span>
+                    </div>
+                </div>
+
+                <!-- Orta: Temel Sayfa Bağlantıları -->
+                <nav class="footer-clean-nav" aria-label="Alt Menü">
+                    <a href="index.html">Ana Sayfa</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="uzmanliklar.html">Faaliyet Alanlarımız</a>
+                    <a href="ortaklar.html" style="color: var(--gold-primary);">Avukatlarımız</a>
+                    <a href="iletisim.html">İletişim</a>
+                </nav>
+
+                <!-- Sağ: Hızlı İletişim Hattı -->
+                <div class="flex-items-center gap-3">
+                    <a href="tel:+902129900000" class="text-gold flex-items-center gap-2 text-xs" style="letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0212 990 00 00</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Alt Çizgi & Zorunlu Yasal Dipnot -->
+            <div class="footer-minimal-bottom">
+                <div>&copy; 2026 Hukuk Bürosu. Tüm Hakları Saklıdır.</div>
+                <div style="font-size: 0.72rem;">
+                    1136 sayılı Avukatlık Kanunu ve TBB Reklam Yasağı Yönetmeliği uyarınca yalnızca bilgilendirme amaçlıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=7.6"></script>
+    <!-- MOBIL SABİT ALT HIZLI İLETİŞİM ÇUBUĞU (DOCK) -->
+    <aside class="mobile-quick-dock" aria-label="Mobil Hızlı İletişim">
+        <a href="tel:+902129900000" class="dock-btn call-btn" title="Telefonla Arayın">
+            <i class="fa-solid fa-phone"></i>
+            <span>Hemen Ara</span>
+        </a>
+        <a href="https://wa.me/905000000000" target="_blank" rel="noopener" class="dock-btn wa-btn" title="WhatsApp Mesaj Gönder">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="iletisim.html" class="dock-btn appt-btn" title="İletişim &amp; Randevu Sayfasına Git">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Randevu Al</span>
+        </a>
+    </aside>
+
+</body>
+</html>

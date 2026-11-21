@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazanılan Davalar &amp; Başarılarımız | HUKUK BÜROSU</title>
+    <meta name="description" content="Hukuk Büromuz müvekkilleri için kazanılan davalar, Yargıtay emsal kararları ve başarılı hukuki sonuçlar.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=7.6">
+</head>
+<body class="bg-obsidian text-pearl font-body antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Ambient Luxury Background Lighting -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-top-right"></div>
+    <div class="ambient-glow glow-center"></div>
+
+    <!-- Main Navigation Bar (Sol: Amblem ve İsim, Sağ: Giriş / Anasayfa) -->
+    <header class="navbar-wrapper sticky-nav" id="mainHeader">
+        <div class="container-luxury flex-between py-4">
+            <!-- Sol: Brand Crest & Monogram -->
+            <a href="index.html" class="brand-crest flex-items-center gap-3" title="Anasayfa - Hukuk Bürosu">
+                <div class="crest-emblem">
+                    <svg viewBox="0 0 100 100" class="w-10 h-10 crest-svg">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="2" stroke-dasharray="2 3"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="url(#goldGradient)" stroke-width="1.2"/>
+                        <path d="M50 16 L56 32 L74 34 L60 46 L64 64 L50 54 L36 64 L40 46 L26 34 L44 32 Z" fill="url(#goldGradient)" opacity="0.3"/>
+                        <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                              stroke="url(#goldGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F5E7A9"/>
+                                <stop offset="50%" stop-color="#D4AF37"/>
+                                <stop offset="100%" stop-color="#917224"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="brand-typography">
+                    <span class="brand-title">HUKUK BÜROSU</span>
+                    <span class="brand-subtitle">AVUKATLIK &amp; DANIŞMANLIK</span>
+                </div>
+            </a>
+
+                        <!-- Orta: Masaüstü Prestijli Sekmeler (Nav Links) -->
+            <nav class="nav-links desktop-only" aria-label="Ana Menü">
+                <a href="index.html" class="nav-item"><span class="nav-num">01.</span>Ana Sayfa</a>
+                <a href="hakkimizda.html" class="nav-item"><span class="nav-num">02.</span>Hakkımızda</a>
+                <a href="uzmanliklar.html" class="nav-item"><span class="nav-num">03.</span>Faaliyet Alanlarımız</a>
+                <a href="ortaklar.html" class="nav-item"><span class="nav-num">04.</span>Avukatlarımız</a>
+                <a href="iletisim.html" class="nav-item"><span class="nav-num">05.</span>İletişim</a>
+            </nav>
+
+            <!-- Sağ: Aksiyonlar (Masaüstü Randevu Butonu + Mobil Hamburger/Arama) -->
+            <div class="nav-right-cluster flex-items-center gap-3">
+                <a href="iletisim.html#randevu" class="nav-home-btn desktop-only" title="Hemen Randevu Alın">
+                    <i class="fa-solid fa-calendar-check text-gold"></i>
+                    <span>Randevu Al</span>
+                </a>
+                <a href="tel:+902129900000" class="mobile-call-icon-btn mobile-only" title="Telefonla Arayın" aria-label="Telefonla Arayın">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <button class="mobile-menu-toggle mobile-only" id="mobileMenuBtn" aria-label="Menüyü Aç" title="Menüyü Aç">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBİL YANDAN KAYAN LÜKS MENÜ (DRAWER) -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header flex-between">
+            <div class="brand-typography">
+                <span class="brand-title" style="font-size: 1.05rem;">HUKUK BÜROSU</span>
+                <span class="brand-subtitle">HUKUK &amp; DANIŞMANLIK</span>
+            </div>
+            <button class="close-drawer" id="closeDrawerBtn" aria-label="Kapat">&times;</button>
+        </div>
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-link"><i class="fa-solid fa-house text-gold mr-2"></i> 01. Ana Sayfa</a>
+            <a href="hakkimizda.html" class="mobile-link"><i class="fa-solid fa-landmark text-gold mr-2"></i> 02. Hakkımızda</a>
+            <a href="uzmanliklar.html" class="mobile-link"><i class="fa-solid fa-scale-balanced text-gold mr-2"></i> 03. Faaliyet Alanlarımız</a>
+            <a href="ortaklar.html" class="mobile-link"><i class="fa-solid fa-user-tie text-gold mr-2"></i> 04. Avukatlarımız</a>
+            <a href="iletisim.html" class="mobile-link"><i class="fa-solid fa-envelope text-gold mr-2"></i> 05. İletişim &amp; Randevu</a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <a href="tel:+902129900000" class="btn-luxury-primary w-full text-center mb-3" style="padding: 0.75rem; display: block;">
+                <i class="fa-solid fa-phone mr-2"></i> 0212 990 00 00
+            </a>
+            <a href="https://wa.me/905000000000" target="_blank" rel="noopener" class="btn-luxury-outline w-full text-center" style="padding: 0.65rem; border-color: #25D366; color: #25D366; display: block;">
+                <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Danışma
+            </a>
+        </div>
+    </div>
+
+    <!-- DEDICATED PAGE HERO: KAZANILAN DAVALAR -->
+    <section class="page-hero-header py-16 bg-slate-dark border-b-gold">
+        <div class="container-luxury text-center">
+            <span class="section-eyebrow">MÜVEKKİLLERİMİZ İÇİN ELDE ETTİĞİMİZ NETİCELER</span>
+            <h1 class="section-title text-4xl mt-3">
+                Kazanılan <span class="gold-gradient-text italic-serif">Davalarımız ve Başarılar</span>
+            </h1>
+            <div class="gold-separator"></div>
+            <p class="section-desc max-w-2xl mx-auto">
+                Yılların tecrübesiyle müvekkillerimizin haklarını koruduğumuz, mahkemelerde ve tahkim kurullarında başarıyla sonuçlandırdığımız davalar.
+            </p>
+        </div>
+    </section>
+
+    <!-- METRICS & CASE DOSSIERS -->
+    <section class="section-padding bg-obsidian">
+        <div class="container-luxury">
+            <div class="grid-2-cols items-center gap-12 mb-16">
+                <div>
+                    <span class="section-eyebrow">EMSALSİZ BAŞARI GEÇMİŞİ</span>
+                    <h2 class="section-title">Stratejik <span class="gold-gradient-text italic-serif">Tahkim Zaferleri</span></h2>
+                    <div class="gold-separator left-aligned"></div>
+                    <p class="text-secondary leading-relaxed mb-6">
+                        Hukuk Büromuz, yalnızca davaları neticelendirmekle kalmaz; yüksek riskli uyuşmazlıklarda müvekkillerimizin sermayesini, haklarını ve ticari itibarını koruyan emsal içtihatlar oluşturur.
+                    </p>
+                    
+                    <div class="prestige-bullet-list">
+                        <div class="bullet-item">
+                            <div class="bullet-gold-badge"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h3 class="bullet-title">€1.4 Milyar Değerinde Telekomünikasyon Tahkimi</h3>
+                                <p class="bullet-sub">ICC Paris nezdinde Türkiye tarihinin en yüksek tutarlı telekomünikasyon hisse devri uyuşmazlığında tam lehe karar.</p>
+                            </div>
+                        </div>
+                        <div class="bullet-item">
+                            <div class="bullet-gold-badge"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h3 class="bullet-title">Sınır Ötesi Bankacılık Konsorsiyum Savunması</h3>
+                                <p class="bullet-sub">Avrupa Yatırım Bankası destekli sendikasyon kredisinde rekor sürede risk yönetimi ve uzlaşma anlaşması.</p>
+                            </div>
+                        </div>
+                        <div class="bullet-item">
+                            <div class="bullet-gold-badge"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h3 class="bullet-title">Yapay Zeka ve Fikri Haklar Emsal Yargıtay Kararı</h3>
+                                <p class="bullet-sub">Otonom kod üreticilerinin telif hakkı korumasına dair Türkiye'deki ilk emsal Yargıtay içtihadının kazanımı.</p>
+                            </div>
+                        </div>
+                        <div class="bullet-item">
+                            <div class="bullet-gold-badge"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h3 class="bullet-title">Danıştay Nezdinde Vergi Hukuku İlke Kararı</h3>
+                                <p class="bullet-sub">Uluslararası holdinglerin iştirak kazançları istisnasında geriye yürümezlik ilkesinin tescil edilmesi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recognition & Accreditation Box -->
+                <div class="prestige-feature-card">
+                    <div class="inner-frame">
+                        <div class="quote-symbol text-gold"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="quote-text">
+                            "Müvekkillerimizin en kritik stratejik hamlelerinde yalnızca bir hukuk danışmanı değil; 
+                            onların itibarını, sermayesini ve geleceğini koruyan zırhıyız."
+                        </p>
+                        <div class="founder-info flex-items-center gap-4 mt-6">
+                            <div class="founder-avatar">
+                                <img src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=400&auto=format&fit=crop" alt="Adalet ve Savunma Heyeti" class="founder-img">
+                            </div>
+                            <div>
+                                <h4 class="founder-name">Kıdemli Yönetici Ortak</h4>
+                                <p class="founder-title">Hukuk Bürosu &bull; Baş Tahkim ve Dava Danışmanı</p>
+                            </div>
+                        </div>
+
+                        <!-- Recognition Badges -->
+                        <div class="recognition-strip mt-8 pt-6 border-t-gold flex-between flex-wrap gap-4">
+                            <div class="rec-badge"><i class="fa-solid fa-star text-gold"></i> THE LEGAL 500 TIER 1</div>
+                            <div class="rec-badge"><i class="fa-solid fa-star text-gold"></i> CHAMBERS GLOBAL TOP RANKED</div>
+                            <div class="rec-badge"><i class="fa-solid fa-star text-gold"></i> IFLR1000 LEADING FIRM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-credentials-row grid-4-cols mt-12">
+                <div class="credential-box">
+                    <i class="fa-solid fa-gavel cred-icon"></i>
+                    <div>
+                        <div class="cred-num">€6.8B+</div>
+                        <div class="cred-label">Kümülatif Portföy</div>
+                    </div>
+                </div>
+                <div class="credential-box">
+                    <i class="fa-solid fa-award cred-icon"></i>
+                    <div>
+                        <div class="cred-num">%96.8</div>
+                        <div class="cred-label">Dava & Tahkim Başarısı</div>
+                    </div>
+                </div>
+                <div class="credential-box">
+                    <i class="fa-solid fa-globe cred-icon"></i>
+                    <div>
+                        <div class="cred-num">38 Ülke</div>
+                        <div class="cred-label">Uluslararası Temsil Gücü</div>
+                    </div>
+                </div>
+                <div class="credential-box">
+                    <i class="fa-solid fa-user-shield cred-icon"></i>
+                    <div>
+                        <div class="cred-num">180+</div>
+                        <div class="cred-label">Münhasır Kurumsal Müvekkil</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-block bg-obsidian py-12 border-t-gold">
+        <div class="container-luxury">
+            <div class="footer-bottom flex-between text-xs text-muted">
+                <div>&copy; 1998 - 2026 Hukuk Bürosu. Tüm Hakları Saklıdır.</div>
+                <div class="flex-items-center gap-6">
+                    <a href="index.html" class="hover-gold">Anasayfa</a>
+                    <a href="uzmanliklar.html" class="hover-gold">Baktığımız Davalar</a>
+                    <a href="emsal-kararlar.html" class="hover-gold">Kazanılan Davalar</a>
+                    <a href="ortaklar.html" class="hover-gold">Avukatlarımız</a>
+                    <a href="iletisim.html" class="hover-gold">İletişim &amp; Randevu</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=7.6"></script>
+    <!-- MOBIL SABİT ALT HIZLI İLETİŞİM ÇUBUĞU (DOCK) -->
+    <aside class="mobile-quick-dock" aria-label="Mobil Hızlı İletişim">
+        <a href="tel:+902129900000" class="dock-btn call-btn" title="Telefonla Arayın">
+            <i class="fa-solid fa-phone"></i>
+            <span>Hemen Ara</span>
+        </a>
+        <a href="https://wa.me/905000000000" target="_blank" rel="noopener" class="dock-btn wa-btn" title="WhatsApp Mesaj Gönder">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="iletisim.html#randevu" class="dock-btn appt-btn" title="Randevu Formuna Git">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Randevu Al</span>
+        </a>
+    </aside>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda &amp; Kurumsal İlkelerimiz | HUKUK BÜROSU</title>
+    <meta name="description" content="Hukuk Büromuz; köklü duruşma tecrübesi, tavizsiz meslek ilkeleri, müvekkil gizliliği ve adalet anlayışıyla hizmet vermektedir.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=23.0">
+</head>
+<body class="bg-obsidian text-pearl font-body antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Ambient Luxury Background Lighting -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-top-right"></div>
+    <div class="ambient-glow glow-center"></div>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar-wrapper sticky-nav" id="mainHeader">
+        <div class="container-luxury flex-between py-4">
+            <!-- Sol: Brand Crest & Monogram -->
+            <a href="index.html" class="brand-crest flex-items-center gap-3" title="Ana Sayfa - Hukuk Bürosu">
+                <div class="crest-emblem">
+                    <svg viewBox="0 0 100 100" class="w-10 h-10 crest-svg">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="2" stroke-dasharray="2 3"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="url(#goldGradient)" stroke-width="1.2"/>
+                        <path d="M50 16 L56 32 L74 34 L60 46 L64 64 L50 54 L36 64 L40 46 L26 34 L44 32 Z" fill="url(#goldGradient)" opacity="0.3"/>
+                        <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                              stroke="url(#goldGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F5E7A9"/>
+                                <stop offset="50%" stop-color="#D4AF37"/>
+                                <stop offset="100%" stop-color="#917224"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="brand-typography">
+                    <span class="brand-title">HUKUK BÜROSU</span>
+                    <span class="brand-subtitle">AVUKATLIK &amp; DANIŞMANLIK</span>
+                </div>
+            </a>
+
+            <!-- Orta: Masaüstü Prestijli Sekmeler (Nav Links) -->
+            <nav class="nav-links desktop-only" aria-label="Ana Menü">
+                <a href="index.html" class="nav-item"><span class="nav-num">01.</span>Ana Sayfa</a>
+                <a href="hakkimizda.html" class="nav-item active"><span class="nav-num">02.</span>Hakkımızda</a>
+                <a href="uzmanliklar.html" class="nav-item"><span class="nav-num">03.</span>Faaliyet Alanlarımız</a>
+                <a href="ortaklar.html" class="nav-item"><span class="nav-num">04.</span>Avukatlarımız</a>
+                <a href="iletisim.html" class="nav-item"><span class="nav-num">05.</span>İletişim</a>
+            </nav>
+
+            <!-- Sağ: Aksiyonlar -->
+            <div class="nav-right-cluster flex-items-center gap-3">
+                <a href="iletisim.html" class="nav-home-btn desktop-only" title="Hemen Randevu Alın">
+                    <i class="fa-solid fa-calendar-check text-gold"></i>
+                    <span>Randevu Al</span>
+                </a>
+                <a href="tel:+902129900000" class="mobile-call-icon-btn mobile-only" title="Telefonla Arayın" aria-label="Telefonla Arayın">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <button class="mobile-menu-toggle mobile-only" id="mobileMenuBtn" aria-label="Menüyü Aç" title="Menüyü Aç">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBİL YANDAN KAYAN LÜKS MENÜ (DRAWER) -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header flex-between">
+            <div class="brand-typography">
+                <span class="brand-title" style="font-size: 1.05rem;">HUKUK BÜROSU</span>
+                <span class="brand-subtitle">HUKUK &amp; DANIŞMANLIK</span>
+            </div>
+            <button class="close-drawer" id="closeDrawerBtn" aria-label="Kapat">&times;</button>
+        </div>
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-link"><i class="fa-solid fa-house text-gold mr-2"></i> 01. Ana Sayfa</a>
+            <a href="hakkimizda.html" class="mobile-link active"><i class="fa-solid fa-landmark text-gold mr-2"></i> 02. Hakkımızda</a>
+            <a href="uzmanliklar.html" class="mobile-link"><i class="fa-solid fa-scale-balanced text-gold mr-2"></i> 03. Faaliyet Alanlarımız</a>
+            <a href="ortaklar.html" class="mobile-link"><i class="fa-solid fa-user-tie text-gold mr-2"></i> 04. Avukatlarımız</a>
+            <a href="iletisim.html" class="mobile-link"><i class="fa-solid fa-envelope text-gold mr-2"></i> 05. İletişim &amp; Randevu</a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <a href="tel:+902129900000" class="btn-luxury-primary w-full text-center mb-3" style="padding: 0.75rem; display: block;">
+                <i class="fa-solid fa-phone mr-2"></i> 0212 990 00 00
+            </a>
+            <a href="https://wa.me/905000000000" target="_blank" rel="noopener" class="btn-luxury-outline w-full text-center" style="padding: 0.65rem; border-color: #25D366; color: #25D366; display: block;">
+                <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Danışma
+            </a>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- BİRLEŞİK, DERLİ TOPLU VE PRESTİJLİ HAKKIMIZDA DÜZENİ (SORU-CEVAP GRID)        -->
+    <!-- Kuruluş tarihi ayrıntılarından arındırılmış, TBB meslek kurallarına tam uyumlu -->
+    <!-- ========================================================================= -->
+    <main class="about-unified-container">
+        
+        <!-- ÜST KISIM: KISA VE VURUCU EDİTORYAL MANŞET -->
+        <header class="about-hero-compact">
+            <span class="section-eyebrow">AVUKATLIK &amp; HUKUKİ DANIŞMANLIK</span>
+            <h1 class="section-title text-4xl mt-3">
+                Hukuki Yaklaşımımız &amp; Kurumsal İlkelerimiz <br>
+                <span class="gold-gradient-text italic-serif">Şeffaf, İlkeli ve Bağımsız Savunma.</span>
+            </h1>
+            <div class="gold-separator mx-auto"></div>
+            <p class="text-secondary text-base mt-4 leading-relaxed">
+                Müvekkillerimizin hak arama özgürlüğünü; hukukun evrensel prensipleri, Türkiye Barolar Birliği meslek kuralları, köklü duruşma disiplini ve tavizsiz bir mesleki gizlilik esasıyla temsil ediyoruz.
+            </p>
+        </header>
+
+        <!-- ORTA KISIM: 4 TEMEL SORU ETRAFINDA PRESTİJLİ KUTULAR (2x2 GRID) -->
+        <div class="about-qa-grid">
+            
+            <!-- KUTU 01: BİZ KİMİZ? -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-landmark"></i> 01. KİMLİK &amp; MİSYON</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Biz Kimiz?</h2>
+                    <p class="qa-answer">
+                        Yargının kurucu unsurlarından bağımsız savunmayı temsil eden, duruşma ve uyuşmazlık çözümü disiplini üzerine kurulu bir avukatlık bürosuyuz. Dosyalarımızı mekanik bir evrak süreci olarak değil; müvekkillerimizin hukuki güvenliğini, itibarını ve ticari geleceğini doğrudan ilgilendiren stratejik bir emanet olarak yürütürüz.
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Bağımsız Savunma Makamı:</strong> Hiçbir dış tesir veya çıkar baskısına boyun eğmeksizin yalnızca hukuka ve müvekkil haklarına bağlılık.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Kıdemli Duruşma Disiplini:</strong> Ağır ceza ve ticari ihtilaflarda kürsü, dava ve müzakere tecrübesi.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Akademik &amp; Çok Yönlü Bakış:</strong> Her hukuki meseleyi alanında uzmanlaşmış avukat kadromuz ve konsültasyon ağıyla çok yönlü ele alma.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KUTU 02: NELER YAPIYORUZ? -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-scale-balanced"></i> 02. FAALİYET KAPSAMI</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Neler Yapıyoruz?</h2>
+                    <p class="qa-answer">
+                        İhtilafların yargıya taşınmadan önce önlenmesinden, yüksek yargı ve tahkim aşamalarındaki nihai ilamların icrasına kadar tüm safhalarda 360° dava temsili ve önleyici hukuk danışmanlığı sağlıyoruz. Ceza yargılamasından şirketler hukukuna kadar geniş ve uzmanlaşmış bir alanda hak savunması gerçekleştiriyoruz.
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Dava &amp; Duruşma Temsili:</strong> Asliye, Ağır Ceza, Ticaret Mahkemeleri, İstinaf ve Yargıtay nezdinde aktif ve kararlı vekillik.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Önleyici Hukuk &amp; Sözleşmeler:</strong> Uyuşmazlıkları henüz doğmadan önleyen sözleşme mimarisi ve kurumsal şirket danışmanlığı.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Ulusal &amp; Uluslararası Tahkim:</strong> ISTAC, ICC ve kurumsal tahkim kurulları nezdinde sınır ötesi uyuşmazlık yönetimi.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KUTU 03: MÜVEKKİLLERİMİZE NE TAAHHÜT EDİYORUZ? -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-shield-halved"></i> 03. MESLEKİ TAAHHÜTLER</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Müvekkillerimize Ne Taahhüt Ediyoruz?</h2>
+                    <p class="qa-answer">
+                        Avukatlık mesleğinin bir kamu hizmeti olduğu bilinciyle; kanuna ve meslek ahlakına aykırı yapay 'sonuç vaatleri' yerine, 1136 sayılı Avukatlık Kanunu ve TBB Meslek Kuralları çerçevesinde meşru ve tavizsiz mesleki güvenceler taahhüt ediyoruz:
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Mutlak ve Süresiz Gizlilik (Av. K. m. 36):</strong> Dosyaya ait tüm bilgi, belge ve sırlar vekalet ilişkisi sona erse dahi ömür boyu kanuni sır saklama dokunulmazlığı altındadır.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Objektif &amp; Gerçekçi Analiz:</strong> Dosyanın tüm lehte ve aleyhte riskleri yüksek yargı içtihatları taranarak şeffaf ve bilimsel bir dille müvekkile sunulur.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Çıkar Çatışmasının Kesin Reddi (TBB m. 35):</strong> Müvekkillerimiz arasında en ufak bir menfaat uyuşmazlığı ihtimalinde tarafsızlık gözetilir ve dosya kabul edilmez.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>Sürekli &amp; Şeffaf Bilgilendirme:</strong> Her ara karar, tebligat, duruşma tutanağı ve gelişme gecikmeksizin yazılı olarak müvekkile raporlanır.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KUTU 04: NASIL ÇALIŞIYORUZ? -->
+            <article class="qa-card-lux">
+                <div>
+                    <div class="qa-card-top">
+                        <span class="qa-badge"><i class="fa-solid fa-magnifying-glass-chart"></i> 04. ÇALIŞMA METODOLOJİSİ</span>
+                        <div class="qa-icon-wrap">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                    </div>
+                    <h2 class="qa-question">Nasıl Çalışıyoruz?</h2>
+                    <p class="qa-answer">
+                        Bize emanet edilen her hukuki meseleyi, tesadüflere yer bırakmayan 4 aşamalı bilimsel ve analitik bir çalışma metodolojisiyle ele alır ve yönetiriz:
+                    </p>
+                </div>
+                <div class="qa-points-list">
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>1. Kapsamlı Delil &amp; Dosya Denetimi:</strong> Maddi vakıalar, yazılı belgeler ve uyuşmazlık kronolojisi en ince ayrıntısına kadar tetkik edilir.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>2. Emsal İçtihat &amp; Doktrin Taraması:</strong> Yargıtay Hukuk Genel Kurulu ve ilgili dairelerin en güncel emsal kararları taranarak sarsılmaz bir hukuki zemin kurulur.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>3. Stratejik Dava &amp; Savunma Mimarisi:</strong> İhtiyati tedbir, delil tespiti ve savunma blokları hak kaybını önleyecek hızda hayata geçirilir.</span>
+                    </div>
+                    <div class="qa-point-item">
+                        <i class="fa-solid fa-circle-check qa-point-bullet"></i>
+                        <span><strong>4. Duruşmada Kararlı Temsil &amp; Raporlama:</strong> Kürsü önünde tavizsiz temsil yürütülürken süreç aşama aşama müvekkilin bilgisine sunulur.</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- MINIMAL & PRESTİJLİ FOOTER (SADECE GEREKLİ BİLGİLER) -->
+    <footer class="footer-minimal-wrapper">
+        <div class="container-luxury">
+            <div class="footer-minimal-inner">
+                
+                <!-- Sol: Minimal Logo & Büro Başlığı -->
+                <div class="flex-items-center gap-3">
+                    <svg viewBox="0 0 100 100" class="w-7 h-7">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                        <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                              stroke="url(#goldGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <div>
+                        <span class="brand-title text-sm font-serif text-gold tracking-wider">HUKUK BÜROSU</span>
+                        <span class="text-xs text-muted block" style="font-size: 0.72rem;">Avukatlık &amp; Hukuki Danışmanlık</span>
+                    </div>
+                </div>
+
+                <!-- Orta: Temel Sayfa Bağlantıları -->
+                <nav class="footer-clean-nav" aria-label="Alt Menü">
+                    <a href="index.html">Ana Sayfa</a>
+                    <a href="hakkimizda.html" style="color: var(--gold-primary);">Hakkımızda</a>
+                    <a href="uzmanliklar.html">Faaliyet Alanlarımız</a>
+                    <a href="ortaklar.html">Avukatlarımız</a>
+                    <a href="iletisim.html">İletişim</a>
+                </nav>
+
+                <!-- Sağ: Hızlı İletişim Hattı -->
+                <div class="flex-items-center gap-3">
+                    <a href="tel:+902129900000" class="text-gold flex-items-center gap-2 text-xs" style="letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0212 990 00 00</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Alt Çizgi & Zorunlu Yasal Dipnot -->
+            <div class="footer-minimal-bottom">
+                <div>&copy; 2026 Hukuk Bürosu. Tüm Hakları Saklıdır.</div>
+                <div style="font-size: 0.72rem;">
+                    1136 sayılı Avukatlık Kanunu ve TBB Reklam Yasağı Yönetmeliği uyarınca yalnızca bilgilendirme amaçlıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js?v=7.7"></script>
+</body>
+</html>

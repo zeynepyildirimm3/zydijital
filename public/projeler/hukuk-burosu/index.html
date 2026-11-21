@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUKUK BÜROSU | Avukatlık &amp; Danışmanlık</title>
+    <meta name="description" content="Hukuk Büromuz; Baktığımız Davalar, Başarılarımız, Deneyimli Avukat Kadromuz ve Danışmanlık Hizmetlerimizle her an yanınızda.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Model Viewer for Realtime 3D glTF/GLB Rendering -->
+    <!-- Model Viewer loaded at bottom for mobile speed -->
+    
+    <!-- Intro Kontrolü: Sayfa yenilemelerinde (F5/reload) introyu göster; yalnızca diğer sayfalardan ana sayfaya geçişte gizle -->
+    <script>
+        (function() {
+            try {
+                var navEntries = performance.getEntriesByType('navigation');
+                var navType = navEntries && navEntries.length > 0 ? navEntries[0].type : '';
+                var isReload = navType === 'reload' || (performance.navigation && performance.navigation.type === 1);
+                
+                // Sayfa yenilenirken (F5 / pull-to-refresh) introyu her zaman göster; sadece başka sayfadan geçişte atla
+                if (!isReload) {
+                    var ref = document.referrer || '';
+                    var internalPages = ['hakkimizda.html', 'uzmanliklar.html', 'ortaklar.html', 'iletisim.html', 'emsal-kararlar.html'];
+                    var cameFromOtherPage = internalPages.some(function(p) { return ref.indexOf(p) !== -1; });
+                    var fromSubpage = sessionStorage.getItem('navigated_from_subpage') === 'true';
+                    
+                    if (cameFromOtherPage || fromSubpage) {
+                        document.documentElement.classList.add('intro-already-seen');
+                    }
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=31.0">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <!-- CRITICAL INLINE CSS FOR ENTRANCE SCREEN (Bypasses all Chrome caching) -->
+    <style>
+        html.intro-already-seen .entrance-gate-screen {
+            display: none !important;
+        }
+
+        .entrance-gate-screen {
+            position: fixed !important;
+            inset: 0 !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            height: 100dvh !important;
+            z-index: 999999 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: clamp(1.8rem, 4vh, 2.8rem) 1.5rem !important;
+            background: radial-gradient(circle at center, #11141C 0%, #07080B 65%, #030406 100%) !important;
+            overflow: hidden !important;
+            box-sizing: border-box !important;
+            cursor: pointer !important;
+            transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1),
+                        opacity 0.85s cubic-bezier(0.77, 0, 0.175, 1),
+                        visibility 0.85s cubic-bezier(0.77, 0, 0.175, 1) !important;
+        }
+
+        .entrance-gate-screen.gate-dismissed {
+            transform: translateY(-100%) !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        .entrance-glow-spot {
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, transparent 70%);
+            filter: blur(65px);
+            pointer-events: none;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .entrance-slogan-wrap {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 720px;
+        }
+
+        .entrance-kicker {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            color: #D4AF37;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .entrance-slogan {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+            font-weight: 600;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin: 0 0 0.4rem 0;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .entrance-sub-slogan {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(0.82rem, 1.8vw, 0.95rem);
+            color: #94A3B8;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        .entrance-scale-center {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 480px;
+            height: clamp(230px, 40vh, 370px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .entrance-scale-model {
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
+            --poster-color: transparent !important;
+            filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.9));
+        }
+
+        .entrance-brand-wrap {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 620px;
+        }
+
+        .entrance-crest-emblem {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 0.65rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .entrance-crest-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.55));
+        }
+
+        .entrance-firm-name {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            color: #FFFFFF;
+            margin: 0 0 0.35rem 0;
+            text-indent: 0.22em;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+        }
+
+        .entrance-firm-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(0.75rem, 1.8vw, 0.88rem);
+            font-weight: 600;
+            letter-spacing: 0.32em;
+            background: linear-gradient(135deg, #F5E7A9 0%, #D4AF37 50%, #917224 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            margin: 0 0 1rem 0;
+            text-indent: 0.32em;
+        }
+
+        .entrance-auto-indicator {
+            width: 140px;
+            height: 2px;
+            background: rgba(212, 175, 55, 0.18);
+            margin: 0 auto;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* Sağ Üst İntroyu Geç Butonu */
+        .btn-skip-intro {
+            position: absolute !important;
+            top: clamp(1.2rem, 3.5vh, 2.2rem) !important;
+            right: clamp(1.2rem, 3.5vw, 2.5rem) !important;
+            z-index: 100 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.55rem !important;
+            background: rgba(18, 21, 29, 0.75) !important;
+            color: #D4AF37 !important;
+            border: 1px solid rgba(212, 175, 55, 0.45) !important;
+            border-radius: 30px !important;
+            padding: 0.55rem 1.3rem !important;
+            font-family: 'Cinzel', serif !important;
+            font-size: 0.75rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.16em !important;
+            cursor: pointer !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(212, 175, 55, 0.08) !important;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        }
+
+        .btn-skip-intro:hover {
+            background: rgba(212, 175, 55, 0.22) !important;
+            border-color: #F5E7A9 !important;
+            color: #FFF5C2 !important;
+            transform: translateY(-2px) scale(1.03) !important;
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4) !important;
+        }
+
+        .btn-skip-intro i {
+            font-size: 0.78rem !important;
+            transition: transform 0.25s ease !important;
+        }
+
+        .btn-skip-intro:hover i {
+            transform: translateX(3px) !important;
+        }
+
+        /* Mobil Cihazlarda İntroyu Atla / Geç Butonu Boyutlandırması */
+        @media (max-width: 768px) {
+            .btn-skip-intro {
+                top: 0.85rem !important;
+                right: 0.85rem !important;
+                padding: 0.32rem 0.75rem !important;
+                font-size: 0.62rem !important;
+                letter-spacing: 0.08em !important;
+                gap: 0.35rem !important;
+                border-radius: 20px !important;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+            }
+            .btn-skip-intro i {
+                font-size: 0.6rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-skip-intro {
+                top: 0.65rem !important;
+                right: 0.65rem !important;
+                padding: 0.24rem 0.58rem !important;
+                font-size: 0.56rem !important;
+                letter-spacing: 0.06em !important;
+                gap: 0.28rem !important;
+                border-radius: 16px !important;
+            }
+            .btn-skip-intro i {
+                font-size: 0.52rem !important;
+            }
+        }
+
+
+
+        .entrance-auto-line {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #917224, #D4AF37, #FFF8D6);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+            animation: entranceLineProgress 5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes entranceLineProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+    </style>
+
+</head>
+<body class="bg-obsidian text-pearl font-body antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- ========================================================================= -->
+    <!-- GİRİŞ EKRANI:                                                             -->
+    <!-- 1. Üstte: Slogan                                                          -->
+    <!-- 2. Ortada: Durmadan Dönen 3D Altın Terazi                                 -->
+    <!-- 3. Altta: Hukuk Bürosu Adı ve Altın Amblemi                               -->
+    <!-- ========================================================================= -->
+    <div class="entrance-gate-screen" id="entranceGateScreen">
+        <div class="entrance-glow-spot"></div>
+
+        <!-- Sağ Üst: İntroyu Geç Butonu -->
+        <button type="button" class="btn-skip-intro" id="btnSkipIntro" title="İntroyu Hemen Geçin">
+            <span>İNTROYU GEÇ</span>
+            <i class="fa-solid fa-forward-step"></i>
+        </button>
+
+        <!-- 1. DÖNEN TERAZİNİN ÜSTÜNDE: SLOGAN -->
+        <div class="entrance-slogan-wrap">
+            <h2 class="entrance-slogan">“Adalet mülkün temelidir.”</h2>
+            <p class="entrance-sub-slogan">Her hak savunulmayı, her adalet arayışı güçlü bir sesi hak eder.</p>
+        </div>
+
+        <!-- 2. ORTADA: DURMADAN DÖNEN CANLI 3D ALTIN TERAZİ -->
+        <div class="entrance-scale-center">
+            <model-viewer 
+                id="entrance3DScaleViewer"
+                src="scales_of_justice.glb" 
+                alt="Durmadan Dönen Altın Adalet Terazisi" 
+                auto-rotate 
+                auto-rotate-delay="0"
+                rotation-per-second="24deg"
+                disable-zoom
+                disable-pan
+                interaction-prompt="none"
+                camera-orbit="0deg 75deg 13m"
+                exposure="1.45"
+                shadow-intensity="1.1"
+                shadow-softness="0.9"
+                class="entrance-scale-model">
+            </model-viewer>
+        </div>
+
+        <!-- 3. TERAZİNİN ALTINDA: HUKUK BÜROSU ADI VE AMBLEMİ -->
+        <div class="entrance-brand-wrap">
+            <!-- Altın Amblem -->
+            <div class="entrance-crest-emblem">
+                <svg viewBox="0 0 100 100" class="entrance-crest-svg">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradGateScreen)" stroke-width="2" stroke-dasharray="2 3"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="url(#goldGradGateScreen)" stroke-width="1.2"/>
+                    <path d="M50 16 L56 32 L74 34 L60 46 L64 64 L50 54 L36 64 L40 46 L26 34 L44 32 Z" fill="url(#goldGradGateScreen)" opacity="0.3"/>
+                    <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                          stroke="url(#goldGradGateScreen)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="goldGradGateScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FFF5C2"/>
+                            <stop offset="50%" stop-color="#D4AF37"/>
+                            <stop offset="100%" stop-color="#8C6D23"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Hukuk Büromuzun Adı -->
+            <h1 class="entrance-firm-name">HUKUK BÜROSU</h1>
+            <p class="entrance-firm-title">AVUKATLIK &amp; HUKUKİ DANIŞMANLIK</p>
+
+            <!-- İntro Akış Çizgisi -->
+            <div class="entrance-auto-indicator">
+                <div class="entrance-auto-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var screen = document.getElementById('entranceGateScreen');
+            if (!screen) return;
+
+            try {
+                var navEntries = performance.getEntriesByType('navigation');
+                var navType = navEntries && navEntries.length > 0 ? navEntries[0].type : '';
+                var isReload = navType === 'reload' || (performance.navigation && performance.navigation.type === 1);
+
+                // Sayfa yenileniyorsa introyu her zaman göster; sadece başka sayfadan dönüldüğünde introyu atla
+                if (!isReload) {
+                    var ref = document.referrer || '';
+                    var internalPages = ['hakkimizda.html', 'uzmanliklar.html', 'ortaklar.html', 'iletisim.html', 'emsal-kararlar.html'];
+                    var cameFromOtherPage = internalPages.some(function(p) { return ref.indexOf(p) !== -1; });
+                    var fromSubpage = sessionStorage.getItem('navigated_from_subpage') === 'true';
+
+                    if (cameFromOtherPage || fromSubpage) {
+                        sessionStorage.removeItem('navigated_from_subpage');
+                        if (screen.parentNode) screen.parentNode.removeChild(screen);
+                        document.body.style.overflow = '';
+                        return;
+                    }
+                }
+            } catch (e) {}
+
+            document.body.style.overflow = 'hidden';
+
+            var closed = false;
+            function enterSite() {
+                if (closed) return;
+                closed = true;
+                screen.classList.add('gate-dismissed');
+                document.body.style.overflow = '';
+                setTimeout(function() {
+                    if (screen.parentNode) screen.parentNode.removeChild(screen);
+                }, 850);
+            }
+
+            var skipBtn = document.getElementById('btnSkipIntro');
+            if (skipBtn) {
+                skipBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    enterSite();
+                });
+            }
+
+            // 5 saniye boyunca rahatça izlenir, ardından kendiliğinden ana siteye akar
+            var introTimer = setTimeout(enterSite, 5000);
+
+            // Ekrana tıklanarak veya tuşa basılarak anında da geçilebilir
+            screen.addEventListener('click', function() {
+                clearTimeout(introTimer);
+                enterSite();
+            });
+            window.addEventListener('keydown', function() {
+                clearTimeout(introTimer);
+                enterSite();
+            });
+        })();
+    </script>
+
+
+<!-- Ambient Luxury Background Lighting -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-top-right"></div>
+    <div class="ambient-glow glow-center"></div>
+
+    <!-- Main Navigation Bar (Sol: Amblem ve İsim, Sağ: Giriş / Anasayfa) -->
+    <header class="navbar-wrapper sticky-nav" id="mainHeader">
+        <div class="container-luxury flex-between py-4">
+            <!-- Sol: Brand Crest & Monogram -->
+            <a href="index.html" class="brand-crest flex-items-center gap-3" title="Anasayfa - Hukuk Bürosu">
+                <div class="crest-emblem">
+                    <svg viewBox="0 0 100 100" class="w-10 h-10 crest-svg">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="2" stroke-dasharray="2 3"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="url(#goldGradient)" stroke-width="1.2"/>
+                        <path d="M50 16 L56 32 L74 34 L60 46 L64 64 L50 54 L36 64 L40 46 L26 34 L44 32 Z" fill="url(#goldGradient)" opacity="0.3"/>
+                        <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                              stroke="url(#goldGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F5E7A9"/>
+                                <stop offset="50%" stop-color="#D4AF37"/>
+                                <stop offset="100%" stop-color="#917224"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="brand-typography">
+                    <span class="brand-title">HUKUK BÜROSU</span>
+                    <span class="brand-subtitle">AVUKATLIK &amp; DANIŞMANLIK</span>
+                </div>
+            </a>
+
+            <!-- Orta: Masaüstü Prestijli Sekmeler (Nav Links) -->
+            <nav class="nav-links desktop-only" aria-label="Ana Menü">
+                <a href="index.html" class="nav-item active"><span class="nav-num">01.</span>Ana Sayfa</a>
+                <a href="hakkimizda.html" class="nav-item"><span class="nav-num">02.</span>Hakkımızda</a>
+                <a href="uzmanliklar.html" class="nav-item"><span class="nav-num">03.</span>Faaliyet Alanlarımız</a>
+                <a href="ortaklar.html" class="nav-item"><span class="nav-num">04.</span>Avukatlarımız</a>
+                <a href="iletisim.html" class="nav-item"><span class="nav-num">05.</span>İletişim</a>
+            </nav>
+
+            <!-- Sağ: Aksiyonlar (Masaüstü Randevu Butonu + Mobil Hamburger/Arama) -->
+            <div class="nav-right-cluster flex-items-center gap-3">
+                <a href="iletisim.html" class="nav-home-btn desktop-only" title="Hemen Randevu Alın">
+                    <i class="fa-solid fa-calendar-check text-gold"></i>
+                    <span>Randevu Al</span>
+                </a>
+                <a href="tel:+902129900000" class="mobile-call-icon-btn mobile-only" title="Telefonla Arayın" aria-label="Telefonla Arayın">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <button class="mobile-menu-toggle mobile-only" id="mobileMenuBtn" aria-label="Menüyü Aç" title="Menüyü Aç">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBİL YANDAN KAYAN LÜKS MENÜ (DRAWER) -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header flex-between">
+            <div class="brand-typography">
+                <span class="brand-title" style="font-size: 1.05rem;">HUKUK BÜROSU</span>
+                <span class="brand-subtitle">HUKUK &amp; DANIŞMANLIK</span>
+            </div>
+            <button class="close-drawer" id="closeDrawerBtn" aria-label="Kapat">&times;</button>
+        </div>
+        <nav class="mobile-nav-list">
+            <a href="index.html" class="mobile-link active"><i class="fa-solid fa-house text-gold mr-2"></i> 01. Ana Sayfa</a>
+            <a href="hakkimizda.html" class="mobile-link"><i class="fa-solid fa-landmark text-gold mr-2"></i> 02. Hakkımızda</a>
+            <a href="uzmanliklar.html" class="mobile-link"><i class="fa-solid fa-scale-balanced text-gold mr-2"></i> 03. Faaliyet Alanlarımız</a>
+            <a href="ortaklar.html" class="mobile-link"><i class="fa-solid fa-user-tie text-gold mr-2"></i> 04. Avukatlarımız</a>
+            <a href="iletisim.html" class="mobile-link"><i class="fa-solid fa-envelope text-gold mr-2"></i> 05. İletişim &amp; Randevu</a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <a href="tel:+902129900000" class="btn-luxury-primary w-full text-center mb-3" style="padding: 0.75rem; display: block;">
+                <i class="fa-solid fa-phone mr-2"></i> 0212 990 00 00
+            </a>
+            <a href="https://wa.me/905000000000" target="_blank" rel="noopener" class="btn-luxury-outline w-full text-center" style="padding: 0.65rem; border-color: #25D366; color: #25D366; display: block;">
+                <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Danışma
+            </a>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- EN ÜSTTE GELEN 5 RESİMLİ TAM EKRAN (EDGE-TO-EDGE) KESİNTİSİZ PANORAMA         -->
+    <!-- 5 Sekmeye Gidiş Anahtarı: Saf Görsel, Kenarlarda Sıfır Boşluk (100% Tam Ekran) -->
+    <!-- ========================================================================= -->
+    <section class="fullwidth-panorama-section" id="tanitim">
+        <!-- Mobil İpucu Rozeti (Sadece Mobilde Görünür) -->
+        <div class="mobile-swipe-guide" aria-hidden="true">
+            <span class="pulse-dot"></span>
+            <span>Bölümleri İncelemek İçin Sağa Kaydırın</span>
+            <i class="fa-solid fa-arrow-right-long text-gold"></i>
+        </div>
+        <div class="seamless-panorama-strip" id="seamlessPanorama">
+            
+            <!-- RESİM 1: Ana Sayfa -->
+            <a href="#anasayfaSahne" class="panorama-slice luxury-card" data-card="1" tabindex="0" title="01. Ana Sayfa">
+                <div class="slice-image-wrap">
+                    <img src="hero_card_1_scales.jpg" 
+                         alt="Ana Sayfa - Altın Adalet Terazisi ve Hukuki İlkelerimiz" 
+                         class="slice-img" 
+                         loading="eager" 
+                         fetchpriority="high" 
+                         decoding="async">
+                    <div class="slice-overlay"></div>
+                    <div class="slice-light-sheen"></div>
+                </div>
+                
+                <!-- Üst Rozet: Sayfa Numarası & Hedef Sekme -->
+                <div class="slice-top-badge">
+                    <span class="badge-num">01</span>
+                    <span class="badge-label">ANA SAYFA</span>
+                </div>
+
+                <!-- Alt Kısım: Sayfa Başlığı ve Hedef Açıklaması -->
+                <div class="slice-bottom-content">
+                    <div class="slice-dest-kicker">
+                        <span class="pulsing-gold-dot-sm"></span>
+                        <span>01 / HOŞ GELDİNİZ</span>
+                    </div>
+                    <h3 class="slice-dest-title">ANA SAYFA</h3>
+                    <p class="slice-dest-desc">Büromuz, Hukuki İlkelerimiz, Tarihçemiz ve Canlı 3D Tanıtımımız</p>
+                    <div class="slice-dest-action">
+                        <span>Sayfayı İncele</span>
+                        <i class="fa-solid fa-arrow-right dest-action-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Lüks Köşe Vurguları (Hover ile belirir) -->
+                <span class="corner-accent top-left"></span>
+                <span class="corner-accent top-right"></span>
+                <span class="corner-accent bottom-left"></span>
+                <span class="corner-accent bottom-right"></span>
+            </a>
+
+            <!-- RESİM 2: Hakkımızda -->
+            <a href="hakkimizda.html" class="panorama-slice luxury-card" data-card="2" tabindex="0" title="02. Hakkımızda &amp; Kurumsal Bilgiler">
+                <div class="slice-image-wrap">
+                    <img src="hero_card_2_gavel.jpg" 
+                         alt="Hakkımızda - Kurumsal Felsefemiz ve İlkelerimiz" 
+                         class="slice-img" 
+                         loading="eager">
+                    <div class="slice-overlay"></div>
+                    <div class="slice-light-sheen"></div>
+                </div>
+                
+                <div class="slice-top-badge">
+                    <span class="badge-num">02</span>
+                    <span class="badge-label">HAKKIMIZDA</span>
+                </div>
+
+                <div class="slice-bottom-content">
+                    <div class="slice-dest-kicker">
+                        <span class="pulsing-gold-dot-sm"></span>
+                        <span>02 / BİZ KİMİZ?</span>
+                    </div>
+                    <h3 class="slice-dest-title">HAKKIMIZDA</h3>
+                    <p class="slice-dest-desc">Köklü Geçmişimiz, Hukuki Değerlerimiz, Vizyonumuz ve Misyonumuz</p>
+                    <div class="slice-dest-action">
+                        <span>Hakkımızda</span>
+                        <i class="fa-solid fa-arrow-right dest-action-icon"></i>
+                    </div>
+                </div>
+
+                <span class="corner-accent top-left"></span>
+                <span class="corner-accent top-right"></span>
+                <span class="corner-accent bottom-left"></span>
+                <span class="corner-accent bottom-right"></span>
+            </a>
+
+            <!-- RESİM 3: Faaliyet Alanlarımız -->
+            <a href="uzmanliklar.html" class="panorama-slice luxury-card" data-card="3" tabindex="0" title="03. Faaliyet Alanlarımız &amp; Hizmetlerimiz">
+                <div class="slice-image-wrap">
+                    <img src="hero_card_3_codex.jpg" 
+                         alt="Faaliyet Alanlarımız - Hukuki Danışmanlık ve Hizmetler" 
+                         class="slice-img" 
+                         loading="lazy" 
+                         decoding="async">
+                    <div class="slice-overlay"></div>
+                    <div class="slice-light-sheen"></div>
+                </div>
+                
+                <div class="slice-top-badge">
+                    <span class="badge-num">03</span>
+                    <span class="badge-label">FAALİYET ALANLARIMIZ</span>
+                </div>
+
+                <div class="slice-bottom-content">
+                    <div class="slice-dest-kicker">
+                        <span class="pulsing-gold-dot-sm"></span>
+                        <span>03 / HİZMETLERİMİZ</span>
+                    </div>
+                    <h3 class="slice-dest-title">FAALİYET ALANLARIMIZ</h3>
+                    <p class="slice-dest-desc">Ceza, Ticaret, Şirketler, Gayrimenkul, Aile ve Miras Hukuku</p>
+                    <div class="slice-dest-action">
+                        <span>Alanları Gör</span>
+                        <i class="fa-solid fa-arrow-right dest-action-icon"></i>
+                    </div>
+                </div>
+
+                <span class="corner-accent top-left"></span>
+                <span class="corner-accent top-right"></span>
+                <span class="corner-accent bottom-left"></span>
+                <span class="corner-accent bottom-right"></span>
+            </a>
+
+            <!-- RESİM 4: Avukatlarımız -->
+            <a href="ortaklar.html" class="panorama-slice luxury-card" data-card="4" tabindex="0" title="04. Avukatlarımız &amp; Hukuk Ekibimiz">
+                <div class="slice-image-wrap">
+                    <img src="hero_card_4_themis.jpg" 
+                         alt="Avukatlarımız - Adalet Tanrıçası Themis Heykeli" 
+                         class="slice-img" 
+                         loading="lazy" 
+                         decoding="async">
+                    <div class="slice-overlay"></div>
+                    <div class="slice-light-sheen"></div>
+                </div>
+                
+                <div class="slice-top-badge">
+                    <span class="badge-num">04</span>
+                    <span class="badge-label">AVUKATLARIMIZ</span>
+                </div>
+
+                <div class="slice-bottom-content">
+                    <div class="slice-dest-kicker">
+                        <span class="pulsing-gold-dot-sm"></span>
+                        <span>04 / HUKUK EKİBİMİZ</span>
+                    </div>
+                    <h3 class="slice-dest-title">AVUKATLARIMIZ</h3>
+                    <p class="slice-dest-desc">Davanızı Takip Edecek Deneyimli Avukatlarımız ve Uzman Kadromuz</p>
+                    <div class="slice-dest-action">
+                        <span>Ekibi Tanı</span>
+                        <i class="fa-solid fa-arrow-right dest-action-icon"></i>
+                    </div>
+                </div>
+
+                <span class="corner-accent top-left"></span>
+                <span class="corner-accent top-right"></span>
+                <span class="corner-accent bottom-left"></span>
+                <span class="corner-accent bottom-right"></span>
+            </a>
+
+            <!-- RESİM 5: İletişim & Randevu -->
+            <a href="iletisim.html" class="panorama-slice luxury-card" data-card="5" tabindex="0" title="05. İletişim &amp; Randevu Al">
+                <div class="slice-image-wrap">
+                    <img src="hero_card_5_palace.jpg" 
+                         alt="İletişim ve Danışma - T.C. Yargıtay Adalet Sarayı ve Hukuki Randevu" 
+                         class="slice-img" 
+                         loading="eager">
+                    <div class="slice-overlay"></div>
+                    <div class="slice-light-sheen"></div>
+                </div>
+                
+                <div class="slice-top-badge">
+                    <span class="badge-num">05</span>
+                    <span class="badge-label">İLETİŞİM &amp; RANDEVU</span>
+                </div>
+
+                <div class="slice-bottom-content">
+                    <div class="slice-dest-kicker">
+                        <span class="pulsing-gold-dot-sm"></span>
+                        <span>05 / BİZE ULAŞIN</span>
+                    </div>
+                    <h3 class="slice-dest-title">İLETİŞİM &amp; RANDEVU</h3>
+                    <p class="slice-dest-desc">Hukuki Danışmanlık ve Randevu İçin Büromuzla Hemen İletişime Geçin</p>
+                    <div class="slice-dest-action">
+                        <span>Randevu Al</span>
+                        <i class="fa-solid fa-arrow-right dest-action-icon"></i>
+                    </div>
+                </div>
+
+                <span class="corner-accent top-left"></span>
+                <span class="corner-accent top-right"></span>
+                <span class="corner-accent bottom-left"></span>
+                <span class="corner-accent bottom-right"></span>
+            </a>
+
+        </div>
+
+        <!-- Mobil Sayfa Noktaları (Pagination Dots: Kaçıncı Sayfadaysak O Sarı Yanar) -->
+        <div class="panorama-dots-bar" id="panoramaDotsBar" aria-label="Görsel Sayfa Göstergesi">
+            <button class="p-dot active" data-index="0" aria-label="01. Ana Sayfa"></button>
+            <button class="p-dot" data-index="1" aria-label="02. Hakkımızda"></button>
+            <button class="p-dot" data-index="2" aria-label="03. Faaliyet Alanlarımız"></button>
+            <button class="p-dot" data-index="3" aria-label="04. Avukatlarımız"></button>
+            <button class="p-dot" data-index="4" aria-label="05. İletişim"></button>
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- ANASAYFA ANA SAHNE: SOLDA EKRAN BÜYÜKLÜĞÜNDE SABİT 3D TERAZİ             -->
+    <!-- SAĞDA AŞAĞI SÜRÜKLENEN / KAYAN SADE VE GÜÇLÜ ANASAYFA İÇERİĞİ             -->
+    <!-- ========================================================================= -->
+    <div class="home-stage-container" id="anasayfaSahne">
+        
+        <!-- SOL BÖLME: Ekran büyüklüğünde, sayfa aşağı inse de YERİNDEN ASLA KIPIRDAMAYAN 3D Terazi -->
+        <aside class="stage-left-scale" id="stickyLeftScale">
+            <!-- Terazinin Üstündeki Hukuki İlke Sözü (Kutusuz, Dümdüz Saf Yazı) -->
+            <p class="scale-pure-quote">
+                “Her hak, savunulmayı; her adalet arayışı, güçlü bir sesi hak eder.”
+            </p>
+            
+            <div class="stage-scale-wrapper">
+                <model-viewer 
+                    id="scales3DViewer"
+                    loading="lazy"
+                    reveal="auto"
+                    src="scales_of_justice.glb" 
+                    alt="Canlı 3D Altın Adalet Terazisi" 
+                    auto-rotate 
+                    auto-rotate-delay="0"
+                    rotation-per-second="16deg"
+                    camera-controls 
+                    disable-zoom
+                    disable-pan
+                    interaction-prompt="none"
+                    touch-action="pan-y"
+                    environment-image="neutral"
+                    shadow-intensity="0.8"
+                    shadow-softness="1"
+                    exposure="1.35"
+                    tone-mapping="neutral"
+                    camera-orbit="0deg 75deg 13m"
+                    min-camera-orbit="auto 75deg 13m"
+                    max-camera-orbit="auto 75deg 13m"
+                    class="hero-fullscreen-scale">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                </model-viewer>
+            </div>
+        </aside>
+
+        <!-- SAĞ BÖLME: Terazinin Sağında Aşağıya Sürüklenen / Kayan Editoryal Akış -->
+        <main class="stage-right-content" id="anasayfaIcerik">
+
+            <div class="manifesto-wrapper">
+                
+                <!-- 1. BÜRO TANITIMI (Kısa Tanıtım Yazısı) -->
+                <div class="manifesto-header-block">
+                    <div class="manifesto-kicker">
+                        <span class="manifesto-kicker-line"></span>
+                        <span>KURUMSAL TANITIM</span>
+                    </div>
+
+                    <h1 class="manifesto-hero-title">
+                        Adaletin Gücü ve Çeyrek Asırlık <br>
+                        <span class="gold-gradient-text italic-serif">Tavizsiz Savunma Geleneği.</span>
+                    </h1>
+
+                    <p class="manifesto-lead">
+                        Hukuk Büromuz; çeyrek asrı aşan köklü dava tecrübesi, tavizsiz dürüstlük ilkeleri ve müvekkil odaklı stratejik yaklaşımıyla, hukuki uyuşmazlıkların her aşamasında haklarınızı korumaktadır. Ağır ceza davalarından şirketler hukukuna, ticari tahkimden tazminat ve miras davalarına kadar müvekkillerimizin sermayesini, itibarını ve şahsi hürriyetini yüksek meslek standartlarıyla savunuyoruz.
+                    </p>
+                </div>
+
+                <!-- 2. MESLEK TANITIMI (Avukatlık & Savunma Makamının Mahiyeti) -->
+                <div class="manifesto-profession-block">
+                    <div class="profession-badge">
+                        <i class="fa-solid fa-scale-balanced mr-1"></i>
+                        <span>MESLEKİ MİSYONUMUZ</span>
+                    </div>
+                    <h2 class="profession-title">Avukatlık: Yargının Kurucu ve Bağımsız Savunma Unsuru</h2>
+                    <p class="profession-text">
+                        Avukatlık, yalnızca bir temsil görevi değil; bireyin hak arama hürriyetinin, adil yargılanma hakkının ve mülkiyet dokunulmazlığının mahkemeler nezdindeki yegane bağımsız teminatıdır. Savunma makamı ne kadar güçlü, bağımsız ve ilkeli olursa; adalet o derece sarsılmaz tecelli eder. Bir avukatın asıl mesleki kudreti, kanun maddelerinin müvekkili koruyan hakkaniyetli ruhunu duruşma kürsüsünde tavizsizce hakim kılmaktır.
+                    </p>
+                </div>
+
+                <!-- 3. SEKME ÖZETLERİ (Sitedeki Bölümlerin Kısa Özeti) -->
+                <div class="manifesto-section-header">
+                    <div class="manifesto-kicker">
+                        <span class="manifesto-kicker-line"></span>
+                        <span>SİTE REHBERİ &amp; BÖLÜMLER</span>
+                    </div>
+                    <h2 class="manifesto-sub-title">Büromuzu ve Hizmetlerimizi Keşfedin</h2>
+                </div>
+
+                <div class="manifesto-tabs-overview">
+                    
+                    <!-- SEKME 02: Hakkımızda -->
+                    <a href="hakkimizda.html" class="tab-overview-row" title="Hakkımızda Sayfasını İnceleyin">
+                        <span class="tab-overview-num">02.</span>
+                        <div class="tab-overview-body">
+                            <h3 class="tab-overview-name">Hakkımızda</h3>
+                            <p class="tab-overview-desc">Çeyrek asırlık kurumsal tarihimiz, tavizsiz meslek ilkelerimiz, İsviçre standartlarında mutlak gizlilik taahhüdümüz ve çalışma felsefemiz.</p>
+                        </div>
+                        <span class="tab-overview-cta">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- SEKME 03: Faaliyet Alanlarımız -->
+                    <a href="uzmanliklar.html" class="tab-overview-row" title="Faaliyet Alanlarımızı İnceleyin">
+                        <span class="tab-overview-num">03.</span>
+                        <div class="tab-overview-body">
+                            <h3 class="tab-overview-name">Faaliyet Alanlarımız</h3>
+                            <p class="tab-overview-desc">Ağır Ceza Savunması, Şirketler &amp; Ticaret Hukuku, Uluslararası Tahkim, Tazminat ve Miras Hukuku başta olmak üzere 360° dava temsili.</p>
+                        </div>
+                        <span class="tab-overview-cta">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- SEKME 04: Avukatlarımız -->
+                    <a href="ortaklar.html" class="tab-overview-row" title="Avukat Kadromuzu İnceleyin">
+                        <span class="tab-overview-num">04.</span>
+                        <div class="tab-overview-body">
+                            <h3 class="tab-overview-name">Avukatlarımız</h3>
+                            <p class="tab-overview-desc">Duruşma tecrübesine sahip kıdemli ortak avukatlarımız, akademik danışman heyetimiz ve uzman hukuk heyetimiz.</p>
+                        </div>
+                        <span class="tab-overview-cta">İncele <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- SEKME 05: İletişim & Randevu -->
+                    <a href="iletisim.html" class="tab-overview-row" title="İletişim ve Randevu Sayfasına Gidin">
+                        <span class="tab-overview-num">05.</span>
+                        <div class="tab-overview-body">
+                            <h3 class="tab-overview-name">İletişim &amp; Randevu</h3>
+                            <p class="tab-overview-desc">Hukuki uyuşmazlığınız için ön inceleme talebi, Levent merkez ofisimiz, doğrudan santralimiz ve online randevu formu.</p>
+                        </div>
+                        <span class="tab-overview-cta">Randevu Al <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+
+                </div>
+
+                <!-- 4. DOĞRUDAN İLETİŞİM & RANDEVU BUTONLARI -->
+                <div class="manifesto-actions" id="hizliIletisim">
+                    <a href="iletisim.html#randevu" class="btn-luxury-primary" title="Hukuki Ön Değerlendirme Talebi">
+                        <i class="fa-solid fa-calendar-check mr-2"></i>
+                        <span>Ön Değerlendirme &amp; Randevu Al</span>
+                    </a>
+                    <a href="tel:+902129900000" class="btn-luxury-outline" title="Doğrudan Büro Santrali">
+                        <i class="fa-solid fa-phone mr-2"></i>
+                        <span>0212 990 00 00</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </main>
+
+            </div>
+
+        </main>
+    </div>
+
+
+    <!-- MINIMAL & PRESTİJLİ FOOTER (SADECE GEREKLİ BİLGİLER) -->
+    <footer class="footer-minimal-wrapper">
+        <div class="container-luxury">
+            <div class="footer-minimal-inner">
+                
+                <!-- Sol: Minimal Logo & Büro Başlığı -->
+                <div class="flex-items-center gap-3">
+                    <svg viewBox="0 0 100 100" class="w-7 h-7">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                        <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                              stroke="url(#goldGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <div>
+                        <span class="brand-title text-sm font-serif text-gold tracking-wider">HUKUK BÜROSU</span>
+                        <span class="text-xs text-muted block" style="font-size: 0.72rem;">Avukatlık &amp; Hukuki Danışmanlık</span>
+                    </div>
+                </div>
+
+                <!-- Orta: Temel Sayfa Bağlantıları -->
+                <nav class="footer-clean-nav" aria-label="Alt Menü">
+                    <a href="index.html" style="color: var(--gold-primary);">Ana Sayfa</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="uzmanliklar.html">Faaliyet Alanlarımız</a>
+                    <a href="ortaklar.html">Avukatlarımız</a>
+                    <a href="iletisim.html">İletişim</a>
+                </nav>
+
+                <!-- Sağ: Hızlı İletişim Hattı -->
+                <div class="flex-items-center gap-3">
+                    <a href="tel:+902129900000" class="text-gold flex-items-center gap-2 text-xs" style="letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0212 990 00 00</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Alt Çizgi & Zorunlu Yasal Dipnot -->
+            <div class="footer-minimal-bottom">
+                <div>&copy; 2026 Hukuk Bürosu. Tüm Hakları Saklıdır.</div>
+                <div style="font-size: 0.72rem;">
+                    1136 sayılı Avukatlık Kanunu ve TBB Reklam Yasağı Yönetmeliği uyarınca yalnızca bilgilendirme amaçlıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODAL: DETAIL MODAL WHEN CLICKING ANY OF THE 5 SHOWCASE CARDS -->
+    <div class="luxury-modal-backdrop" id="cardModal">
+        <div class="luxury-modal-container">
+            <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+            <div class="modal-body" id="modalDynamicContent">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    
+    <script src="script.js?v=11.0"></script>
+    <!-- MOBIL SABİT ALT HIZLI İLETİŞİM ÇUBUĞU (DOCK) -->
+    <aside class="mobile-quick-dock" aria-label="Mobil Hızlı İletişim">
+        <a href="tel:+902129900000" class="dock-btn call-btn" title="Telefonla Arayın">
+            <i class="fa-solid fa-phone"></i>
+            <span>Hemen Ara</span>
+        </a>
+        <a href="https://wa.me/905000000000" target="_blank" rel="noopener" class="dock-btn wa-btn" title="WhatsApp Mesaj Gönder">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="iletisim.html" class="dock-btn appt-btn" title="İletişim &amp; Randevu Sayfasına Git">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Randevu Al</span>
+        </a>
+    </aside>
+
+</body>
+</html>

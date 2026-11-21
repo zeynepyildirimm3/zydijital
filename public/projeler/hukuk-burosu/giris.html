@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş İntrosu | HUKUK BÜROSU</title>
+    <meta name="description" content="Hukuk Büromuz; çeyrek asırlık tecrübesi, tavizsiz meslek ilkeleri, müvekkil gizliliği ve adalet anlayışıyla hizmet vermektedir.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=8.1">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-color: #060709;
+        }
+        .portal-fullscreen {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-pearl font-body antialiased selection:bg-gold-500 selection:text-black">
+
+    <div class="portal-fullscreen" id="portalWrap" title="Hemen Geçmek İçin Tıklayın">
+        <!-- Arka Plan Görseli & Atmosferik Karartma -->
+        <img src="hero_court_obsidian.jpg" 
+             alt="Hukuk Bürosu Giriş Portalı" 
+             class="gate-backdrop-media" 
+             fetchpriority="high">
+        <div class="gate-overlay-radial"></div>
+
+        <!-- Ambient Luxury Background Lighting -->
+        <div class="ambient-glow glow-top-left"></div>
+        <div class="ambient-glow glow-top-right"></div>
+        <div class="ambient-glow glow-center"></div>
+
+        <!-- Merkez Lüks Kart -->
+        <div class="gate-content-container">
+            <!-- Dönen Dış Halka & Altın Arma -->
+            <div class="gate-crest-wrap">
+                <span class="gate-glow-ring"></span>
+                <svg viewBox="0 0 100 100" class="crest-svg">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGradientPortal)" stroke-width="2" stroke-dasharray="2 3"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="url(#goldGradientPortal)" stroke-width="1.2"/>
+                    <path d="M50 16 L56 32 L74 34 L60 46 L64 64 L50 54 L36 64 L40 46 L26 34 L44 32 Z" fill="url(#goldGradientPortal)" opacity="0.3"/>
+                    <path d="M50 20 L50 78 M35 34 L65 34 M35 34 L27 52 M35 34 L43 52 M65 34 L57 52 M65 34 L73 52 M24 52 C24 57 46 57 46 52 Z M54 52 C54 57 76 57 76 52 Z M38 78 L62 78" 
+                          stroke="url(#goldGradientPortal)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="goldGradientPortal" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#F5E7A9"/>
+                            <stop offset="50%" stop-color="#D4AF37"/>
+                            <stop offset="100%" stop-color="#917224"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Üst Başlık & Tarih -->
+            <div class="gate-eyebrow">
+                <span class="pulsing-gold-dot-sm"></span>
+                <span>AVUKATLIK &amp; HUKUKİ DANIŞMANLIK &bull; EST. 1998</span>
+            </div>
+
+            <h1 class="gate-title">HUKUK BÜROSU</h1>
+            <p class="gate-subtitle">KURUMSAL PORTALA HOŞ GELDİNİZ</p>
+            <div class="gate-divider"></div>
+
+            <p class="gate-quote">
+                “Adalet mülkün temelidir. Çeyrek asırlık köklü tecrübemiz ve tavizsiz meslek ilkelerimizle haklarınızın güvencesiyiz.”
+            </p>
+
+            <!-- Otomatik İntro İlerleme Çubuğu -->
+            <div class="gate-auto-block">
+                <div class="gate-progress-wrap">
+                    <div class="gate-progress-bar"></div>
+                </div>
+                <div class="gate-auto-label">
+                    <span>SİTEYE GİRİLİYOR</span>
+                    <span class="pulsing-gold-dot-sm"></span>
+                </div>
+                <a href="index.html" class="gate-skip-btn">
+                    <span>Hemen Geç &raquo;</span>
+                </a>
+            </div>
+
+            <!-- Hızlı Geçiş Sekmeleri -->
+            <div class="gate-quick-links">
+                <a href="index.html" class="gate-pill-link">01. Ana Sayfa</a>
+                <a href="hakkimizda.html" class="gate-pill-link">02. Hakkımızda</a>
+                <a href="uzmanliklar.html" class="gate-pill-link">03. Faaliyet Alanlarımız</a>
+                <a href="ortaklar.html" class="gate-pill-link">04. Avukatlarımız</a>
+                <a href="iletisim.html" class="gate-pill-link">05. İletişim</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Otomatik 2.5 saniye sonra index.html'e aktar
+        let redirectTimer = setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 2500);
+
+        document.getElementById('portalWrap').addEventListener('click', function(e) {
+            clearTimeout(redirectTimer);
+            window.location.href = 'index.html';
+        });
+
+        window.addEventListener('keydown', function() {
+            clearTimeout(redirectTimer);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
